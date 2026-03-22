@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: CI実行が必要かチェック
+        id: guard
+        run: |
+          if [ -f setup.js ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "未初期化テンプレートのため、CIをスキップします"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.guard.outputs.skip != 'true'
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Lint
+        if: steps.guard.outputs.skip != 'true'
+        run: npm run lint
+
+      - name: Format check
+        if: steps.guard.outputs.skip != 'true'
+        run: npm run format:check
+
+      - name: Type check
+        if: steps.guard.outputs.skip != 'true'
+        run: npm run build
+
+      - name: Test
+        if: steps.guard.outputs.skip != 'true'
+        run: npm run test

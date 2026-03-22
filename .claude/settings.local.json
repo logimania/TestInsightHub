@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:x.com)",
+      "WebFetch(domain:api.fxtwitter.com)",
+      "Bash(mkdir:*)",
+      "Bash(/tmp/check_files.txt:*)",
+      "Read(//tmp/**)",
+      "Bash(gh run:*)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}
