@@ -3,9 +3,11 @@ import { existsSync } from "fs";
 import type { BrowserWindow } from "electron";
 import {
   detectTestFramework,
+  detectAllFrameworks,
   type DetectedFramework,
 } from "./framework-detector";
 import { loadCoverage, type LoadCoverageResult } from "../coverage-analyzer";
+import type { FileCoverage, NormalizedCoverage } from "@shared/types/coverage";
 import { AppErrorImpl } from "@shared/types/errors";
 
 export interface TestRunResult {
@@ -110,6 +112,174 @@ export async function runTestsWithCoverage(
     durationMs,
     coverageResult,
   };
+}
+
+/**
+ * プロジェクト内の全テストフレームワーク（unit + e2e）を検出し、
+ * 順番に実行してカバレッジをマージする。
+ */
+export async function runAllTestsWithCoverage(
+  options: TestRunOptions,
+): Promise<TestRunResult> {
+  const { rootPath, timeoutMs = DEFAULT_TIMEOUT_MS, onOutput } = options;
+
+  const frameworks = await detectAllFrameworks(rootPath);
+
+  if (frameworks.length === 0) {
+    throw new AppErrorImpl({
+      code: "COVERAGE_NOT_LOADED",
+      message:
+        "テストフレームワークを自動検出できませんでした。テスト実行コマンドを入力してください。",
+      recoverable: true,
+    });
+  }
+
+  onOutput?.(
+    `検出されたフレームワーク: ${frameworks.map((f) => `${f.framework} (${f.testType})`).join(", ")}`,
+    "stdout",
+  );
+
+  const allCoverageFiles: FileCoverage[] = [];
+  let primaryResult: TestRunResult | null = null;
+  let reportFormat: string = "istanbul";
+
+  for (const fw of frameworks) {
+    onOutput?.(`\n--- ${fw.framework} (${fw.testType}) を実行中 ---`, "stdout");
+
+    const command = options.customCommand && fw === frameworks[0]
+      ? options.customCommand
+      : fw.coverageCommand;
+
+    if (!command) {
+      onOutput?.(`${fw.framework}: コマンドなし、スキップ`, "stderr");
+      continue;
+    }
+
+    const startTime = Date.now();
+    const { exitCode, stdout, stderr } = await executeCommand(
+      command,
+      rootPath,
+      timeoutMs,
+      onOutput,
+    );
+    const durationMs = Date.now() - startTime;
+
+    onOutput?.(
+      `${fw.framework} 完了 (${(durationMs / 1000).toFixed(1)}秒, exit: ${exitCode})`,
+      "stdout",
+    );
+
+    // カバレッジ読み込み
+    let coverageResult: LoadCoverageResult | null = null;
+    if (fw.reportPath && existsSync(fw.reportPath)) {
+      try {
+        coverageResult = await loadCoverage({ rootPath, reportPath: fw.reportPath });
+        onOutput?.(
+          `${fw.framework} カバレッジ: ${coverageResult.coverage.files.length} ファイル`,
+          "stdout",
+        );
+      } catch (err) {
+        onOutput?.(
+          `${fw.framework} カバレッジ解析失敗: ${err instanceof Error ? err.message : String(err)}`,
+          "stderr",
+        );
+      }
+    } else if (fw.testType === "unit") {
+      try {
+        coverageResult = await loadCoverage({ rootPath, autoDetect: true });
+      } catch {
+        // no coverage for this framework
+      }
+    }
+
+    if (coverageResult) {
+      reportFormat = coverageResult.coverage.reportFormat;
+      allCoverageFiles.push(...coverageResult.coverage.files);
+    }
+
+    if (!primaryResult) {
+      primaryResult = {
+        framework: fw,
+        exitCode,
+        stdout,
+        stderr,
+        durationMs,
+        coverageResult,
+      };
+    }
+  }
+
+  // マージされたカバレッジを構築
+  if (allCoverageFiles.length > 0 && primaryResult) {
+    const mergedCoverage: NormalizedCoverage = {
+      reportFormat: reportFormat as NormalizedCoverage["reportFormat"],
+      files: mergeCoverageFiles(allCoverageFiles),
+      generatedAt: new Date().toISOString(),
+    };
+    const mergedResult: LoadCoverageResult = {
+      coverage: mergedCoverage,
+      unmatchedFiles: [],
+      matchRate: 100,
+    };
+
+    onOutput?.(
+      `\nカバレッジマージ完了: ${mergedCoverage.files.length} ファイル`,
+      "stdout",
+    );
+
+    return { ...primaryResult, coverageResult: mergedResult };
+  }
+
+  return primaryResult ?? {
+    framework: frameworks[0],
+    exitCode: 1,
+    stdout: "",
+    stderr: "No test results",
+    durationMs: 0,
+    coverageResult: null,
+  };
+}
+
+/**
+ * 同じファイルパスのカバレッジをマージする。
+ * 複数のテストランナーが同じファイルをカバーしている場合、カバレッジを合算する。
+ */
+function mergeCoverageFiles(
+  files: readonly FileCoverage[],
+): FileCoverage[] {
+  const byPath = new Map<string, FileCoverage>();
+
+  for (const file of files) {
+    const existing = byPath.get(file.filePath);
+    if (!existing) {
+      byPath.set(file.filePath, file);
+    } else {
+      // カバー数を合算（重複行は大きい方を採用）
+      byPath.set(file.filePath, {
+        filePath: file.filePath,
+        lineCoverage: {
+          covered: Math.max(existing.lineCoverage.covered, file.lineCoverage.covered),
+          total: Math.max(existing.lineCoverage.total, file.lineCoverage.total),
+          percentage: Math.max(existing.lineCoverage.percentage, file.lineCoverage.percentage),
+        },
+        branchCoverage: existing.branchCoverage ?? file.branchCoverage,
+        functionCoverage: {
+          covered: Math.max(existing.functionCoverage.covered, file.functionCoverage.covered),
+          total: Math.max(existing.functionCoverage.total, file.functionCoverage.total),
+          percentage: Math.max(existing.functionCoverage.percentage, file.functionCoverage.percentage),
+        },
+        uncoveredLines: existing.uncoveredLines.length < file.uncoveredLines.length
+          ? existing.uncoveredLines
+          : file.uncoveredLines,
+        uncoveredFunctions: existing.uncoveredFunctions.length < file.uncoveredFunctions.length
+          ? existing.uncoveredFunctions
+          : file.uncoveredFunctions,
+        coveredByTests: [...existing.coveredByTests, ...file.coveredByTests],
+      });
+    }
+  }
+
+  return [...byPath.values()];
 }
 
 function executeCommand(

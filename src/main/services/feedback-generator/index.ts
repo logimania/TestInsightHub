@@ -2,16 +2,13 @@ import type {
   FeedbackFile,
   PriorityWeights,
   FeedbackSummary,
-  ProjectTestEnvironment,
 } from "@shared/types/feedback";
 import type { ModuleCoverage } from "@shared/types/coverage";
 import type { ProjectStructure } from "@shared/types/project";
 import { FEEDBACK_FILE_VERSION } from "@shared/constants";
 import { detectGaps, buildRecommendations } from "./gap-detector";
 import { scorePriority } from "./priority-scorer";
-import { detectPrerequisites } from "@shared/utils/prerequisite-detector";
 import { evaluateQualityGate } from "@shared/utils/quality-gate";
-import { classifyFile, getTestingNote } from "@shared/utils/file-classifier";
 
 export interface GenerateFeedbackOptions {
   readonly moduleCoverages: readonly ModuleCoverage[];
@@ -20,8 +17,6 @@ export interface GenerateFeedbackOptions {
   readonly weights?: PriorityWeights;
   readonly complexityMap?: ReadonlyMap<string, number>;
   readonly changeFreqMap?: ReadonlyMap<string, number>;
-  readonly projectTestEnv?: ProjectTestEnvironment;
-  readonly fileContents?: ReadonlyMap<string, string>;
 }
 
 export function generateFeedback(
@@ -29,24 +24,12 @@ export function generateFeedback(
 ): FeedbackFile {
   const { projectStructure, threshold, weights } = options;
 
-  // カバレッジ対象はsrc配下のみ。tests/, coverage/, eval/等は除外。
+  // カバレッジ対象はsrc配下のみ
   const moduleCoverages = options.moduleCoverages.filter((mc) =>
     isSrcModule(mc.moduleId),
   );
 
   let gaps = detectGaps(moduleCoverages, threshold);
-
-  // ファイル内容から属性判定し、テスト方法の指示を付与
-  if (options.fileContents) {
-    const contents = options.fileContents;
-    gaps = gaps.map((g) => {
-      const content = contents.get(g.filePath);
-      if (!content) return g;
-      const category = classifyFile(content);
-      const testingNote = getTestingNote(category);
-      return testingNote ? { ...g, testingNote } : g;
-    });
-  }
 
   const complexityMap =
     options.complexityMap ?? buildComplexityMap(projectStructure);
@@ -54,19 +37,6 @@ export function generateFeedback(
 
   gaps = scorePriority(gaps, complexityMap, changeFreqMap, weights);
   gaps.sort((a, b) => b.priorityScore - a.priorityScore);
-
-  // prerequisites 付与（環境情報がある場合のみ）
-  const env = options.projectTestEnv;
-  if (env) {
-    gaps = gaps.map((g) => ({
-      ...g,
-      prerequisites: detectPrerequisites(
-        g.filePath,
-        g.recommendedTestType,
-        env,
-      ),
-    }));
-  }
 
   const recommendations = buildRecommendations(gaps);
 

@@ -4,14 +4,14 @@ const {
   mockHandle,
   mockOn,
   mockSend,
-  mockRunTestsWithCoverage,
+  mockRunAllTestsWithCoverage,
   mockAnalyzeTestQuality,
   mockMapTestsToCoverage,
 } = vi.hoisted(() => ({
   mockHandle: vi.fn(),
   mockOn: vi.fn(),
   mockSend: vi.fn(),
-  mockRunTestsWithCoverage: vi.fn(),
+  mockRunAllTestsWithCoverage: vi.fn(),
   mockAnalyzeTestQuality: vi.fn(),
   mockMapTestsToCoverage: vi.fn(),
 }));
@@ -22,7 +22,7 @@ vi.mock("electron", () => ({
 }));
 
 vi.mock("../../../../src/main/services/test-runner", () => ({
-  runTestsWithCoverage: mockRunTestsWithCoverage,
+  runAllTestsWithCoverage: mockRunAllTestsWithCoverage,
 }));
 
 vi.mock("../../../../src/main/services/test-quality-analyzer", () => ({
@@ -50,7 +50,7 @@ describe("test-handlers", () => {
     mockHandle.mockReset();
     mockOn.mockReset();
     mockSend.mockReset();
-    mockRunTestsWithCoverage.mockReset();
+    mockRunAllTestsWithCoverage.mockReset();
     mockAnalyzeTestQuality.mockReset();
     mockMapTestsToCoverage.mockReset();
   });
@@ -86,7 +86,7 @@ describe("test-handlers", () => {
         files: [{ filePath: "src/a.ts" }],
         generatedAt: "2026-01-01",
       };
-      mockRunTestsWithCoverage.mockResolvedValue({
+      mockRunAllTestsWithCoverage.mockResolvedValue({
         coverageResult: { coverage },
       });
 
@@ -102,7 +102,7 @@ describe("test-handlers", () => {
     });
 
     it("returns null when no coverage result", async () => {
-      mockRunTestsWithCoverage.mockResolvedValue({
+      mockRunAllTestsWithCoverage.mockResolvedValue({
         coverageResult: null,
       });
 
@@ -111,7 +111,7 @@ describe("test-handlers", () => {
     });
 
     it("returns null when coverageResult has no coverage", async () => {
-      mockRunTestsWithCoverage.mockResolvedValue({
+      mockRunAllTestsWithCoverage.mockResolvedValue({
         coverageResult: { coverage: null },
       });
 
@@ -156,7 +156,7 @@ describe("test-handlers", () => {
         files,
         generatedAt: "2026-01-01",
       };
-      mockRunTestsWithCoverage.mockResolvedValue({
+      mockRunAllTestsWithCoverage.mockResolvedValue({
         coverageResult: { coverage },
       });
       mockMapTestsToCoverage.mockReturnValue(files);

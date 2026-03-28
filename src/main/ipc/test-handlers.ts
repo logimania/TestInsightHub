@@ -2,7 +2,7 @@ import { ipcMain, BrowserWindow } from "electron";
 import { IPC_CHANNELS } from "@shared/types/ipc";
 import type { TestRunRequest, TestQualityRequest } from "@shared/types/ipc";
 import type { ProjectStructure } from "@shared/types/project";
-import { runTestsWithCoverage } from "../services/test-runner";
+import { runAllTestsWithCoverage } from "../services/test-runner";
 import { analyzeTestQuality } from "../services/test-quality-analyzer";
 import { mapTestsToCoverage } from "../services/coverage-analyzer/test-source-mapper";
 
@@ -20,7 +20,7 @@ export function registerTestHandlers(mainWindow: BrowserWindow): void {
   ipcMain.handle(
     IPC_CHANNELS.TEST_RUN,
     async (_event, request: TestRunRequest) => {
-      const result = await runTestsWithCoverage({
+      const result = await runAllTestsWithCoverage({
         rootPath: request.rootPath,
         customCommand: request.customCommand,
         timeoutMs: request.timeoutMs,

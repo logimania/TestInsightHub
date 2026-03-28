@@ -6,7 +6,6 @@ import type {
   PriorityWeights,
   CoverageGap,
   TestRecommendation,
-  ProjectTestEnvironment,
 } from "@shared/types/feedback";
 import type {
   EnrichedGap,
@@ -24,7 +23,6 @@ import {
   DEFAULT_PRIORITY_WEIGHTS,
   PRIORITY_SCORE_THRESHOLDS,
 } from "@shared/constants";
-import { detectPrerequisites } from "@shared/utils/prerequisite-detector";
 import { evaluateQualityGate } from "@shared/utils/quality-gate";
 
 interface FeedbackState {
@@ -38,7 +36,6 @@ interface FeedbackState {
     moduleCoverages: readonly ModuleCoverage[],
     threshold: number,
     weights?: PriorityWeights,
-    projectTestEnv?: ProjectTestEnvironment,
   ) => void;
   readonly deploy: (deployPath: string) => Promise<void>;
   readonly reset: () => void;
@@ -51,13 +48,7 @@ export const useFeedbackStore = create<FeedbackState>((set, get) => ({
   history: [],
   isGenerating: false,
 
-  generateFromData: (
-    structure,
-    moduleCoverages,
-    threshold,
-    weights,
-    projectTestEnv,
-  ) => {
+  generateFromData: (structure, moduleCoverages, threshold, weights) => {
     set({ isGenerating: true });
 
     // カバレッジ対象はsrc配下のみ
@@ -71,14 +62,12 @@ export const useFeedbackStore = create<FeedbackState>((set, get) => ({
         srcCoverages,
         threshold,
         weights,
-        projectTestEnv,
       );
       const enrichedGaps = buildEnrichedGaps(
         structure,
         srcCoverages,
         threshold,
         weights,
-        projectTestEnv,
       );
       const { currentFeedback: previous } = get();
       const comparison = previous
@@ -124,7 +113,6 @@ function buildEnrichedGaps(
   moduleCoverages: readonly ModuleCoverage[],
   threshold: number,
   weights: PriorityWeights = DEFAULT_PRIORITY_WEIGHTS,
-  projectTestEnv?: ProjectTestEnvironment,
 ): EnrichedGap[] {
   const allFiles = structure.modules.flatMap((m) => m.files);
   const enriched: EnrichedGap[] = [];
@@ -198,10 +186,6 @@ function buildEnrichedGaps(
       const fileForScenarios = { ...file, uncoveredFunctions };
       const scenarios = generateScenarios(fileForScenarios, src, branches);
 
-      const prerequisites = projectTestEnv
-        ? detectPrerequisites(file.filePath, testType, projectTestEnv)
-        : undefined;
-
       enriched.push({
         filePath: file.filePath,
         moduleName: mod.moduleId,
@@ -219,7 +203,6 @@ function buildEnrichedGaps(
         qualityScore: quality.score,
         qualitySuggestions: quality.suggestions,
         requiredScenarios: scenarios,
-        prerequisites,
       });
     }
   }
@@ -413,7 +396,6 @@ function generateFeedbackLocal(
   mc: readonly ModuleCoverage[],
   th: number,
   w: PriorityWeights = DEFAULT_PRIORITY_WEIGHTS,
-  projectTestEnv?: ProjectTestEnvironment,
 ): FeedbackFile {
   let gaps = detectGaps(mc, th);
   const cMap = new Map<string, number>();
@@ -427,17 +409,6 @@ function generateFeedbackLocal(
       );
   gaps = scorePriority(gaps, cMap, w);
   gaps.sort((a, b) => b.priorityScore - a.priorityScore);
-
-  if (projectTestEnv) {
-    gaps = gaps.map((g) => ({
-      ...g,
-      prerequisites: detectPrerequisites(
-        g.filePath,
-        g.recommendedTestType,
-        projectTestEnv,
-      ),
-    }));
-  }
 
   const recs = buildRecommendations(gaps);
   const tc = mc.reduce((s, m) => s + m.lineCoverage.covered, 0);

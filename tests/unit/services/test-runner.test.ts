@@ -17,14 +17,19 @@ vi.mock("fs", () => ({
   default: { existsSync: mockExistsSync },
   existsSync: mockExistsSync,
 }));
+const { mockDetectAllFrameworks } = vi.hoisted(() => ({
+  mockDetectAllFrameworks: vi.fn(),
+}));
+
 vi.mock("../../../src/main/services/test-runner/framework-detector", () => ({
   detectTestFramework: mockDetectTestFramework,
+  detectAllFrameworks: mockDetectAllFrameworks,
 }));
 vi.mock("../../../src/main/services/coverage-analyzer", () => ({
   loadCoverage: mockLoadCoverage,
 }));
 
-import { runTestsWithCoverage } from "../../../src/main/services/test-runner/index";
+import { runTestsWithCoverage, runAllTestsWithCoverage } from "../../../src/main/services/test-runner/index";
 
 interface MockChild extends EventEmitter {
   stdout: EventEmitter | null;
@@ -67,6 +72,16 @@ const VITEST_FRAMEWORK = {
   coverageCommand: "npx vitest run --coverage",
   reportPath: "/project/coverage/coverage-final.json",
   confidence: "high" as const,
+  testType: "unit" as const,
+};
+
+const PLAYWRIGHT_FRAMEWORK = {
+  framework: "playwright" as const,
+  testCommand: "npx playwright test",
+  coverageCommand: "npx playwright test",
+  reportPath: "",
+  confidence: "high" as const,
+  testType: "e2e" as const,
 };
 
 const UNKNOWN_FRAMEWORK = {
@@ -75,6 +90,7 @@ const UNKNOWN_FRAMEWORK = {
   coverageCommand: "",
   reportPath: "",
   confidence: "low" as const,
+  testType: "unit" as const,
 };
 
 describe("runTestsWithCoverage", () => {
@@ -326,5 +342,108 @@ describe("runTestsWithCoverage", () => {
     expect(execOptions.env.CI).toBe("true");
     expect(execOptions.env.FORCE_COLOR).toBe("0");
     expect(execOptions.windowsHide).toBe(true);
+  });
+});
+
+describe("runAllTestsWithCoverage", () => {
+  beforeEach(() => {
+    vi.resetAllMocks();
+  });
+
+  it("runs all detected frameworks and merges coverage", async () => {
+    mockDetectAllFrameworks.mockResolvedValue([VITEST_FRAMEWORK, PLAYWRIGHT_FRAMEWORK]);
+    mockExec.mockImplementation(() => createMockChild({ exitCode: 0 }));
+    mockExistsSync.mockReturnValue(true);
+    mockLoadCoverage.mockResolvedValue({
+      coverage: {
+        reportFormat: "istanbul",
+        files: [{ filePath: "src/a.ts", lineCoverage: { covered: 80, total: 100, percentage: 80 }, branchCoverage: null, functionCoverage: { covered: 80, total: 100, percentage: 80 }, uncoveredLines: [], uncoveredFunctions: [], coveredByTests: [] }],
+        generatedAt: "",
+      },
+      unmatchedFiles: [],
+      matchRate: 100,
+    });
+
+    const result = await runAllTestsWithCoverage({ rootPath: "/project" });
+
+    expect(mockExec).toHaveBeenCalledTimes(2);
+    expect(result.coverageResult).not.toBeNull();
+  });
+
+  it("throws when no frameworks detected", async () => {
+    mockDetectAllFrameworks.mockResolvedValue([]);
+
+    await expect(
+      runAllTestsWithCoverage({ rootPath: "/project" }),
+    ).rejects.toMatchObject({
+      code: "COVERAGE_NOT_LOADED",
+    });
+  });
+
+  it("runs single framework when only one detected", async () => {
+    mockDetectAllFrameworks.mockResolvedValue([VITEST_FRAMEWORK]);
+    mockExec.mockImplementation(() => createMockChild({ exitCode: 0 }));
+    mockExistsSync.mockReturnValue(false);
+    mockLoadCoverage.mockRejectedValue(new Error("no report"));
+
+    const result = await runAllTestsWithCoverage({ rootPath: "/project" });
+
+    expect(mockExec).toHaveBeenCalledTimes(1);
+    expect(result.framework).toEqual(VITEST_FRAMEWORK);
+  });
+
+  it("skips framework with no command", async () => {
+    const noCommandFw = { ...PLAYWRIGHT_FRAMEWORK, coverageCommand: "" };
+    mockDetectAllFrameworks.mockResolvedValue([VITEST_FRAMEWORK, noCommandFw]);
+    mockExec.mockImplementation(() => createMockChild({ exitCode: 0 }));
+    mockExistsSync.mockReturnValue(false);
+    mockLoadCoverage.mockRejectedValue(new Error("no report"));
+
+    await runAllTestsWithCoverage({ rootPath: "/project" });
+
+    expect(mockExec).toHaveBeenCalledTimes(1);
+  });
+
+  it("merges coverage from multiple frameworks", async () => {
+    mockDetectAllFrameworks.mockResolvedValue([VITEST_FRAMEWORK, PLAYWRIGHT_FRAMEWORK]);
+    mockExec.mockImplementation(() => createMockChild({ exitCode: 0 }));
+    mockExistsSync.mockImplementation((p: string) => p.includes("coverage-final"));
+
+    let callCount = 0;
+    mockLoadCoverage.mockImplementation(() => {
+      callCount++;
+      if (callCount === 1) {
+        return Promise.resolve({
+          coverage: {
+            reportFormat: "istanbul",
+            files: [{ filePath: "src/a.ts", lineCoverage: { covered: 50, total: 100, percentage: 50 }, branchCoverage: null, functionCoverage: { covered: 50, total: 100, percentage: 50 }, uncoveredLines: [], uncoveredFunctions: [], coveredByTests: [] }],
+            generatedAt: "",
+          },
+          unmatchedFiles: [],
+          matchRate: 100,
+        });
+      }
+      return Promise.reject(new Error("no e2e coverage"));
+    });
+
+    const result = await runAllTestsWithCoverage({ rootPath: "/project" });
+
+    expect(result.coverageResult).not.toBeNull();
+    expect(result.coverageResult!.coverage.files.length).toBe(1);
+  });
+
+  it("uses customCommand only for first framework", async () => {
+    mockDetectAllFrameworks.mockResolvedValue([VITEST_FRAMEWORK, PLAYWRIGHT_FRAMEWORK]);
+    mockExec.mockImplementation(() => createMockChild({ exitCode: 0 }));
+    mockExistsSync.mockReturnValue(false);
+    mockLoadCoverage.mockRejectedValue(new Error("no report"));
+
+    await runAllTestsWithCoverage({
+      rootPath: "/project",
+      customCommand: "custom-test-cmd",
+    });
+
+    expect(mockExec.mock.calls[0][0]).toBe("custom-test-cmd");
+    expect(mockExec.mock.calls[1][0]).toBe("npx playwright test");
   });
 });

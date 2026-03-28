@@ -33,7 +33,12 @@
       "Bash(cp tests/unit/renderer/components/diagram/diagram-controls.test.tsx eval/backup/)",
       "Bash(cp tests/unit/renderer/app.test.tsx eval/backup/)",
       "Bash(cp tests/unit/main/ipc/settings-handlers.test.ts eval/backup/)",
-      "Bash(node -e \"const ja=require\\(''./src/renderer/i18n/ja.json''\\); console.log\\(JSON.stringify\\(ja.help, null, 2\\)\\)\")"
+      "Bash(node -e \"const ja=require\\(''./src/renderer/i18n/ja.json''\\); console.log\\(JSON.stringify\\(ja.help, null, 2\\)\\)\")",
+      "Bash(ls:*)",
+      "Bash(npx playwright:*)",
+      "Bash(rm -r tests/e2e)",
+      "Bash(rm playwright.config.ts)",
+      "Bash(npm ls:*)"
     ]
   }
 }

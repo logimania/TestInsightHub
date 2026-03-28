@@ -150,7 +150,7 @@ describe("useFeedbackStore", () => {
 
       const state = useFeedbackStore.getState();
       expect(state.currentFeedback).not.toBeNull();
-      expect(state.currentFeedback!.version).toBe("1.2.0");
+      expect(state.currentFeedback!.version).toBe("1.3.0");
       expect(state.currentFeedback!.coverageThreshold).toBe(80);
       expect(state.currentFeedback!.gaps.length).toBeGreaterThan(0);
       expect(state.enrichedGaps.length).toBeGreaterThan(0);

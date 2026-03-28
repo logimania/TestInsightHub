@@ -1,6 +1,6 @@
 {
-  "version": "1.3.0",
-  "generatedAt": "2026-03-28T15:46:41.831Z",
+  "version": "1.2.0",
+  "generatedAt": "2026-03-28T14:35:45.476Z",
   "projectRoot": "D:\\AI_Agent\\ClaudeWorkingFolder\\TestTools\\TestInsightHub",
   "coverageThreshold": 80,
   "qualityGate": {
@@ -9,10 +9,10 @@
     "moduleResults": [
       {
         "moduleId": "src/main",
-        "coverage": 87.8,
+        "coverage": 91.2,
         "threshold": 80,
         "passed": true,
-        "fileCount": 39,
+        "fileCount": 40,
         "untestedFileCount": 2
       },
       {
@@ -25,7 +25,7 @@
       },
       {
         "moduleId": "src/renderer",
-        "coverage": 84.2,
+        "coverage": 80.1,
         "threshold": 80,
         "passed": true,
         "fileCount": 32,
@@ -33,10 +33,10 @@
       },
       {
         "moduleId": "src/shared",
-        "coverage": 100,
+        "coverage": 99.8,
         "threshold": 80,
         "passed": true,
-        "fileCount": 11,
+        "fileCount": 13,
         "untestedFileCount": 4
       }
     ],
@@ -46,7 +46,7 @@
     "totalModules": 4,
     "belowThreshold": 0,
     "totalUncoveredFunctions": 0,
-    "overallCoverage": 86.4
+    "overallCoverage": 86.2
   },
   "gaps": [
     {
@@ -184,66 +184,129 @@
       "changeFrequency": 0
     },
     {
-      "filePath": "src/main/services/test-runner/index.ts",
-      "moduleName": "src/main",
-      "currentCoverage": 47.03703703703704,
+      "filePath": "src/renderer/pages/coverage-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 53.179190751445084,
       "targetCoverage": 80,
       "uncoveredLines": [
         {
-          "start": 79,
-          "end": 79,
-          "functionName": "runTestsWithCoverage 内の分岐 (L79-81)"
+          "start": 24,
+          "end": 24,
+          "functionName": "getMetricForMode 内の分岐 (L24-24)"
         },
         {
-          "start": 96,
-          "end": 96,
-          "functionName": "runTestsWithCoverage 内の分岐 (L96-98)"
+          "start": 26,
+          "end": 26,
+          "functionName": "getMetricForMode 内の分岐 (L26-26)"
         },
         {
-          "start": 121,
-          "end": 121,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L121-124)"
+          "start": 38,
+          "end": 38,
+          "functionName": "filterByTestType 内の分岐 (L38-42)"
         },
         {
-          "start": 126,
-          "end": 126,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L126-126)"
+          "start": 86,
+          "end": 86,
+          "functionName": "CoveragePage 内の分岐 (L86-89)"
         },
         {
-          "start": 128,
-          "end": 128,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L128-135)"
+          "start": 91,
+          "end": 91,
+          "functionName": "CoveragePage 内の分岐 (L91-92)"
         },
         {
-          "start": 137,
-          "end": 137,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L137-140)"
+          "start": 95,
+          "end": 95,
+          "functionName": "CoveragePage 内の分岐 (L95-99)"
+        },
+        {
+          "start": 101,
+          "end": 101,
+          "functionName": "CoveragePage 内の分岐 (L101-106)"
+        },
+        {
+          "start": 108,
+          "end": 108,
+          "functionName": "CoveragePage 内の分岐 (L108-117)"
+        },
+        {
+          "start": 120,
+          "end": 120,
+          "functionName": "CoveragePage 内の分岐 (L120-139)"
         },
         {
           "start": 142,
           "end": 142,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L142-144)"
-        },
-        {
-          "start": 146,
-          "end": 146,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L146-147)"
-        },
-        {
-          "start": 149,
-          "end": 149,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L149-151)"
-        },
-        {
-          "start": 153,
-          "end": 153,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L153-156)"
+          "functionName": "CoveragePage 内の分岐 (L142-158)"
         }
       ],
-      "recommendedTestType": "unit",
+      "recommendedTestType": "e2e",
       "priority": "low",
-      "priorityScore": 24,
-      "complexity": 25,
+      "priorityScore": 23,
+      "complexity": 31,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/feedback-history-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 41.62162162162162,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 15,
+          "end": 15,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L15-16)"
+        },
+        {
+          "start": 28,
+          "end": 28,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L28-61)"
+        },
+        {
+          "start": 63,
+          "end": 63,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L63-70)"
+        },
+        {
+          "start": 72,
+          "end": 72,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L72-80)"
+        },
+        {
+          "start": 82,
+          "end": 82,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L82-82)"
+        },
+        {
+          "start": 150,
+          "end": 150,
+          "functionName": "HistoryEntry 内の分岐 (L150-156)"
+        },
+        {
+          "start": 158,
+          "end": 158,
+          "functionName": "HistoryEntry 内の分岐 (L158-171)"
+        },
+        {
+          "start": 173,
+          "end": 173,
+          "functionName": "HistoryEntry 内の分岐 (L173-183)"
+        },
+        {
+          "start": 186,
+          "end": 186,
+          "functionName": "HistoryEntry 内の分岐 (L186-192)"
+        },
+        {
+          "start": 194,
+          "end": 194,
+          "functionName": "HistoryEntry 内の分岐 (L194-199)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 21,
+      "complexity": 5,
       "changeFrequency": 0
     },
     {
@@ -310,69 +373,6 @@
       "changeFrequency": 0
     },
     {
-      "filePath": "src/renderer/pages/coverage-page.tsx",
-      "moduleName": "src/renderer",
-      "currentCoverage": 60.69364161849711,
-      "targetCoverage": 80,
-      "uncoveredLines": [
-        {
-          "start": 24,
-          "end": 24,
-          "functionName": "getMetricForMode 内の分岐 (L24-24)"
-        },
-        {
-          "start": 26,
-          "end": 26,
-          "functionName": "getMetricForMode 内の分岐 (L26-26)"
-        },
-        {
-          "start": 38,
-          "end": 38,
-          "functionName": "filterByTestType 内の分岐 (L38-42)"
-        },
-        {
-          "start": 86,
-          "end": 86,
-          "functionName": "CoveragePage 内の分岐 (L86-89)"
-        },
-        {
-          "start": 91,
-          "end": 91,
-          "functionName": "CoveragePage 内の分岐 (L91-92)"
-        },
-        {
-          "start": 95,
-          "end": 95,
-          "functionName": "CoveragePage 内の分岐 (L95-99)"
-        },
-        {
-          "start": 101,
-          "end": 101,
-          "functionName": "CoveragePage 内の分岐 (L101-106)"
-        },
-        {
-          "start": 108,
-          "end": 108,
-          "functionName": "CoveragePage 内の分岐 (L108-117)"
-        },
-        {
-          "start": 120,
-          "end": 120,
-          "functionName": "CoveragePage 内の分岐 (L120-139)"
-        },
-        {
-          "start": 142,
-          "end": 142,
-          "functionName": "CoveragePage 内の分岐 (L142-158)"
-        }
-      ],
-      "recommendedTestType": "e2e",
-      "priority": "low",
-      "priorityScore": 19,
-      "complexity": 31,
-      "changeFrequency": 0
-    },
-    {
       "filePath": "src/renderer/pages/diagram-page.tsx",
       "moduleName": "src/renderer",
       "currentCoverage": 61.5819209039548,
@@ -423,6 +423,39 @@
       "priority": "low",
       "priorityScore": 15,
       "complexity": 18,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/home-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 62.06896551724138,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 23,
+          "end": 23,
+          "functionName": "HomePage 内の分岐 (L23-24)"
+        },
+        {
+          "start": 26,
+          "end": 26,
+          "functionName": "HomePage 内の分岐 (L26-34)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "HomePage 内の分岐 (L37-45)"
+        },
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "HomePage 内の分岐 (L61-73)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 12,
+      "complexity": 10,
       "changeFrequency": 0
     },
     {
@@ -543,6 +576,39 @@
       "priorityScore": 6,
       "complexity": 3,
       "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/feedback-generator/index.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 78.26086956521739,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 41,
+          "end": 41,
+          "functionName": "generateFeedback 内の分岐 (L41-49)"
+        },
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "generateFeedback 内の分岐 (L61-69)"
+        },
+        {
+          "start": 116,
+          "end": 116,
+          "functionName": "buildComplexityMap 内の分岐 (L116-116)"
+        },
+        {
+          "start": 127,
+          "end": 127,
+          "functionName": "isSrcModule 内の分岐 (L127-127)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 4,
+      "complexity": 11,
+      "changeFrequency": 0
     }
   ],
   "recommendations": [
@@ -594,14 +660,31 @@
       "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
     },
     {
-      "type": "unit",
-      "targetFile": "src/main/services/test-runner/index.ts",
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/coverage-page.tsx",
       "suggestedTestFile": "",
       "functions": [
-        "runAllTestsWithCoverage",
-        "mergeCoverageFiles"
+        "handleRunTests",
+        "handleLoadExisting",
+        "onChange",
+        "onChange",
+        "onClick",
+        "onClick",
+        "onChange",
+        "buildZeroCoverage"
       ],
-      "description": "Line: 47%→80% | Function: 50%→80% | Branch: 71%→80% | 品質: MEDIUM | normal: runAllTestsWithCoverage の正常系テスト | normal: mergeCoverageFiles の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 未テスト関数: runAllTestsWithCoverage, mergeCoverageFiles"
+      "description": "Line: 53%→80% | Function: 33%→80% | Branch: 66%→80% | 品質: LOW | normal: handleRunTests の正常系テスト | normal: handleLoadExisting の正常系テスト | normal: onChange の正常系テスト | normal: onChange の正常系テスト | normal: onClick の正常系テスト | normal: onClick の正常系テスト | normal: onChange の正常系テスト | normal: buildZeroCoverage の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: handleRunTests, handleLoadExisting, onChange, onChange, onClick, onClick, onChange, buildZeroCoverage"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/feedback-history-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "toggleExpand",
+        "onClick",
+        "onToggle"
+      ],
+      "description": "Line: 42%→80% | Function: 50%→80% | Branch: 57%→80% | 品質: LOW | normal: toggleExpand の正常系テスト | normal: onClick の正常系テスト | normal: onToggle の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: toggleExpand, onClick, onToggle"
     },
     {
       "type": "e2e",
@@ -622,21 +705,6 @@
     },
     {
       "type": "e2e",
-      "targetFile": "src/renderer/pages/coverage-page.tsx",
-      "suggestedTestFile": "",
-      "functions": [
-        "handleRunTests",
-        "handleLoadExisting",
-        "onChange",
-        "onChange",
-        "onClick",
-        "onChange",
-        "buildZeroCoverage"
-      ],
-      "description": "Line: 61%→80% | Function: 42%→80% | Branch: 75%→80% | 品質: MEDIUM | normal: handleRunTests の正常系テスト | normal: handleLoadExisting の正常系テスト | normal: onChange の正常系テスト | normal: onChange の正常系テスト | normal: onClick の正常系テスト | normal: onChange の正常系テスト | normal: buildZeroCoverage の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: handleRunTests, handleLoadExisting, onChange, onChange, onClick, onChange, buildZeroCoverage"
-    },
-    {
-      "type": "e2e",
       "targetFile": "src/renderer/pages/diagram-page.tsx",
       "suggestedTestFile": "",
       "functions": [
@@ -645,6 +713,17 @@
         "getCoverageColor"
       ],
       "description": "Line: 62%→80% | Function: 40%→80% | Branch: 71%→80% | 品質: MEDIUM | normal: onClose の正常系テスト | normal: computeOverall の正常系テスト | normal: getCoverageColor の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: onClose, computeOverall, getCoverageColor"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/home-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "handleSelectProject",
+        "handleOpenRecent",
+        "onClick"
+      ],
+      "description": "Line: 62%→80% | Function: 25%→80% | Branch: 93%→80% | 品質: MEDIUM | normal: handleSelectProject の正常系テスト | normal: handleOpenRecent の正常系テスト | normal: onClick の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: handleSelectProject, handleOpenRecent, onClick"
     },
     {
       "type": "unit",
@@ -677,6 +756,17 @@
         "suggestGitignore"
       ],
       "description": "Line: 70%→80% | Function: 100%→80% | Branch: 64%→80% | 品質: MEDIUM | normal: deployFeedback の正常系テスト | normal: suggestGitignore の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/feedback-generator/index.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "generateFeedback",
+        "buildComplexityMap",
+        "isSrcModule"
+      ],
+      "description": "Line: 78%→80% | Function: 100%→80% | Branch: 79%→80% | 品質: HIGH | normal: generateFeedback の正常系テスト | normal: buildComplexityMap の正常系テスト | normal: isSrcModule の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト"
     }
   ]
 }

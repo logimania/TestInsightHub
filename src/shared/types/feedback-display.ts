@@ -1,5 +1,4 @@
 import type { CoverageMetric, TestType } from "./coverage";
-import type { TestPrerequisites } from "./feedback";
 
 /** フィードバック画面表示用の拡張ギャップ情報 */
 export interface EnrichedGap {
@@ -19,7 +18,6 @@ export interface EnrichedGap {
   readonly qualityScore: number;
   readonly qualitySuggestions: readonly string[];
   readonly requiredScenarios: readonly TestScenario[];
-  readonly prerequisites?: TestPrerequisites;
 }
 
 export interface UncoveredBranch {

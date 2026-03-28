@@ -18,6 +18,12 @@ function makeFeedbackFile(overrides: Partial<FeedbackFile> = {}): FeedbackFile {
     generatedAt: "2026-01-01T00:00:00Z",
     projectRoot: "/project",
     coverageThreshold: 80,
+    qualityGate: {
+      passed: false,
+      verdict: "不合格",
+      moduleResults: [],
+      failedModules: [],
+    },
     summary: {
       totalModules: 5,
       belowThreshold: 2,

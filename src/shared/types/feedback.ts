@@ -49,8 +49,6 @@ export interface CoverageGap {
   readonly priorityScore: number;
   readonly complexity: number;
   readonly changeFrequency: number;
-  readonly prerequisites?: TestPrerequisites;
-  readonly testingNote?: string;
 }
 
 export interface TestRecommendation {
@@ -81,26 +79,4 @@ export interface PriorityWeights {
   readonly coverageGapWeight: number;
   readonly complexityWeight: number;
   readonly changeFreqWeight: number;
-}
-
-// --- Prerequisites ---
-
-export interface TestPrerequisite {
-  readonly type: "package" | "config";
-  readonly name: string;
-  readonly description: string;
-  readonly installCommand?: string;
-  readonly configExample?: string;
-}
-
-export interface TestPrerequisites {
-  readonly satisfied: boolean;
-  readonly missing: readonly TestPrerequisite[];
-}
-
-export interface ProjectTestEnvironment {
-  readonly installedPackages: readonly string[];
-  readonly configFiles: readonly string[];
-  readonly testFramework: string | null;
-  readonly testEnvironment: string | null;
 }

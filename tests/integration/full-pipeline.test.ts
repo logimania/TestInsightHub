@@ -42,7 +42,7 @@ describe("Full Pipeline Integration", () => {
       threshold: 80,
     });
 
-    expect(feedback.version).toBe("1.2.0");
+    expect(feedback.version).toBe("1.3.0");
     expect(feedback.coverageThreshold).toBe(80);
     expect(feedback.summary.totalModules).toBe(moduleCoverages.length);
     expect(feedback.gaps.length).toBeGreaterThan(0);

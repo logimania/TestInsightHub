@@ -1,6 +1,6 @@
 {
   "version": "1.3.0",
-  "generatedAt": "2026-03-28T15:46:41.831Z",
+  "generatedAt": "2026-03-28T15:07:33.379Z",
   "projectRoot": "D:\\AI_Agent\\ClaudeWorkingFolder\\TestTools\\TestInsightHub",
   "coverageThreshold": 80,
   "qualityGate": {
@@ -9,7 +9,7 @@
     "moduleResults": [
       {
         "moduleId": "src/main",
-        "coverage": 87.8,
+        "coverage": 91.6,
         "threshold": 80,
         "passed": true,
         "fileCount": 39,
@@ -25,7 +25,7 @@
       },
       {
         "moduleId": "src/renderer",
-        "coverage": 84.2,
+        "coverage": 83.8,
         "threshold": 80,
         "passed": true,
         "fileCount": 32,
@@ -46,7 +46,7 @@
     "totalModules": 4,
     "belowThreshold": 0,
     "totalUncoveredFunctions": 0,
-    "overallCoverage": 86.4
+    "overallCoverage": 87.8
   },
   "gaps": [
     {
@@ -181,69 +181,6 @@
       "priority": "medium",
       "priorityScore": 40,
       "complexity": 1,
-      "changeFrequency": 0
-    },
-    {
-      "filePath": "src/main/services/test-runner/index.ts",
-      "moduleName": "src/main",
-      "currentCoverage": 47.03703703703704,
-      "targetCoverage": 80,
-      "uncoveredLines": [
-        {
-          "start": 79,
-          "end": 79,
-          "functionName": "runTestsWithCoverage 内の分岐 (L79-81)"
-        },
-        {
-          "start": 96,
-          "end": 96,
-          "functionName": "runTestsWithCoverage 内の分岐 (L96-98)"
-        },
-        {
-          "start": 121,
-          "end": 121,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L121-124)"
-        },
-        {
-          "start": 126,
-          "end": 126,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L126-126)"
-        },
-        {
-          "start": 128,
-          "end": 128,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L128-135)"
-        },
-        {
-          "start": 137,
-          "end": 137,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L137-140)"
-        },
-        {
-          "start": 142,
-          "end": 142,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L142-144)"
-        },
-        {
-          "start": 146,
-          "end": 146,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L146-147)"
-        },
-        {
-          "start": 149,
-          "end": 149,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L149-151)"
-        },
-        {
-          "start": 153,
-          "end": 153,
-          "functionName": "runAllTestsWithCoverage 内の分岐 (L153-156)"
-        }
-      ],
-      "recommendedTestType": "unit",
-      "priority": "low",
-      "priorityScore": 24,
-      "complexity": 25,
       "changeFrequency": 0
     },
     {
@@ -426,6 +363,39 @@
       "changeFrequency": 0
     },
     {
+      "filePath": "src/renderer/pages/home-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 62.06896551724138,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 23,
+          "end": 23,
+          "functionName": "HomePage 内の分岐 (L23-24)"
+        },
+        {
+          "start": 26,
+          "end": 26,
+          "functionName": "HomePage 内の分岐 (L26-34)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "HomePage 内の分岐 (L37-45)"
+        },
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "HomePage 内の分岐 (L61-73)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 12,
+      "complexity": 10,
+      "changeFrequency": 0
+    },
+    {
       "filePath": "src/main/services/project-parser/file-scanner.ts",
       "moduleName": "src/main",
       "currentCoverage": 73.25581395348837,
@@ -594,16 +564,6 @@
       "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
     },
     {
-      "type": "unit",
-      "targetFile": "src/main/services/test-runner/index.ts",
-      "suggestedTestFile": "",
-      "functions": [
-        "runAllTestsWithCoverage",
-        "mergeCoverageFiles"
-      ],
-      "description": "Line: 47%→80% | Function: 50%→80% | Branch: 71%→80% | 品質: MEDIUM | normal: runAllTestsWithCoverage の正常系テスト | normal: mergeCoverageFiles の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 未テスト関数: runAllTestsWithCoverage, mergeCoverageFiles"
-    },
-    {
       "type": "e2e",
       "targetFile": "src/renderer/pages/feedback-page.tsx",
       "suggestedTestFile": "",
@@ -645,6 +605,17 @@
         "getCoverageColor"
       ],
       "description": "Line: 62%→80% | Function: 40%→80% | Branch: 71%→80% | 品質: MEDIUM | normal: onClose の正常系テスト | normal: computeOverall の正常系テスト | normal: getCoverageColor の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: onClose, computeOverall, getCoverageColor"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/home-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "handleSelectProject",
+        "handleOpenRecent",
+        "onClick"
+      ],
+      "description": "Line: 62%→80% | Function: 25%→80% | Branch: 93%→80% | 品質: MEDIUM | normal: handleSelectProject の正常系テスト | normal: handleOpenRecent の正常系テスト | normal: onClick の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: handleSelectProject, handleOpenRecent, onClick"
     },
     {
       "type": "unit",

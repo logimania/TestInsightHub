@@ -39,7 +39,7 @@ describe("FeedbackHistoryPage", () => {
     useFeedbackStore.setState({
       history: [
         {
-          version: "1.2.0",
+          version: "1.3.0",
           generatedAt: "2026-01-01T00:00:00Z",
           projectRoot: "/project",
           coverageThreshold: 80,
@@ -59,7 +59,7 @@ describe("FeedbackHistoryPage", () => {
     useFeedbackStore.setState({
       history: [
         {
-          version: "1.2.0",
+          version: "1.3.0",
           generatedAt: "2026-01-01T00:00:00Z",
           projectRoot: "/project",
           coverageThreshold: 80,
@@ -82,7 +82,7 @@ describe("FeedbackHistoryPage", () => {
     useFeedbackStore.setState({
       history: [
         {
-          version: "1.2.0",
+          version: "1.3.0",
           generatedAt: "2026-01-01T00:00:00Z",
           projectRoot: "/project",
           coverageThreshold: 80,
