@@ -66,4 +66,95 @@ describe("module-builder", () => {
     expect(modules[0].name).toBe("lib");
     expect(modules[0].id).toBe("lib");
   });
+
+  it("handles files at root level (no directory)", () => {
+    const files: ParsedFile[] = [makeFile("utils.ts")];
+
+    const modules = buildModules(files);
+    expect(modules.length).toBe(1);
+    // dirname of "utils.ts" is "." so moduleDir should be "."
+    expect(modules[0].id).toBe(".");
+  });
+
+  it("respects maxDepth parameter for grouping", () => {
+    const files: ParsedFile[] = [
+      makeFile("src/api/v1/handler.ts"),
+      makeFile("src/api/v2/handler.ts"),
+      makeFile("src/service/auth/login.ts"),
+    ];
+
+    // Default maxDepth=2 groups by first 2 path segments
+    const modules2 = buildModules(files, 2);
+    expect(modules2.length).toBe(2); // src/api and src/service
+
+    // maxDepth=3 groups deeper
+    const modules3 = buildModules(files, 3);
+    expect(modules3.length).toBe(3); // src/api/v1, src/api/v2, src/service/auth
+  });
+
+  it("builds child modules for deeper paths", () => {
+    const files: ParsedFile[] = [
+      makeFile("src/api/handler.ts"),
+      makeFile("src/api/v1/handler.ts"),
+      makeFile("src/api/v2/handler.ts"),
+    ];
+
+    const modules = buildModules(files, 2);
+    const apiModule = modules.find((m) => m.id === "src/api");
+    expect(apiModule).toBeDefined();
+    // Children should include v1 and v2 subdirectories
+    expect(apiModule!.children.length).toBe(2);
+    const childIds = apiModule!.children.map((c) => c.id);
+    expect(childIds).toContain("src/api/v1");
+    expect(childIds).toContain("src/api/v2");
+  });
+
+  it("child modules have correct statistics", () => {
+    const files: ParsedFile[] = [
+      makeFile("src/service/auth/login.ts", 200),
+      makeFile("src/service/auth/logout.ts", 100),
+    ];
+
+    const modules = buildModules(files, 2);
+    const serviceModule = modules.find((m) => m.id === "src/service");
+    expect(serviceModule).toBeDefined();
+    expect(serviceModule!.children.length).toBe(1);
+
+    const authChild = serviceModule!.children[0];
+    expect(authChild.name).toBe("auth");
+    expect(authChild.totalLoc).toBe(300);
+    expect(authChild.fileCount).toBe(2);
+    expect(authChild.functionCount).toBe(2);
+  });
+
+  it("handles empty file list", () => {
+    const modules = buildModules([]);
+    expect(modules).toHaveLength(0);
+  });
+
+  it("child modules are sorted alphabetically", () => {
+    const files: ParsedFile[] = [
+      makeFile("src/main/z-module/a.ts"),
+      makeFile("src/main/a-module/b.ts"),
+      makeFile("src/main/m-module/c.ts"),
+    ];
+
+    const modules = buildModules(files, 2);
+    const mainModule = modules.find((m) => m.id === "src/main");
+    expect(mainModule).toBeDefined();
+    const childNames = mainModule!.children.map((c) => c.name);
+    expect(childNames).toEqual(["a-module", "m-module", "z-module"]);
+  });
+
+  it("files directly in parent path do not create child modules", () => {
+    const files: ParsedFile[] = [
+      makeFile("src/main/index.ts"),
+    ];
+
+    const modules = buildModules(files, 2);
+    const mainModule = modules.find((m) => m.id === "src/main");
+    expect(mainModule).toBeDefined();
+    // index.ts is directly in src/main, no children needed
+    expect(mainModule!.children).toHaveLength(0);
+  });
 });

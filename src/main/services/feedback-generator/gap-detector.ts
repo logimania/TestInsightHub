@@ -70,6 +70,20 @@ function recommendTestType(file: FileCoverage): TestType {
   if (file.coveredByTests.length > 0) {
     return file.coveredByTests[0].testType;
   }
+
+  const l = file.filePath.toLowerCase();
+
+  // Electron main entry → e2e
+  if (/\/main\/index\.ts$/.test(l)) return "e2e";
+
+  // React components/pages → e2e
+  if (/\/renderer\/(pages|components|stores|hooks)\//.test(l)) return "e2e";
+  if (/\.(tsx|jsx)$/.test(l) && /\/renderer\//.test(l)) return "e2e";
+
+  // IPC handlers, API routes → integration
+  if (/\/(api|controller|handler|route|ipc)\//.test(l)) return "integration";
+  if (/\/preload\//.test(l)) return "integration";
+
   return "unit";
 }
 

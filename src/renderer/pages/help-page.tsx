@@ -89,7 +89,7 @@ export function HelpPage(): JSX.Element {
               <p>{t("help.step5Desc")}</p>
               <ul className="help-list">
                 <li>{t("help.step5Item1")}</li>
-                <li>{t("help.step5Item2")}</li>
+                <li>{t("help.step5Item2Prefix")}<br /><strong style={{ color: "#dc2626" }}>{t("help.step5Item2Command")}</strong></li>
                 <li><strong>{t("help.step5Item3")}</strong></li>
               </ul>
             </div>

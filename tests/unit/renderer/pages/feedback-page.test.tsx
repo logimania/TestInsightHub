@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { screen } from "@testing-library/react";
+import { screen, fireEvent } from "@testing-library/react";
 import { renderWithProviders } from "../../../helpers/render-with-providers";
 import { FeedbackPage } from "../../../../src/renderer/pages/feedback-page";
 import { useProjectStore } from "../../../../src/renderer/stores/project-store";
@@ -202,5 +202,155 @@ describe("FeedbackPage", () => {
     });
     renderWithProviders(<FeedbackPage />, { route: "/feedback" });
     expect(screen.getByText(/カバレッジ画面でテスト/)).toBeDefined();
+  });
+
+  it("handles generate click with project and coverage data", () => {
+    useProjectStore.setState({
+      structure: {
+        rootPath: "/p",
+        modules: [{ id: "src", name: "src", path: "src", files: [{ path: "src/a.ts", language: "typescript", loc: 100, functions: [{ name: "fn1", startLine: 1, endLine: 10, complexity: 5 }], imports: [] }], fileCount: 1, functionCount: 1, totalLoc: 100, children: [] }],
+        edges: [],
+        totalFiles: 1,
+        totalLoc: 100,
+        parsedAt: "",
+        parseErrors: [],
+      },
+    });
+    useCoverageStore.setState({
+      moduleCoverages: [{ moduleId: "src", lineCoverage: { covered: 20, total: 100, percentage: 20 }, branchCoverage: null, functionCoverage: { covered: 20, total: 100, percentage: 20 }, files: [{ filePath: "src/a.ts", lineCoverage: { covered: 20, total: 100, percentage: 20 }, branchCoverage: null, functionCoverage: { covered: 20, total: 100, percentage: 20 }, uncoveredLines: [{ start: 1, end: 10 }], uncoveredFunctions: ["fn1"], coveredByTests: [] }], colorLevel: "red" }],
+    });
+
+    renderWithProviders(<FeedbackPage />, { route: "/feedback" });
+    const btn = screen.getByRole("button", { name: /フィードバック生成/ });
+    expect(btn.hasAttribute("disabled")).toBe(false);
+    fireEvent.click(btn);
+    // Should trigger generation without errors
+    expect(btn).toBeDefined();
+  });
+
+  it("handles threshold input change", () => {
+    renderWithProviders(<FeedbackPage />, { route: "/feedback" });
+    const input = screen.getByRole("spinbutton");
+    fireEvent.change(input, { target: { value: "70" } });
+    expect((input as HTMLInputElement).value).toBe("70");
+  });
+
+  it("handles clear button click when feedback exists", () => {
+    useProjectStore.setState({
+      structure: { rootPath: "/p", modules: [], edges: [], totalFiles: 1, totalLoc: 10, parsedAt: "", parseErrors: [] },
+    });
+    useFeedbackStore.setState({
+      currentFeedback: {
+        version: "1.1.0",
+        generatedAt: "2026-01-01T00:00:00Z",
+        projectRoot: "/p",
+        coverageThreshold: 80,
+        summary: { totalModules: 1, belowThreshold: 0, totalUncoveredFunctions: 0, overallCoverage: 90 },
+        gaps: [],
+        recommendations: [],
+      },
+      enrichedGaps: [],
+    });
+
+    renderWithProviders(<FeedbackPage />, { route: "/feedback" });
+    const clearBtn = screen.getByRole("button", { name: /クリア/ });
+    fireEvent.click(clearBtn);
+
+    // After clearing, feedback should be reset
+    expect(useFeedbackStore.getState().currentFeedback).toBeNull();
+  });
+
+  it("handles copy to clipboard click", async () => {
+    useProjectStore.setState({
+      structure: { rootPath: "/p", modules: [], edges: [], totalFiles: 1, totalLoc: 10, parsedAt: "", parseErrors: [] },
+    });
+    useFeedbackStore.setState({
+      currentFeedback: {
+        version: "1.1.0",
+        generatedAt: "2026-01-01T00:00:00Z",
+        projectRoot: "/p",
+        coverageThreshold: 80,
+        summary: { totalModules: 1, belowThreshold: 0, totalUncoveredFunctions: 0, overallCoverage: 90 },
+        gaps: [],
+        recommendations: [],
+      },
+      enrichedGaps: [],
+    });
+
+    renderWithProviders(<FeedbackPage />, { route: "/feedback" });
+    const copyBtn = screen.getByRole("button", { name: /コピー/ });
+    fireEvent.click(copyBtn);
+
+    // clipboard.writeText should have been called
+    expect(navigator.clipboard.writeText).toHaveBeenCalled();
+  });
+
+  it("handles deploy button click", async () => {
+    useProjectStore.setState({
+      structure: { rootPath: "/p", modules: [], edges: [], totalFiles: 1, totalLoc: 10, parsedAt: "", parseErrors: [] },
+    });
+    useFeedbackStore.setState({
+      currentFeedback: {
+        version: "1.1.0",
+        generatedAt: "2026-01-01T00:00:00Z",
+        projectRoot: "/p",
+        coverageThreshold: 80,
+        summary: { totalModules: 1, belowThreshold: 0, totalUncoveredFunctions: 0, overallCoverage: 90 },
+        gaps: [],
+        recommendations: [],
+      },
+      enrichedGaps: [],
+    });
+
+    renderWithProviders(<FeedbackPage />, { route: "/feedback" });
+    const deployBtn = screen.getByRole("button", { name: /プロジェクトに配置/ });
+    fireEvent.click(deployBtn);
+
+    expect((window as any).api.feedback.deploy).toHaveBeenCalled();
+  });
+
+  it("renders view history link", () => {
+    renderWithProviders(<FeedbackPage />, { route: "/feedback" });
+    const historyLink = screen.getByRole("button", { name: /履歴|history/i });
+    expect(historyLink).toBeDefined();
+  });
+
+  it("shows enriched gap with branch coverage when present", () => {
+    useProjectStore.setState({
+      structure: { rootPath: "/p", modules: [], edges: [], totalFiles: 1, totalLoc: 100, parsedAt: "", parseErrors: [] },
+    });
+    useFeedbackStore.setState({
+      currentFeedback: {
+        version: "1.1.0",
+        generatedAt: "2026-01-01T00:00:00Z",
+        projectRoot: "/p",
+        coverageThreshold: 80,
+        summary: { totalModules: 1, belowThreshold: 1, totalUncoveredFunctions: 0, overallCoverage: 50 },
+        gaps: [],
+        recommendations: [],
+      },
+      enrichedGaps: [{
+        filePath: "src/b.ts",
+        moduleName: "src",
+        lineCoverage: { covered: 50, total: 100, percentage: 50 },
+        branchCoverage: { covered: 2, total: 10, percentage: 20 },
+        functionCoverage: { covered: 5, total: 10, percentage: 50 },
+        targetCoverage: 80,
+        priority: "medium",
+        priorityScore: 50,
+        complexity: 5,
+        recommendedTestType: "unit",
+        uncoveredFunctions: [],
+        uncoveredBranches: [],
+        qualityLevel: "medium",
+        qualityScore: 50,
+        qualitySuggestions: [],
+        requiredScenarios: [],
+      }],
+    });
+
+    renderWithProviders(<FeedbackPage />, { route: "/feedback" });
+    expect(screen.getByText(/src\/b\.ts/)).toBeDefined();
+    expect(screen.getByText("Branch")).toBeDefined();
   });
 });

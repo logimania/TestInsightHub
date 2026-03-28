@@ -106,7 +106,7 @@
           "functionName": "setupCSP 内の分岐 (L51-58)"
         }
       ],
-      "recommendedTestType": "integration",
+      "recommendedTestType": "e2e",
       "priority": "medium",
       "priorityScore": 41,
       "complexity": 3,

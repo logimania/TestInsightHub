@@ -38,7 +38,10 @@
       "Bash(npx playwright:*)",
       "Bash(rm -r tests/e2e)",
       "Bash(rm playwright.config.ts)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''.test-insight/feedback.json'',''utf8''\\)\\); const idx=d.gaps.find\\(g=>g.filePath.includes\\(''main/index''\\)\\); console.log\\(idx ? idx.filePath + '' | '' + idx.recommendedTestType : ''not found''\\);\")",
+      "Bash(rm -f tests/unit/main/services/main-index.test.ts)",
+      "Bash(rm -f playwright.config.ts)"
     ]
   }
 }

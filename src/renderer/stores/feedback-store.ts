@@ -268,9 +268,11 @@ function inferTestType(path: string): TestType {
   if (/\/(pages|page|e2e|flow)\//.test(l)) return "e2e";
   if (/\.(tsx|jsx)$/.test(l) && /\/renderer\//.test(l)) return "e2e";
 
-  // Preload, main entry → integration test
+  // Preload → integration test
   if (/\/preload\//.test(l)) return "integration";
-  if (/\/main\/index\.ts$/.test(l)) return "integration";
+
+  // Electron main entry → e2e test (requires actual app launch)
+  if (/\/main\/index\.ts$/.test(l)) return "e2e";
 
   return "unit";
 }

@@ -446,4 +446,122 @@ describe("runAllTestsWithCoverage", () => {
     expect(mockExec.mock.calls[0][0]).toBe("custom-test-cmd");
     expect(mockExec.mock.calls[1][0]).toBe("npx playwright test");
   });
+
+  it("returns fallback result when no primary result and no coverage", async () => {
+    // All frameworks have no commands
+    const noCmd1 = { ...VITEST_FRAMEWORK, coverageCommand: "" };
+    const noCmd2 = { ...PLAYWRIGHT_FRAMEWORK, coverageCommand: "" };
+    mockDetectAllFrameworks.mockResolvedValue([noCmd1, noCmd2]);
+
+    const result = await runAllTestsWithCoverage({ rootPath: "/project" });
+
+    expect(result.exitCode).toBe(1);
+    expect(result.stderr).toBe("No test results");
+    expect(result.coverageResult).toBeNull();
+  });
+
+  it("calls onOutput with framework detection info", async () => {
+    mockDetectAllFrameworks.mockResolvedValue([VITEST_FRAMEWORK]);
+    mockExec.mockImplementation(() => createMockChild({ exitCode: 0 }));
+    mockExistsSync.mockReturnValue(false);
+    mockLoadCoverage.mockRejectedValue(new Error("no report"));
+
+    const lines: Array<{ line: string; stream: string }> = [];
+    await runAllTestsWithCoverage({
+      rootPath: "/project",
+      onOutput: (line, stream) => lines.push({ line, stream }),
+    });
+
+    const stdoutLines = lines.filter((l) => l.stream === "stdout");
+    expect(stdoutLines.some((l) => l.line.includes("検出されたフレームワーク"))).toBe(true);
+    expect(stdoutLines.some((l) => l.line.includes("vitest"))).toBe(true);
+  });
+
+  it("auto-detects coverage for unit framework when reportPath missing", async () => {
+    const noReportFw = { ...VITEST_FRAMEWORK, reportPath: "" };
+    mockDetectAllFrameworks.mockResolvedValue([noReportFw]);
+    mockExec.mockImplementation(() => createMockChild({ exitCode: 0 }));
+    mockExistsSync.mockReturnValue(false);
+    mockLoadCoverage.mockResolvedValue({
+      coverage: {
+        reportFormat: "istanbul",
+        files: [{ filePath: "src/x.ts", lineCoverage: { covered: 10, total: 20, percentage: 50 }, branchCoverage: null, functionCoverage: { covered: 5, total: 10, percentage: 50 }, uncoveredLines: [], uncoveredFunctions: [], coveredByTests: [] }],
+        generatedAt: "",
+      },
+      unmatchedFiles: [],
+      matchRate: 100,
+    });
+
+    const result = await runAllTestsWithCoverage({ rootPath: "/project" });
+
+    expect(result.coverageResult).not.toBeNull();
+    expect(mockLoadCoverage).toHaveBeenCalledWith({ rootPath: "/project", autoDetect: true });
+  });
+
+  it("handles coverage loading failure gracefully in multi-framework run", async () => {
+    mockDetectAllFrameworks.mockResolvedValue([VITEST_FRAMEWORK]);
+    mockExec.mockImplementation(() => createMockChild({ exitCode: 0 }));
+    mockExistsSync.mockReturnValue(true);
+    mockLoadCoverage.mockRejectedValue(new Error("parse error"));
+
+    const lines: Array<{ line: string; stream: string }> = [];
+    const result = await runAllTestsWithCoverage({
+      rootPath: "/project",
+      onOutput: (line, stream) => lines.push({ line, stream }),
+    });
+
+    // Should still return a result even if coverage loading fails
+    expect(result.framework).toEqual(VITEST_FRAMEWORK);
+    const stderrLines = lines.filter((l) => l.stream === "stderr");
+    expect(stderrLines.some((l) => l.line.includes("カバレッジ解析失敗"))).toBe(true);
+  });
+
+  it("merges coverage files with same path by taking max values", async () => {
+    // Use two unit frameworks so both have reportPaths
+    const FW_A = { ...VITEST_FRAMEWORK, reportPath: "/project/coverage/a.json" };
+    const FW_B = { ...VITEST_FRAMEWORK, framework: "jest" as const, reportPath: "/project/coverage/b.json" };
+    mockDetectAllFrameworks.mockResolvedValue([FW_A, FW_B]);
+    mockExec.mockImplementation(() => createMockChild({ exitCode: 0 }));
+    mockExistsSync.mockReturnValue(true);
+
+    let callCount = 0;
+    mockLoadCoverage.mockImplementation(() => {
+      callCount++;
+      return Promise.resolve({
+        coverage: {
+          reportFormat: "istanbul",
+          files: [{
+            filePath: "src/shared.ts",
+            lineCoverage: { covered: callCount === 1 ? 30 : 70, total: 100, percentage: callCount === 1 ? 30 : 70 },
+            branchCoverage: callCount === 1 ? { covered: 2, total: 5, percentage: 40 } : null,
+            functionCoverage: { covered: callCount === 1 ? 3 : 8, total: 10, percentage: callCount === 1 ? 30 : 80 },
+            uncoveredLines: callCount === 1 ? [{ start: 1, end: 70 }] : [{ start: 1, end: 30 }],
+            uncoveredFunctions: callCount === 1 ? ["a", "b", "c"] : ["a"],
+            coveredByTests: callCount === 1 ? [{ testFilePath: "unit.test.ts", testName: "t1", testType: "unit" as const }] : [{ testFilePath: "e2e.test.ts", testName: "t2", testType: "e2e" as const }],
+          }],
+          generatedAt: "",
+        },
+        unmatchedFiles: [],
+        matchRate: 100,
+      });
+    });
+
+    const result = await runAllTestsWithCoverage({ rootPath: "/project" });
+
+    expect(result.coverageResult).not.toBeNull();
+    const mergedFiles = result.coverageResult!.coverage.files;
+    expect(mergedFiles).toHaveLength(1);
+    // Should take max covered values
+    expect(mergedFiles[0].lineCoverage.covered).toBe(70);
+    expect(mergedFiles[0].functionCoverage.covered).toBe(8);
+    // Should merge coveredByTests
+    expect(mergedFiles[0].coveredByTests).toHaveLength(2);
+    // Should take shorter uncoveredLines (fewer uncovered = better)
+    expect(mergedFiles[0].uncoveredLines).toHaveLength(1);
+    expect(mergedFiles[0].uncoveredLines[0].end).toBe(30);
+    // Should take shorter uncoveredFunctions
+    expect(mergedFiles[0].uncoveredFunctions).toHaveLength(1);
+    // branchCoverage should use existing value when other is null
+    expect(mergedFiles[0].branchCoverage).not.toBeNull();
+  });
 });
