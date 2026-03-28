@@ -25,6 +25,7 @@ import {
   PRIORITY_SCORE_THRESHOLDS,
 } from "@shared/constants";
 import { detectPrerequisites } from "@shared/utils/prerequisite-detector";
+import { evaluateQualityGate } from "@shared/utils/quality-gate";
 
 interface FeedbackState {
   readonly currentFeedback: FeedbackFile | null;
@@ -58,17 +59,23 @@ export const useFeedbackStore = create<FeedbackState>((set, get) => ({
     projectTestEnv,
   ) => {
     set({ isGenerating: true });
+
+    // カバレッジ対象はsrc配下のみ
+    const srcCoverages = moduleCoverages.filter((mc) =>
+      isSrcModule(mc.moduleId),
+    );
+
     try {
       const feedback = generateFeedbackLocal(
         structure,
-        moduleCoverages,
+        srcCoverages,
         threshold,
         weights,
         projectTestEnv,
       );
       const enrichedGaps = buildEnrichedGaps(
         structure,
-        moduleCoverages,
+        srcCoverages,
         threshold,
         weights,
         projectTestEnv,
@@ -146,6 +153,7 @@ function buildEnrichedGaps(
     for (const file of filesToCheck) {
       if (file.lineCoverage.percentage >= threshold) continue;
       const src = allFiles.find((f) => f.path === file.filePath);
+
 
       // ソースファイルの実際の関数名を取得（制御構文を除外）
       const sourceFunctionNames = src
@@ -434,11 +442,13 @@ function generateFeedbackLocal(
   const recs = buildRecommendations(gaps);
   const tc = mc.reduce((s, m) => s + m.lineCoverage.covered, 0);
   const tl = mc.reduce((s, m) => s + m.lineCoverage.total, 0);
+  const qualityGate = evaluateQualityGate(mc, th);
   return {
     version: FEEDBACK_FILE_VERSION,
     generatedAt: new Date().toISOString(),
     projectRoot: s.rootPath,
     coverageThreshold: th,
+    qualityGate,
     summary: {
       totalModules: mc.length,
       belowThreshold: mc.filter(
@@ -569,4 +579,12 @@ function compareFeedbackLocal(
     newGaps: ng,
     improvementRate: t > 0 ? Math.round((imp.length / t) * 1000) / 10 : 0,
   };
+}
+
+function isSrcModule(moduleId: string): boolean {
+  return (
+    moduleId === "src" ||
+    moduleId.startsWith("src/") ||
+    moduleId.startsWith("src\\")
+  );
 }

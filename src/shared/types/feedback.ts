@@ -5,9 +5,26 @@ export interface FeedbackFile {
   readonly generatedAt: string;
   readonly projectRoot: string;
   readonly coverageThreshold: number;
+  readonly qualityGate: QualityGate;
   readonly summary: FeedbackSummary;
   readonly gaps: readonly CoverageGap[];
   readonly recommendations: readonly TestRecommendation[];
+}
+
+export interface QualityGate {
+  readonly passed: boolean;
+  readonly verdict: string;
+  readonly moduleResults: readonly ModuleGateResult[];
+  readonly failedModules: readonly string[];
+}
+
+export interface ModuleGateResult {
+  readonly moduleId: string;
+  readonly coverage: number;
+  readonly threshold: number;
+  readonly passed: boolean;
+  readonly fileCount: number;
+  readonly untestedFileCount: number;
 }
 
 export interface FeedbackSummary {
@@ -33,6 +50,7 @@ export interface CoverageGap {
   readonly complexity: number;
   readonly changeFrequency: number;
   readonly prerequisites?: TestPrerequisites;
+  readonly testingNote?: string;
 }
 
 export interface TestRecommendation {

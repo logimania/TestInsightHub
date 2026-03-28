@@ -30,16 +30,6 @@ vi.mock("../../../../src/main/services/settings-manager", () => ({
 
 import { registerSettingsHandlers } from "../../../../src/main/ipc/settings-handlers";
 
-function findHandler(channel: string): Function {
-  const call = mockHandle.mock.calls.find(
-    (c: unknown[]) => c[0] === channel,
-  );
-  if (!call) {
-    throw new Error(`No handler registered for channel: ${channel}`);
-  }
-  return call[1];
-}
-
 describe("settings-handlers", () => {
   beforeEach(() => {
     mockHandle.mockReset();
@@ -51,7 +41,7 @@ describe("settings-handlers", () => {
   });
 
   describe("registerSettingsHandlers", () => {
-    it("registers all 5 IPC handlers", () => {
+    it("registers all 5 settings handlers", () => {
       registerSettingsHandlers();
       const channels = mockHandle.mock.calls.map((c: unknown[]) => c[0]);
       expect(channels).toContain("settings:load-global");
@@ -63,66 +53,96 @@ describe("settings-handlers", () => {
   });
 
   describe("settings:load-global handler", () => {
-    it("delegates to loadGlobalSettings", async () => {
-      const settings = { theme: "dark", locale: "ja" };
-      mockLoadGlobal.mockResolvedValue(settings);
-      registerSettingsHandlers();
-      const handler = findHandler("settings:load-global");
+    let handler: Function;
 
-      const result = await handler({});
+    beforeEach(() => {
+      registerSettingsHandlers();
+      handler = mockHandle.mock.calls.find(
+        (c: unknown[]) => c[0] === "settings:load-global",
+      )![1];
+    });
+
+    it("delegates to loadGlobalSettings", async () => {
+      const settings = { theme: "dark", language: "ja" };
+      mockLoadGlobal.mockResolvedValue(settings);
+
+      const result = await handler();
       expect(result).toEqual(settings);
-      expect(mockLoadGlobal).toHaveBeenCalledOnce();
+      expect(mockLoadGlobal).toHaveBeenCalled();
     });
   });
 
   describe("settings:save-global handler", () => {
-    it("delegates to saveGlobalSettings with provided settings", async () => {
-      const settings = { theme: "light", locale: "en" };
-      registerSettingsHandlers();
-      const handler = findHandler("settings:save-global");
+    let handler: Function;
 
+    beforeEach(() => {
+      registerSettingsHandlers();
+      handler = mockHandle.mock.calls.find(
+        (c: unknown[]) => c[0] === "settings:save-global",
+      )![1];
+    });
+
+    it("delegates to saveGlobalSettings", async () => {
+      const settings = { theme: "light", language: "en" };
       await handler({}, settings);
       expect(mockSaveGlobal).toHaveBeenCalledWith(settings);
     });
   });
 
   describe("settings:load-project handler", () => {
-    it("delegates to loadProjectSettings with projectId", async () => {
-      const projectSettings = { projectId: "proj-1", name: "Test" };
-      mockLoadProject.mockResolvedValue(projectSettings);
-      registerSettingsHandlers();
-      const handler = findHandler("settings:load-project");
+    let handler: Function;
 
-      const result = await handler({}, "proj-1");
+    beforeEach(() => {
+      registerSettingsHandlers();
+      handler = mockHandle.mock.calls.find(
+        (c: unknown[]) => c[0] === "settings:load-project",
+      )![1];
+    });
+
+    it("delegates to loadProjectSettings with projectId", async () => {
+      const projectSettings = { exclude: ["node_modules"] };
+      mockLoadProject.mockResolvedValue(projectSettings);
+
+      const result = await handler({}, "proj-123");
       expect(result).toEqual(projectSettings);
-      expect(mockLoadProject).toHaveBeenCalledWith("proj-1");
+      expect(mockLoadProject).toHaveBeenCalledWith("proj-123");
     });
   });
 
   describe("settings:save-project handler", () => {
-    it("delegates to saveProjectSettings with provided settings", async () => {
-      const settings = { projectId: "proj-1", name: "Test" };
-      registerSettingsHandlers();
-      const handler = findHandler("settings:save-project");
+    let handler: Function;
 
+    beforeEach(() => {
+      registerSettingsHandlers();
+      handler = mockHandle.mock.calls.find(
+        (c: unknown[]) => c[0] === "settings:save-project",
+      )![1];
+    });
+
+    it("delegates to saveProjectSettings", async () => {
+      const settings = { projectId: "proj-123", exclude: [] };
       await handler({}, settings);
       expect(mockSaveProject).toHaveBeenCalledWith(settings);
     });
   });
 
   describe("recent-projects:load handler", () => {
-    it("delegates to loadRecentProjects", async () => {
-      const projects = [
-        { id: "proj-1", name: "Project 1", path: "/path/1" },
-        { id: "proj-2", name: "Project 2", path: "/path/2" },
-      ];
-      mockLoadRecent.mockResolvedValue(projects);
-      registerSettingsHandlers();
-      const handler = findHandler("recent-projects:load");
+    let handler: Function;
 
-      const result = await handler({});
+    beforeEach(() => {
+      registerSettingsHandlers();
+      handler = mockHandle.mock.calls.find(
+        (c: unknown[]) => c[0] === "recent-projects:load",
+      )![1];
+    });
+
+    it("delegates to loadRecentProjects", async () => {
+      const projects = [{ id: "proj-1", path: "/path" }];
+      mockLoadRecent.mockResolvedValue(projects);
+
+      const result = await handler();
       expect(result).toEqual(projects);
-      expect(mockLoadRecent).toHaveBeenCalledOnce();
+      expect(mockLoadRecent).toHaveBeenCalled();
     });
   });
 });

@@ -3,7 +3,7 @@ import type { PriorityWeights } from "./types/feedback";
 
 export const APP_NAME = "Test Insight Hub";
 export const APP_VERSION = "0.1.0";
-export const FEEDBACK_FILE_VERSION = "1.1.0";
+export const FEEDBACK_FILE_VERSION = "1.2.0";
 
 export const DEFAULT_COVERAGE_THRESHOLD = 80;
 

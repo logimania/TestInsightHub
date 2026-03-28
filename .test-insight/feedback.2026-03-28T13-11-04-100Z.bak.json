@@ -1,186 +1,149 @@
 {
-  "version": "1.2.0",
-  "generatedAt": "2026-03-28T14:35:45.476Z",
+  "version": "1.1.0",
+  "generatedAt": "2026-03-26T13:55:51.955Z",
   "projectRoot": "D:\\AI_Agent\\ClaudeWorkingFolder\\TestTools\\TestInsightHub",
   "coverageThreshold": 80,
-  "qualityGate": {
-    "passed": true,
-    "verdict": "合格: 全4モジュールが閾値80%を達成",
-    "moduleResults": [
-      {
-        "moduleId": "src/main",
-        "coverage": 91.2,
-        "threshold": 80,
-        "passed": true,
-        "fileCount": 40,
-        "untestedFileCount": 2
-      },
-      {
-        "moduleId": "src/preload",
-        "coverage": 87.9,
-        "threshold": 80,
-        "passed": true,
-        "fileCount": 1,
-        "untestedFileCount": 0
-      },
-      {
-        "moduleId": "src/renderer",
-        "coverage": 80.1,
-        "threshold": 80,
-        "passed": true,
-        "fileCount": 32,
-        "untestedFileCount": 0
-      },
-      {
-        "moduleId": "src/shared",
-        "coverage": 99.8,
-        "threshold": 80,
-        "passed": true,
-        "fileCount": 13,
-        "untestedFileCount": 4
-      }
-    ],
-    "failedModules": []
-  },
   "summary": {
-    "totalModules": 4,
-    "belowThreshold": 0,
-    "totalUncoveredFunctions": 0,
-    "overallCoverage": 86.2
+    "totalModules": 1,
+    "belowThreshold": 1,
+    "totalUncoveredFunctions": 106,
+    "overallCoverage": 74.2
   },
   "gaps": [
     {
-      "filePath": "src/main/index.ts",
-      "moduleName": "src/main",
+      "filePath": "src/renderer/App.tsx",
+      "moduleName": "src/renderer",
       "currentCoverage": 0,
       "targetCoverage": 80,
       "uncoveredLines": [
         {
           "start": 1,
           "end": 1,
-          "functionName": "L1-3 の分岐"
+          "functionName": "L1-18 の分岐"
         },
         {
-          "start": 5,
-          "end": 5,
-          "functionName": "L5-5 の分岐"
+          "start": 20,
+          "end": 20,
+          "functionName": "L20-20 の分岐"
         },
         {
-          "start": 7,
-          "end": 7,
-          "functionName": "L7-7 の分岐"
+          "start": 22,
+          "end": 22,
+          "functionName": "App 内の分岐 (L22-24)"
         },
         {
-          "start": 9,
-          "end": 9,
-          "functionName": "createWindow 内の分岐 (L9-25)"
+          "start": 26,
+          "end": 26,
+          "functionName": "App 内の分岐 (L26-31)"
         },
         {
-          "start": 27,
-          "end": 27,
-          "functionName": "createWindow 内の分岐 (L27-29)"
-        },
-        {
-          "start": 31,
-          "end": 31,
-          "functionName": "createWindow 内の分岐 (L31-34)"
-        },
-        {
-          "start": 36,
-          "end": 36,
-          "functionName": "createWindow 内の分岐 (L36-36)"
+          "start": 33,
+          "end": 33,
+          "functionName": "App 内の分岐 (L33-36)"
         },
         {
           "start": 38,
           "end": 38,
-          "functionName": "createWindow 内の分岐 (L38-43)"
+          "functionName": "App 内の分岐 (L38-42)"
         },
         {
-          "start": 45,
-          "end": 45,
-          "functionName": "setupCSP 内の分岐 (L45-49)"
+          "start": 44,
+          "end": 44,
+          "functionName": "App 内の分岐 (L44-71)"
         },
         {
-          "start": 51,
-          "end": 51,
-          "functionName": "setupCSP 内の分岐 (L51-58)"
+          "start": 73,
+          "end": 73,
+          "functionName": "App 内の分岐 (L73-73)"
         }
       ],
-      "recommendedTestType": "integration",
+      "recommendedTestType": "e2e",
       "priority": "medium",
       "priorityScore": 41,
       "complexity": 3,
       "changeFrequency": 0
     },
     {
-      "filePath": "src/main/ipc/index.ts",
-      "moduleName": "src/main",
+      "filePath": "src/renderer/components/keyboard-shortcut-provider.tsx",
+      "moduleName": "src/renderer",
       "currentCoverage": 0,
       "targetCoverage": 80,
       "uncoveredLines": [
         {
-          "start": 2,
-          "end": 2,
-          "functionName": "L2-7 の分岐"
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-1 の分岐"
         },
         {
-          "start": 9,
-          "end": 9,
-          "functionName": "registerAllHandlers 内の分岐 (L9-16)"
+          "start": 3,
+          "end": 3,
+          "functionName": "KeyboardShortcutProvider 内の分岐 (L3-6)"
         }
       ],
-      "recommendedTestType": "integration",
+      "recommendedTestType": "e2e",
       "priority": "medium",
       "priorityScore": 40,
       "complexity": 1,
       "changeFrequency": 0
     },
     {
-      "filePath": "src/shared/types/coverage.ts",
-      "moduleName": "src/shared",
-      "currentCoverage": 0,
+      "filePath": "src/renderer/components/diagram/dependency-edge.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 3.7735849056603774,
       "targetCoverage": 80,
       "uncoveredLines": [],
-      "recommendedTestType": "unit",
-      "priority": "medium",
-      "priorityScore": 40,
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 38,
       "complexity": 1,
       "changeFrequency": 0
     },
     {
-      "filePath": "src/shared/types/feedback-display.ts",
-      "moduleName": "src/shared",
-      "currentCoverage": 0,
+      "filePath": "src/renderer/components/toast.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 34.375,
       "targetCoverage": 80,
-      "uncoveredLines": [],
-      "recommendedTestType": "unit",
-      "priority": "medium",
-      "priorityScore": 40,
-      "complexity": 1,
-      "changeFrequency": 0
-    },
-    {
-      "filePath": "src/shared/types/feedback.ts",
-      "moduleName": "src/shared",
-      "currentCoverage": 0,
-      "targetCoverage": 80,
-      "uncoveredLines": [],
-      "recommendedTestType": "unit",
-      "priority": "medium",
-      "priorityScore": 40,
-      "complexity": 1,
-      "changeFrequency": 0
-    },
-    {
-      "filePath": "src/shared/types/settings.ts",
-      "moduleName": "src/shared",
-      "currentCoverage": 0,
-      "targetCoverage": 80,
-      "uncoveredLines": [],
-      "recommendedTestType": "unit",
-      "priority": "medium",
-      "priorityScore": 40,
-      "complexity": 1,
+      "uncoveredLines": [
+        {
+          "start": 20,
+          "end": 20,
+          "functionName": "Toast 内の分岐 (L20-22)"
+        },
+        {
+          "start": 24,
+          "end": 24,
+          "functionName": "Toast 内の分岐 (L24-27)"
+        },
+        {
+          "start": 29,
+          "end": 29,
+          "functionName": "Toast 内の分岐 (L29-32)"
+        },
+        {
+          "start": 34,
+          "end": 34,
+          "functionName": "Toast 内の分岐 (L34-34)"
+        },
+        {
+          "start": 36,
+          "end": 36,
+          "functionName": "Toast 内の分岐 (L36-38)"
+        },
+        {
+          "start": 40,
+          "end": 40,
+          "functionName": "Toast 内の分岐 (L40-44)"
+        },
+        {
+          "start": 46,
+          "end": 46,
+          "functionName": "Toast 内の分岐 (L46-46)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 25,
+      "complexity": 7,
       "changeFrequency": 0
     },
     {
@@ -373,6 +336,49 @@
       "changeFrequency": 0
     },
     {
+      "filePath": "src/renderer/components/progress-bar-global.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 48.484848484848484,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 31,
+          "end": 31,
+          "functionName": "ProgressBarGlobal 内の分岐 (L31-33)"
+        },
+        {
+          "start": 35,
+          "end": 35,
+          "functionName": "ProgressBarGlobal 内の分岐 (L35-35)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "ProgressBarGlobal 内の分岐 (L37-44)"
+        },
+        {
+          "start": 46,
+          "end": 46,
+          "functionName": "ProgressBarGlobal 内の分岐 (L46-46)"
+        },
+        {
+          "start": 48,
+          "end": 48,
+          "functionName": "ProgressBarGlobal 内の分岐 (L48-50)"
+        },
+        {
+          "start": 52,
+          "end": 52,
+          "functionName": "ProgressBarGlobal 内の分岐 (L52-52)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 17,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
       "filePath": "src/renderer/pages/diagram-page.tsx",
       "moduleName": "src/renderer",
       "currentCoverage": 61.5819209039548,
@@ -459,205 +465,101 @@
       "changeFrequency": 0
     },
     {
-      "filePath": "src/main/services/project-parser/file-scanner.ts",
-      "moduleName": "src/main",
-      "currentCoverage": 73.25581395348837,
+      "filePath": "src/renderer/hooks/use-diagram.ts",
+      "moduleName": "src/renderer",
+      "currentCoverage": 62.328767123287676,
       "targetCoverage": 80,
       "uncoveredLines": [
         {
-          "start": 37,
-          "end": 37,
-          "functionName": "scanProject 内の分岐 (L37-39)"
+          "start": 40,
+          "end": 40,
+          "functionName": "useDiagram 内の分岐 (L40-48)"
         },
         {
-          "start": 53,
-          "end": 53,
-          "functionName": "scanProject 内の分岐 (L53-54)"
+          "start": 54,
+          "end": 54,
+          "functionName": "useDiagram 内の分岐 (L54-55)"
         },
         {
-          "start": 61,
-          "end": 61,
-          "functionName": "scanProject 内の分岐 (L61-66)"
+          "start": 84,
+          "end": 84,
+          "functionName": "useDiagram 内の分岐 (L84-94)"
         },
         {
-          "start": 70,
-          "end": 70,
-          "functionName": "scanProject 内の分岐 (L70-71)"
+          "start": 97,
+          "end": 97,
+          "functionName": "useDiagram 内の分岐 (L97-106)"
         },
         {
-          "start": 73,
-          "end": 73,
-          "functionName": "scanProject 内の分岐 (L73-75)"
+          "start": 111,
+          "end": 111,
+          "functionName": "useDiagram 内の分岐 (L111-116)"
         },
         {
-          "start": 80,
-          "end": 80,
-          "functionName": "scanProject 内の分岐 (L80-82)"
+          "start": 121,
+          "end": 121,
+          "functionName": "useDiagram 内の分岐 (L121-122)"
         },
         {
-          "start": 91,
-          "end": 91,
-          "functionName": "scanProject 内の分岐 (L91-92)"
+          "start": 130,
+          "end": 130,
+          "functionName": "useDiagram 内の分岐 (L130-131)"
         },
         {
-          "start": 115,
-          "end": 115,
-          "functionName": "loadGitignorePatterns 内の分岐 (L115-116)"
+          "start": 163,
+          "end": 163,
+          "functionName": "applyDagreLayout 内の分岐 (L163-164)"
+        },
+        {
+          "start": 179,
+          "end": 179,
+          "functionName": "applyGridLayout 内の分岐 (L179-189)"
         }
       ],
-      "recommendedTestType": "unit",
+      "recommendedTestType": "e2e",
       "priority": "low",
-      "priorityScore": 8,
-      "complexity": 14,
-      "changeFrequency": 0
-    },
-    {
-      "filePath": "src/main/services/project-parser/module-builder.ts",
-      "moduleName": "src/main",
-      "currentCoverage": 70.73170731707317,
-      "targetCoverage": 80,
-      "uncoveredLines": [
-        {
-          "start": 70,
-          "end": 70,
-          "functionName": "buildChildModules 内の分岐 (L70-71)"
-        },
-        {
-          "start": 73,
-          "end": 73,
-          "functionName": "buildChildModules 内の分岐 (L73-77)"
-        },
-        {
-          "start": 81,
-          "end": 81,
-          "functionName": "buildChildModules 内の分岐 (L81-86)"
-        },
-        {
-          "start": 88,
-          "end": 88,
-          "functionName": "buildChildModules 内の分岐 (L88-98)"
-        }
-      ],
-      "recommendedTestType": "unit",
-      "priority": "low",
-      "priorityScore": 7,
-      "complexity": 7,
-      "changeFrequency": 0
-    },
-    {
-      "filePath": "src/main/services/feedback-generator/feedback-deployer.ts",
-      "moduleName": "src/main",
-      "currentCoverage": 70.49180327868852,
-      "targetCoverage": 80,
-      "uncoveredLines": [
-        {
-          "start": 22,
-          "end": 22,
-          "functionName": "deployFeedback 内の分岐 (L22-28)"
-        },
-        {
-          "start": 41,
-          "end": 41,
-          "functionName": "deployFeedback 内の分岐 (L41-42)"
-        },
-        {
-          "start": 49,
-          "end": 49,
-          "functionName": "deployFeedback 内の分岐 (L49-55)"
-        },
-        {
-          "start": 75,
-          "end": 75,
-          "functionName": "suggestGitignore 内の分岐 (L75-76)"
-        }
-      ],
-      "recommendedTestType": "unit",
-      "priority": "low",
-      "priorityScore": 6,
-      "complexity": 3,
-      "changeFrequency": 0
-    },
-    {
-      "filePath": "src/main/services/feedback-generator/index.ts",
-      "moduleName": "src/main",
-      "currentCoverage": 78.26086956521739,
-      "targetCoverage": 80,
-      "uncoveredLines": [
-        {
-          "start": 41,
-          "end": 41,
-          "functionName": "generateFeedback 内の分岐 (L41-49)"
-        },
-        {
-          "start": 61,
-          "end": 61,
-          "functionName": "generateFeedback 内の分岐 (L61-69)"
-        },
-        {
-          "start": 116,
-          "end": 116,
-          "functionName": "buildComplexityMap 内の分岐 (L116-116)"
-        },
-        {
-          "start": 127,
-          "end": 127,
-          "functionName": "isSrcModule 内の分岐 (L127-127)"
-        }
-      ],
-      "recommendedTestType": "unit",
-      "priority": "low",
-      "priorityScore": 4,
-      "complexity": 11,
+      "priorityScore": 12,
+      "complexity": 10,
       "changeFrequency": 0
     }
   ],
   "recommendations": [
     {
-      "type": "integration",
-      "targetFile": "src/main/index.ts",
+      "type": "e2e",
+      "targetFile": "src/renderer/App.tsx",
       "suggestedTestFile": "",
       "functions": [
-        "createWindow",
-        "setupCSP"
+        "App",
+        "handleOnboardingComplete"
       ],
-      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: LOW | normal: createWindow の正常系テスト | normal: setupCSP の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: (empty-report)"
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: App の正常系テスト | normal: handleOnboardingComplete の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
     },
     {
-      "type": "integration",
-      "targetFile": "src/main/ipc/index.ts",
+      "type": "e2e",
+      "targetFile": "src/renderer/components/keyboard-shortcut-provider.tsx",
       "suggestedTestFile": "",
       "functions": [
-        "registerAllHandlers"
+        "KeyboardShortcutProvider"
       ],
-      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | normal: registerAllHandlers の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: LOW | normal: KeyboardShortcutProvider の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: (empty-report)"
     },
     {
-      "type": "unit",
-      "targetFile": "src/shared/types/coverage.ts",
+      "type": "e2e",
+      "targetFile": "src/renderer/components/diagram/dependency-edge.tsx",
       "suggestedTestFile": "",
-      "functions": [],
-      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+      "functions": [
+        "DependencyEdge"
+      ],
+      "description": "Line: 4%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: DependencyEdge の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
     },
     {
-      "type": "unit",
-      "targetFile": "src/shared/types/feedback-display.ts",
+      "type": "e2e",
+      "targetFile": "src/renderer/components/toast.tsx",
       "suggestedTestFile": "",
-      "functions": [],
-      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
-    },
-    {
-      "type": "unit",
-      "targetFile": "src/shared/types/feedback.ts",
-      "suggestedTestFile": "",
-      "functions": [],
-      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
-    },
-    {
-      "type": "unit",
-      "targetFile": "src/shared/types/settings.ts",
-      "suggestedTestFile": "",
-      "functions": [],
-      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+      "functions": [
+        "Toast"
+      ],
+      "description": "Line: 34%→80% | Function: 50%→80% | Branch: 100%→80% | 品質: MEDIUM | normal: Toast の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 未テスト関数: Toast"
     },
     {
       "type": "e2e",
@@ -705,6 +607,15 @@
     },
     {
       "type": "e2e",
+      "targetFile": "src/renderer/components/progress-bar-global.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "ProgressBarGlobal"
+      ],
+      "description": "Line: 48%→80% | Function: 75%→80% | Branch: 100%→80% | 品質: MEDIUM | normal: ProgressBarGlobal の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 未テスト関数: ProgressBarGlobal"
+    },
+    {
+      "type": "e2e",
       "targetFile": "src/renderer/pages/diagram-page.tsx",
       "suggestedTestFile": "",
       "functions": [
@@ -726,47 +637,13 @@
       "description": "Line: 62%→80% | Function: 25%→80% | Branch: 93%→80% | 品質: MEDIUM | normal: handleSelectProject の正常系テスト | normal: handleOpenRecent の正常系テスト | normal: onClick の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: handleSelectProject, handleOpenRecent, onClick"
     },
     {
-      "type": "unit",
-      "targetFile": "src/main/services/project-parser/file-scanner.ts",
+      "type": "e2e",
+      "targetFile": "src/renderer/hooks/use-diagram.ts",
       "suggestedTestFile": "",
       "functions": [
-        "scanProject",
-        "walk",
-        "loadGitignorePatterns"
+        "applyGridLayout"
       ],
-      "description": "Line: 73%→80% | Function: 100%→80% | Branch: 50%→80% | 品質: MEDIUM | normal: scanProject の正常系テスト | normal: walk の正常系テスト | normal: loadGitignorePatterns の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。"
-    },
-    {
-      "type": "unit",
-      "targetFile": "src/main/services/project-parser/module-builder.ts",
-      "suggestedTestFile": "",
-      "functions": [
-        "buildModules",
-        "groupByDirectory",
-        "buildChildModules"
-      ],
-      "description": "Line: 71%→80% | Function: 100%→80% | Branch: 71%→80% | 品質: HIGH | normal: buildModules の正常系テスト | normal: groupByDirectory の正常系テスト | normal: buildChildModules の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト"
-    },
-    {
-      "type": "unit",
-      "targetFile": "src/main/services/feedback-generator/feedback-deployer.ts",
-      "suggestedTestFile": "",
-      "functions": [
-        "deployFeedback",
-        "suggestGitignore"
-      ],
-      "description": "Line: 70%→80% | Function: 100%→80% | Branch: 64%→80% | 品質: MEDIUM | normal: deployFeedback の正常系テスト | normal: suggestGitignore の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。"
-    },
-    {
-      "type": "unit",
-      "targetFile": "src/main/services/feedback-generator/index.ts",
-      "suggestedTestFile": "",
-      "functions": [
-        "generateFeedback",
-        "buildComplexityMap",
-        "isSrcModule"
-      ],
-      "description": "Line: 78%→80% | Function: 100%→80% | Branch: 79%→80% | 品質: HIGH | normal: generateFeedback の正常系テスト | normal: buildComplexityMap の正常系テスト | normal: isSrcModule の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト"
+      "description": "Line: 62%→80% | Function: 67%→80% | Branch: 58%→80% | 品質: NONE | normal: applyGridLayout の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
     }
   ]
 }

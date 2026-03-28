@@ -1,0 +1,2708 @@
+{
+  "version": "1.2.0",
+  "generatedAt": "2026-03-28T13:11:01.766Z",
+  "projectRoot": "D:\\AI_Agent\\ClaudeWorkingFolder\\TestTools\\TestInsightHub",
+  "coverageThreshold": 80,
+  "qualityGate": {
+    "passed": false,
+    "verdict": "不合格: 8/11モジュールが閾値80%未満。未達モジュール: ., coverage, eval/backup, src/preload, tests/fixtures, tests/helpers, tests/integration, tests/unit。全モジュールが閾値を超えるまでテストを追加してください。",
+    "moduleResults": [
+      {
+        "moduleId": ".",
+        "coverage": 0,
+        "threshold": 80,
+        "passed": false,
+        "fileCount": 0,
+        "untestedFileCount": 0
+      },
+      {
+        "moduleId": "coverage",
+        "coverage": 0,
+        "threshold": 80,
+        "passed": false,
+        "fileCount": 0,
+        "untestedFileCount": 0
+      },
+      {
+        "moduleId": "eval/backup",
+        "coverage": 0,
+        "threshold": 80,
+        "passed": false,
+        "fileCount": 0,
+        "untestedFileCount": 0
+      },
+      {
+        "moduleId": "src/main",
+        "coverage": 91.5,
+        "threshold": 80,
+        "passed": true,
+        "fileCount": 40,
+        "untestedFileCount": 2
+      },
+      {
+        "moduleId": "src/preload",
+        "coverage": 0,
+        "threshold": 80,
+        "passed": false,
+        "fileCount": 0,
+        "untestedFileCount": 0
+      },
+      {
+        "moduleId": "src/renderer",
+        "coverage": 80,
+        "threshold": 80,
+        "passed": true,
+        "fileCount": 32,
+        "untestedFileCount": 0
+      },
+      {
+        "moduleId": "src/shared",
+        "coverage": 100,
+        "threshold": 80,
+        "passed": true,
+        "fileCount": 12,
+        "untestedFileCount": 4
+      },
+      {
+        "moduleId": "tests/fixtures",
+        "coverage": 0,
+        "threshold": 80,
+        "passed": false,
+        "fileCount": 0,
+        "untestedFileCount": 0
+      },
+      {
+        "moduleId": "tests/helpers",
+        "coverage": 0,
+        "threshold": 80,
+        "passed": false,
+        "fileCount": 0,
+        "untestedFileCount": 0
+      },
+      {
+        "moduleId": "tests/integration",
+        "coverage": 0,
+        "threshold": 80,
+        "passed": false,
+        "fileCount": 0,
+        "untestedFileCount": 0
+      },
+      {
+        "moduleId": "tests/unit",
+        "coverage": 0,
+        "threshold": 80,
+        "passed": false,
+        "fileCount": 0,
+        "untestedFileCount": 0
+      }
+    ],
+    "failedModules": [
+      ".",
+      "coverage",
+      "eval/backup",
+      "src/preload",
+      "tests/fixtures",
+      "tests/helpers",
+      "tests/integration",
+      "tests/unit"
+    ]
+  },
+  "summary": {
+    "totalModules": 11,
+    "belowThreshold": 0,
+    "totalUncoveredFunctions": 4,
+    "overallCoverage": 85.3
+  },
+  "gaps": [
+    {
+      "filePath": "coverage/prettify.js",
+      "moduleName": "coverage",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "high",
+      "priorityScore": 70,
+      "complexity": 352,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "coverage/sorter.js",
+      "moduleName": "coverage",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 47,
+      "complexity": 22,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "coverage/block-navigation.js",
+      "moduleName": "coverage",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 44,
+      "complexity": 14,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/complexity-calculator.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 42,
+      "complexity": 5,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/feedback-generator.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 42,
+      "complexity": 6,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/test-runner.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 42,
+      "complexity": 6,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/index.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-3 の分岐"
+        },
+        {
+          "start": 5,
+          "end": 5,
+          "functionName": "L5-5 の分岐"
+        },
+        {
+          "start": 7,
+          "end": 7,
+          "functionName": "L7-7 の分岐"
+        },
+        {
+          "start": 9,
+          "end": 9,
+          "functionName": "createWindow 内の分岐 (L9-25)"
+        },
+        {
+          "start": 27,
+          "end": 27,
+          "functionName": "createWindow 内の分岐 (L27-29)"
+        },
+        {
+          "start": 31,
+          "end": 31,
+          "functionName": "createWindow 内の分岐 (L31-34)"
+        },
+        {
+          "start": 36,
+          "end": 36,
+          "functionName": "createWindow 内の分岐 (L36-36)"
+        },
+        {
+          "start": 38,
+          "end": 38,
+          "functionName": "createWindow 内の分岐 (L38-43)"
+        },
+        {
+          "start": 45,
+          "end": 45,
+          "functionName": "setupCSP 内の分岐 (L45-49)"
+        },
+        {
+          "start": 51,
+          "end": 51,
+          "functionName": "setupCSP 内の分岐 (L51-58)"
+        }
+      ],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/fixtures/multi-lang/app.py",
+      "moduleName": "tests/fixtures",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/fixtures/multi-lang/main.cpp",
+      "moduleName": "tests/fixtures",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/fixtures/multi-lang/main.go",
+      "moduleName": "tests/fixtures",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/fixtures/sample-project/src/api/handler.ts",
+      "moduleName": "tests/fixtures",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/fixtures/sample-project/src/service/user-service.ts",
+      "moduleName": "tests/fixtures",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/helpers/render-with-providers.tsx",
+      "moduleName": "tests/helpers",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/integration/full-pipeline.test.ts",
+      "moduleName": "tests/integration",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/main/ipc/settings-handlers.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/layout/menu-bar.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/hooks/use-diagram.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/stores/coverage-store.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/stores/feedback-store.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/aggregator.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/coveragepy-parser.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/gap-detector.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/llvm-cov-parser.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/shared/constants.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 2,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/shared/quality-gate.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "electron.vite.config.ts",
+      "moduleName": ".",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "eslint.config.js",
+      "moduleName": ".",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "vitest.config.ts",
+      "moduleName": ".",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "eval/backup/app.test.tsx",
+      "moduleName": "eval/backup",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "eval/backup/diagram-controls.test.tsx",
+      "moduleName": "eval/backup",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "eval/backup/settings-handlers.test.ts",
+      "moduleName": "eval/backup",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/index.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 2,
+          "end": 2,
+          "functionName": "L2-7 の分岐"
+        },
+        {
+          "start": 9,
+          "end": 9,
+          "functionName": "registerAllHandlers 内の分岐 (L9-16)"
+        }
+      ],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/preload/index.ts",
+      "moduleName": "src/preload",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-2 の分岐"
+        },
+        {
+          "start": 15,
+          "end": 15,
+          "functionName": "L15-56 の分岐"
+        },
+        {
+          "start": 58,
+          "end": 58,
+          "functionName": "L58-78 の分岐"
+        },
+        {
+          "start": 80,
+          "end": 80,
+          "functionName": "L80-80 の分岐"
+        }
+      ],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/shared/types/coverage.ts",
+      "moduleName": "src/shared",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/shared/types/feedback-display.ts",
+      "moduleName": "src/shared",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/shared/types/feedback.ts",
+      "moduleName": "src/shared",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/shared/types/settings.ts",
+      "moduleName": "src/shared",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/fixtures/multi-lang/lib.rs",
+      "moduleName": "tests/fixtures",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/fixtures/sample-project/src/repo/order-repo.ts",
+      "moduleName": "tests/fixtures",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/fixtures/sample-project/src/repo/user-repo.ts",
+      "moduleName": "tests/fixtures",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/main/ipc/coverage-handlers.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/main/ipc/export-handlers.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/main/ipc/feedback-handlers.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/main/ipc/project-handlers.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/main/ipc/test-handlers.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/app.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/about-dialog.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/diagram/dependency-edge.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/diagram/diagram-controls.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/diagram/diagram-detail-panel.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/diagram/module-node.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/keyboard-shortcut-provider.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/layout/header.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/layout/log-panel.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/layout/sidebar.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/onboarding-wizard.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/progress-bar-global.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/toast-component.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/components/toast.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/hooks/use-ipc.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/hooks/use-keyboard-shortcuts.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/i18n/index.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/pages/coverage-detail-panel.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/pages/coverage-page.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/pages/diagram-page.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/pages/feedback-history-page.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/pages/feedback-page.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/pages/help-page.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/pages/home-page.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/pages/settings-page.test.tsx",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/stores/project-store.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/stores/settings-store.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/stores/ui-store.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/renderer/utils/diagram-export.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/ast-analyzer.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/cache-manager.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/coverage-analyzer.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/coverage-parsers.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/cycle-tracker.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/dependency-resolver.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/env-collector.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/feedback-deployer.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/file-scanner.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/framework-detector.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/git-utils.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/hash-utils.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/module-builder.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/normalizer.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/priority-scorer.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/project-parser.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/report-detector.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/settings-manager.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/test-classifier.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/test-quality-analyzer.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/services/test-source-mapper.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/shared/errors.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/shared/prerequisite-detector.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "tests/unit/shared/schemas.test.ts",
+      "moduleName": "tests/unit",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/coverage-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 53.179190751445084,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 24,
+          "end": 24,
+          "functionName": "getMetricForMode 内の分岐 (L24-24)"
+        },
+        {
+          "start": 26,
+          "end": 26,
+          "functionName": "getMetricForMode 内の分岐 (L26-26)"
+        },
+        {
+          "start": 38,
+          "end": 38,
+          "functionName": "filterByTestType 内の分岐 (L38-42)"
+        },
+        {
+          "start": 86,
+          "end": 86,
+          "functionName": "CoveragePage 内の分岐 (L86-89)"
+        },
+        {
+          "start": 91,
+          "end": 91,
+          "functionName": "CoveragePage 内の分岐 (L91-92)"
+        },
+        {
+          "start": 95,
+          "end": 95,
+          "functionName": "CoveragePage 内の分岐 (L95-99)"
+        },
+        {
+          "start": 101,
+          "end": 101,
+          "functionName": "CoveragePage 内の分岐 (L101-106)"
+        },
+        {
+          "start": 108,
+          "end": 108,
+          "functionName": "CoveragePage 内の分岐 (L108-117)"
+        },
+        {
+          "start": 120,
+          "end": 120,
+          "functionName": "CoveragePage 内の分岐 (L120-139)"
+        },
+        {
+          "start": 142,
+          "end": 142,
+          "functionName": "CoveragePage 内の分岐 (L142-158)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 23,
+      "complexity": 31,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/feedback-history-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 41.62162162162162,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 15,
+          "end": 15,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L15-16)"
+        },
+        {
+          "start": 28,
+          "end": 28,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L28-61)"
+        },
+        {
+          "start": 63,
+          "end": 63,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L63-70)"
+        },
+        {
+          "start": 72,
+          "end": 72,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L72-80)"
+        },
+        {
+          "start": 82,
+          "end": 82,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L82-82)"
+        },
+        {
+          "start": 150,
+          "end": 150,
+          "functionName": "HistoryEntry 内の分岐 (L150-156)"
+        },
+        {
+          "start": 158,
+          "end": 158,
+          "functionName": "HistoryEntry 内の分岐 (L158-171)"
+        },
+        {
+          "start": 173,
+          "end": 173,
+          "functionName": "HistoryEntry 内の分岐 (L173-183)"
+        },
+        {
+          "start": 186,
+          "end": 186,
+          "functionName": "HistoryEntry 内の分岐 (L186-192)"
+        },
+        {
+          "start": 194,
+          "end": 194,
+          "functionName": "HistoryEntry 内の分岐 (L194-199)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 21,
+      "complexity": 5,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/feedback-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 58.432304038004744,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 39,
+          "end": 39,
+          "functionName": "FeedbackPage 内の分岐 (L39-47)"
+        },
+        {
+          "start": 51,
+          "end": 51,
+          "functionName": "FeedbackPage 内の分岐 (L51-59)"
+        },
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "FeedbackPage 内の分岐 (L61-75)"
+        },
+        {
+          "start": 78,
+          "end": 78,
+          "functionName": "FeedbackPage 内の分岐 (L78-81)"
+        },
+        {
+          "start": 84,
+          "end": 84,
+          "functionName": "FeedbackPage 内の分岐 (L84-85)"
+        },
+        {
+          "start": 87,
+          "end": 87,
+          "functionName": "FeedbackPage 内の分岐 (L87-98)"
+        },
+        {
+          "start": 101,
+          "end": 101,
+          "functionName": "FeedbackPage 内の分岐 (L101-109)"
+        },
+        {
+          "start": 113,
+          "end": 113,
+          "functionName": "FeedbackPage 内の分岐 (L113-113)"
+        },
+        {
+          "start": 115,
+          "end": 115,
+          "functionName": "FeedbackPage 内の分岐 (L115-115)"
+        },
+        {
+          "start": 253,
+          "end": 253,
+          "functionName": "FeedbackPage 内の分岐 (L253-268)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 21,
+      "complexity": 34,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/diagram-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 61.5819209039548,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 49,
+          "end": 49,
+          "functionName": "DiagramContent 内の分岐 (L49-49)"
+        },
+        {
+          "start": 54,
+          "end": 54,
+          "functionName": "DiagramContent 内の分岐 (L54-78)"
+        },
+        {
+          "start": 84,
+          "end": 84,
+          "functionName": "DiagramContent 内の分岐 (L84-98)"
+        },
+        {
+          "start": 130,
+          "end": 130,
+          "functionName": "DiagramContent 内の分岐 (L130-135)"
+        },
+        {
+          "start": 178,
+          "end": 178,
+          "functionName": "DiagramContent 内の分岐 (L178-182)"
+        },
+        {
+          "start": 184,
+          "end": 184,
+          "functionName": "DiagramContent 内の分岐 (L184-185)"
+        },
+        {
+          "start": 192,
+          "end": 192,
+          "functionName": "computeOverall 内の分岐 (L192-200)"
+        },
+        {
+          "start": 202,
+          "end": 202,
+          "functionName": "getCoverageColor 内の分岐 (L202-206)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 15,
+      "complexity": 18,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/home-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 62.06896551724138,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 23,
+          "end": 23,
+          "functionName": "HomePage 内の分岐 (L23-24)"
+        },
+        {
+          "start": 26,
+          "end": 26,
+          "functionName": "HomePage 内の分岐 (L26-34)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "HomePage 内の分岐 (L37-45)"
+        },
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "HomePage 内の分岐 (L61-73)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 12,
+      "complexity": 10,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/file-scanner.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 73.25581395348837,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "scanProject 内の分岐 (L37-39)"
+        },
+        {
+          "start": 53,
+          "end": 53,
+          "functionName": "scanProject 内の分岐 (L53-54)"
+        },
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "scanProject 内の分岐 (L61-66)"
+        },
+        {
+          "start": 70,
+          "end": 70,
+          "functionName": "scanProject 内の分岐 (L70-71)"
+        },
+        {
+          "start": 73,
+          "end": 73,
+          "functionName": "scanProject 内の分岐 (L73-75)"
+        },
+        {
+          "start": 80,
+          "end": 80,
+          "functionName": "scanProject 内の分岐 (L80-82)"
+        },
+        {
+          "start": 91,
+          "end": 91,
+          "functionName": "scanProject 内の分岐 (L91-92)"
+        },
+        {
+          "start": 115,
+          "end": 115,
+          "functionName": "loadGitignorePatterns 内の分岐 (L115-116)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 8,
+      "complexity": 14,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/module-builder.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 70.73170731707317,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 70,
+          "end": 70,
+          "functionName": "buildChildModules 内の分岐 (L70-71)"
+        },
+        {
+          "start": 73,
+          "end": 73,
+          "functionName": "buildChildModules 内の分岐 (L73-77)"
+        },
+        {
+          "start": 81,
+          "end": 81,
+          "functionName": "buildChildModules 内の分岐 (L81-86)"
+        },
+        {
+          "start": 88,
+          "end": 88,
+          "functionName": "buildChildModules 内の分岐 (L88-98)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 7,
+      "complexity": 7,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/feedback-generator/feedback-deployer.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 70.49180327868852,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 22,
+          "end": 22,
+          "functionName": "deployFeedback 内の分岐 (L22-28)"
+        },
+        {
+          "start": 41,
+          "end": 41,
+          "functionName": "deployFeedback 内の分岐 (L41-42)"
+        },
+        {
+          "start": 49,
+          "end": 49,
+          "functionName": "deployFeedback 内の分岐 (L49-55)"
+        },
+        {
+          "start": 75,
+          "end": 75,
+          "functionName": "suggestGitignore 内の分岐 (L75-76)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 6,
+      "complexity": 3,
+      "changeFrequency": 0
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "unit",
+      "targetFile": "coverage/prettify.js",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "coverage/sorter.js",
+      "suggestedTestFile": "",
+      "functions": [
+        "addSorting",
+        "getTable",
+        "getTableHeader",
+        "getTableBody",
+        "getNthColumn",
+        "onFilterInput",
+        "addSearchBox",
+        "loadColumns",
+        "loadRowData",
+        "loadData",
+        "sortByIndex",
+        "removeSortIndicators",
+        "addSortIndicators",
+        "enableUI",
+        "ithSorter"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: addSorting の正常系テスト | normal: getTable の正常系テスト | normal: getTableHeader の正常系テスト | normal: getTableBody の正常系テスト | normal: getNthColumn の正常系テスト | normal: onFilterInput の正常系テスト | normal: addSearchBox の正常系テスト | normal: loadColumns の正常系テスト | normal: loadRowData の正常系テスト | normal: loadData の正常系テスト | normal: sortByIndex の正常系テスト | normal: removeSortIndicators の正常系テスト | normal: addSortIndicators の正常系テスト | normal: enableUI の正常系テスト | normal: ithSorter の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "coverage/block-navigation.js",
+      "suggestedTestFile": "",
+      "functions": [
+        "init",
+        "toggleClass",
+        "makeCurrent",
+        "goToPrevious",
+        "goToNext",
+        "jump"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: init の正常系テスト | normal: toggleClass の正常系テスト | normal: makeCurrent の正常系テスト | normal: goToPrevious の正常系テスト | normal: goToNext の正常系テスト | normal: jump の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/complexity-calculator.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "greet",
+        "check",
+        "validate",
+        "process",
+        "safe",
+        "risky"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: greet の正常系テスト | normal: check の正常系テスト | normal: validate の正常系テスト | normal: process の正常系テスト | normal: safe の正常系テスト | normal: risky の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/feedback-generator.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeFile",
+        "makeModule",
+        "makeStructure",
+        "makeModuleCoverage"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeFile の正常系テスト | normal: makeModule の正常系テスト | normal: makeStructure の正常系テスト | normal: makeModuleCoverage の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/test-runner.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "createMockChild"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: createMockChild の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "src/main/index.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "createWindow",
+        "setupCSP"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: LOW | normal: createWindow の正常系テスト | normal: setupCSP の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: (empty-report)"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/fixtures/multi-lang/app.py",
+      "suggestedTestFile": "",
+      "functions": [
+        "greet",
+        "fetch_data",
+        "process"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: greet の正常系テスト | normal: fetch_data の正常系テスト | normal: process の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/fixtures/multi-lang/main.cpp",
+      "suggestedTestFile": "",
+      "functions": [
+        "calculateSum",
+        "processData",
+        "formatOutput"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: calculateSum の正常系テスト | normal: processData の正常系テスト | normal: formatOutput の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/fixtures/multi-lang/main.go",
+      "suggestedTestFile": "",
+      "functions": [
+        "main",
+        "handleRequest",
+        "calculateSum"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: main の正常系テスト | normal: handleRequest の正常系テスト | normal: calculateSum の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "tests/fixtures/sample-project/src/api/handler.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "handleGetUsers",
+        "handleHealthCheck"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: handleGetUsers の正常系テスト | normal: handleHealthCheck の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/fixtures/sample-project/src/service/user-service.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "getUsers",
+        "getUserById",
+        "formatUserName"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: getUsers の正常系テスト | normal: getUserById の正常系テスト | normal: formatUserName の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/helpers/render-with-providers.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "renderWithProviders"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: renderWithProviders の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/integration/full-pipeline.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "tests/unit/main/ipc/settings-handlers.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "findHandler"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: findHandler の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/layout/menu-bar.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/hooks/use-diagram.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeStructure",
+        "makeModule",
+        "makeCoverage"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeStructure の正常系テスト | normal: makeModule の正常系テスト | normal: makeCoverage の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/stores/coverage-store.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeMetric",
+        "makeFileCoverage",
+        "makeParsedFile",
+        "makeModuleNode",
+        "mode"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeMetric の正常系テスト | normal: makeFileCoverage の正常系テスト | normal: makeParsedFile の正常系テスト | normal: makeModuleNode の正常系テスト | normal: mode の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/stores/feedback-store.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeMetric",
+        "makeParsedFile",
+        "makeModule",
+        "makeFileCoverage",
+        "makeModuleCoverage",
+        "makeStructure",
+        "names"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeMetric の正常系テスト | normal: makeParsedFile の正常系テスト | normal: makeModule の正常系テスト | normal: makeFileCoverage の正常系テスト | normal: makeModuleCoverage の正常系テスト | normal: makeStructure の正常系テスト | normal: names の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/aggregator.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeFileCoverage",
+        "makeModule"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeFileCoverage の正常系テスト | normal: makeModule の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/coveragepy-parser.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/gap-detector.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeFileCoverage",
+        "makeModuleCoverage"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeFileCoverage の正常系テスト | normal: makeModuleCoverage の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/llvm-cov-parser.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "coverage",
+        "coverage"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: coverage の正常系テスト | normal: coverage の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/shared/constants.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/shared/quality-gate.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeMetric",
+        "makeModule"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeMetric の正常系テスト | normal: makeModule の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "electron.vite.config.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "eslint.config.js",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "vitest.config.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "eval/backup/app.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "eval/backup/diagram-controls.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeProps"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeProps の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "eval/backup/settings-handlers.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "src/main/ipc/index.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "registerAllHandlers"
+      ],
+      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | normal: registerAllHandlers の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "src/preload/index.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/shared/types/coverage.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/shared/types/feedback-display.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/shared/types/feedback.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/shared/types/settings.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 100%→80% | Branch: 100%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/fixtures/multi-lang/lib.rs",
+      "suggestedTestFile": "",
+      "functions": [
+        "greet",
+        "private_helper",
+        "fetch_data"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: greet の正常系テスト | normal: private_helper の正常系テスト | normal: fetch_data の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/fixtures/sample-project/src/repo/order-repo.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "findOrdersByUserId",
+        "createOrder"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: findOrdersByUserId の正常系テスト | normal: createOrder の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/fixtures/sample-project/src/repo/user-repo.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "findAllUsers",
+        "findUserById",
+        "createUser"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: findAllUsers の正常系テスト | normal: findUserById の正常系テスト | normal: createUser の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "tests/unit/main/ipc/coverage-handlers.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "tests/unit/main/ipc/export-handlers.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "tests/unit/main/ipc/feedback-handlers.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "tests/unit/main/ipc/project-handlers.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "integration",
+      "targetFile": "tests/unit/main/ipc/test-handlers.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "that"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: that の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/app.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/about-dialog.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/diagram/dependency-edge.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeProps"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeProps の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/diagram/diagram-controls.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeProps"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeProps の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/diagram/diagram-detail-panel.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/diagram/module-node.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeProps",
+        "count"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeProps の正常系テスト | normal: count の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/keyboard-shortcut-provider.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "wrapper"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: wrapper の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/layout/header.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/layout/log-panel.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/layout/sidebar.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/onboarding-wizard.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/progress-bar-global.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/toast-component.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/components/toast.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/hooks/use-ipc.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/hooks/use-keyboard-shortcuts.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "wrapper"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: wrapper の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/renderer/i18n/index.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/pages/coverage-detail-panel.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/pages/coverage-page.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/pages/diagram-page.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/pages/feedback-history-page.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/pages/feedback-page.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/pages/help-page.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/pages/home-page.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/pages/settings-page.test.tsx",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/stores/project-store.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/stores/settings-store.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "tests/unit/renderer/stores/ui-store.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/renderer/utils/diagram-export.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeMockElement"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeMockElement の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/ast-analyzer.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "definitions",
+        "definitions",
+        "definitions",
+        "definitions"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: definitions の正常系テスト | normal: definitions の正常系テスト | normal: definitions の正常系テスト | normal: definitions の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/cache-manager.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/coverage-analyzer.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/coverage-parsers.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/cycle-tracker.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeFeedback",
+        "makeGap"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeFeedback の正常系テスト | normal: makeGap の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/dependency-resolver.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeFile"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeFile の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/env-collector.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/feedback-deployer.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeFeedbackFile"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeFeedbackFile の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/file-scanner.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/framework-detector.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/git-utils.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/hash-utils.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/module-builder.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeFile"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeFile の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/normalizer.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeFileCoverage"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeFileCoverage の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/priority-scorer.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeGap"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeGap の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/project-parser.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/report-detector.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/settings-manager.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/test-classifier.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/test-quality-analyzer.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "add"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: add の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/services/test-source-mapper.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeSourceFile",
+        "makeTestFile",
+        "makeCoverage"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeSourceFile の正常系テスト | normal: makeTestFile の正常系テスト | normal: makeCoverage の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/shared/errors.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "thrower"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: thrower の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/shared/prerequisite-detector.test.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "makeEnv"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | normal: makeEnv の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "tests/unit/shared/schemas.test.ts",
+      "suggestedTestFile": "",
+      "functions": [],
+      "description": "Line: 0%→80% | Function: 0%→80% | 品質: NONE | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/coverage-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "handleRunTests",
+        "handleLoadExisting",
+        "onChange",
+        "onChange",
+        "onClick",
+        "onClick",
+        "onChange",
+        "buildZeroCoverage"
+      ],
+      "description": "Line: 53%→80% | Function: 33%→80% | Branch: 66%→80% | 品質: LOW | normal: handleRunTests の正常系テスト | normal: handleLoadExisting の正常系テスト | normal: onChange の正常系テスト | normal: onChange の正常系テスト | normal: onClick の正常系テスト | normal: onClick の正常系テスト | normal: onChange の正常系テスト | normal: buildZeroCoverage の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: handleRunTests, handleLoadExisting, onChange, onChange, onClick, onClick, onChange, buildZeroCoverage"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/feedback-history-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "toggleExpand",
+        "onClick",
+        "onToggle"
+      ],
+      "description": "Line: 42%→80% | Function: 50%→80% | Branch: 57%→80% | 品質: LOW | normal: toggleExpand の正常系テスト | normal: onClick の正常系テスト | normal: onToggle の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: toggleExpand, onClick, onToggle"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/feedback-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "handleGenerate",
+        "handleClear",
+        "handleDeploy",
+        "handleCopyToClipboard",
+        "onClick",
+        "onClick",
+        "onChange",
+        "buildFeedbackText",
+        "buildEnrichedJson"
+      ],
+      "description": "Line: 58%→80% | Function: 18%→80% | Branch: 74%→80% | 品質: MEDIUM | normal: handleGenerate の正常系テスト | normal: handleClear の正常系テスト | normal: handleDeploy の正常系テスト | normal: handleCopyToClipboard の正常系テスト | normal: onClick の正常系テスト | normal: onClick の正常系テスト | normal: onChange の正常系テスト | normal: buildFeedbackText の正常系テスト | normal: buildEnrichedJson の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: handleGenerate, handleClear, handleDeploy, handleCopyToClipboard, onClick, onClick, onChange, buildFeedbackText, buildEnrichedJson"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/diagram-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "onClose",
+        "computeOverall",
+        "getCoverageColor"
+      ],
+      "description": "Line: 62%→80% | Function: 40%→80% | Branch: 71%→80% | 品質: MEDIUM | normal: onClose の正常系テスト | normal: computeOverall の正常系テスト | normal: getCoverageColor の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: onClose, computeOverall, getCoverageColor"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/home-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "handleSelectProject",
+        "handleOpenRecent",
+        "onClick"
+      ],
+      "description": "Line: 62%→80% | Function: 25%→80% | Branch: 93%→80% | 品質: MEDIUM | normal: handleSelectProject の正常系テスト | normal: handleOpenRecent の正常系テスト | normal: onClick の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: handleSelectProject, handleOpenRecent, onClick"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/file-scanner.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "scanProject",
+        "walk",
+        "loadGitignorePatterns"
+      ],
+      "description": "Line: 73%→80% | Function: 100%→80% | Branch: 50%→80% | 品質: MEDIUM | normal: scanProject の正常系テスト | normal: walk の正常系テスト | normal: loadGitignorePatterns の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/module-builder.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "buildModules",
+        "groupByDirectory",
+        "buildChildModules"
+      ],
+      "description": "Line: 71%→80% | Function: 100%→80% | Branch: 71%→80% | 品質: HIGH | normal: buildModules の正常系テスト | normal: groupByDirectory の正常系テスト | normal: buildChildModules の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/feedback-generator/feedback-deployer.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "deployFeedback",
+        "suggestGitignore"
+      ],
+      "description": "Line: 70%→80% | Function: 100%→80% | Branch: 64%→80% | 品質: MEDIUM | normal: deployFeedback の正常系テスト | normal: suggestGitignore の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。"
+    }
+  ]
+}

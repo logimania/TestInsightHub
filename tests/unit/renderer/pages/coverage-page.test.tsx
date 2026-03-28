@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { screen } from "@testing-library/react";
+import { screen, fireEvent } from "@testing-library/react";
 import { renderWithProviders } from "../../../helpers/render-with-providers";
 import { CoveragePage } from "../../../../src/renderer/pages/coverage-page";
 import { useProjectStore } from "../../../../src/renderer/stores/project-store";
@@ -127,5 +127,70 @@ describe("CoveragePage", () => {
     renderWithProviders(<CoveragePage />, { route: "/coverage" });
     const runBtn = screen.getByRole("button", { name: /テスト実行|run/i });
     expect(runBtn).toBeDefined();
+  });
+
+  it("renders coverage mode selector when data exists", () => {
+    useProjectStore.setState({
+      structure: { rootPath: "/p", modules: [], edges: [], totalFiles: 1, totalLoc: 10, parsedAt: "", parseErrors: [] },
+    });
+    useCoverageStore.setState({
+      normalizedCoverage: {
+        reportFormat: "istanbul",
+        files: [{ filePath: "a.ts", lineCoverage: { covered: 50, total: 100, percentage: 50 }, branchCoverage: null, functionCoverage: { covered: 50, total: 100, percentage: 50 }, uncoveredLines: [], uncoveredFunctions: [], coveredByTests: [] }],
+        generatedAt: "2026-01-01",
+      },
+    });
+    renderWithProviders(<CoveragePage />, { route: "/coverage" });
+    const selects = screen.getAllByRole("combobox");
+    expect(selects.length).toBeGreaterThanOrEqual(1);
+  });
+
+  it("renders summary stats with coverage data", () => {
+    useProjectStore.setState({
+      structure: { rootPath: "/p", modules: [], edges: [], totalFiles: 1, totalLoc: 100, parsedAt: "", parseErrors: [] },
+    });
+    useCoverageStore.setState({
+      normalizedCoverage: {
+        reportFormat: "istanbul",
+        files: [
+          { filePath: "a.ts", lineCoverage: { covered: 80, total: 100, percentage: 80 }, branchCoverage: null, functionCoverage: { covered: 80, total: 100, percentage: 80 }, uncoveredLines: [], uncoveredFunctions: [], coveredByTests: [] },
+          { filePath: "b.ts", lineCoverage: { covered: 60, total: 100, percentage: 60 }, branchCoverage: null, functionCoverage: { covered: 60, total: 100, percentage: 60 }, uncoveredLines: [], uncoveredFunctions: [], coveredByTests: [] },
+        ],
+        generatedAt: "2026-01-01",
+      },
+    });
+    renderWithProviders(<CoveragePage />, { route: "/coverage" });
+    expect(screen.getByText("a.ts")).toBeDefined();
+    expect(screen.getByText("b.ts")).toBeDefined();
+    expect(screen.getByText("istanbul")).toBeDefined();
+  });
+
+  it("renders rerun button when coverage data exists", () => {
+    useProjectStore.setState({
+      structure: { rootPath: "/p", modules: [], edges: [], totalFiles: 1, totalLoc: 10, parsedAt: "", parseErrors: [] },
+    });
+    useCoverageStore.setState({
+      normalizedCoverage: { reportFormat: "istanbul", files: [{ filePath: "a.ts", lineCoverage: { covered: 50, total: 100, percentage: 50 }, branchCoverage: null, functionCoverage: { covered: 50, total: 100, percentage: 50 }, uncoveredLines: [], uncoveredFunctions: [], coveredByTests: [] }], generatedAt: "" },
+    });
+    renderWithProviders(<CoveragePage />, { route: "/coverage" });
+    expect(screen.getByRole("button", { name: /再実行|rerun/i })).toBeDefined();
+  });
+
+  it("renders advanced options toggle", () => {
+    useProjectStore.setState({
+      structure: { rootPath: "/p", modules: [], edges: [], totalFiles: 1, totalLoc: 10, parsedAt: "", parseErrors: [] },
+    });
+    renderWithProviders(<CoveragePage />, { route: "/coverage" });
+    expect(screen.getByRole("button", { name: /▶|詳細|advanced/i })).toBeDefined();
+  });
+
+  it("shows load existing button in advanced options", () => {
+    useProjectStore.setState({
+      structure: { rootPath: "/p", modules: [], edges: [], totalFiles: 1, totalLoc: 10, parsedAt: "", parseErrors: [] },
+    });
+    renderWithProviders(<CoveragePage />, { route: "/coverage" });
+    const advBtn = screen.getByRole("button", { name: /▶|詳細|advanced/i });
+    fireEvent.click(advBtn);
+    expect(screen.getByRole("button", { name: /既存レポート|load existing/i })).toBeDefined();
   });
 });

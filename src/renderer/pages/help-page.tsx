@@ -73,7 +73,9 @@ export function HelpPage(): JSX.Element {
               <ul className="help-list">
                 <li>{t("help.step4Item1")}</li>
                 <li>{t("help.step4Item2")}</li>
-                <li>{t("help.step4Item3")}</li>
+                <li><strong style={{ color: "#dc2626" }}>{t("help.step4Item3")}</strong></li>
+                <li>{t("help.step4Item4")}</li>
+                <li>{t("help.step4Item5")}</li>
               </ul>
             </div>
           </div>
@@ -88,6 +90,7 @@ export function HelpPage(): JSX.Element {
               <ul className="help-list">
                 <li>{t("help.step5Item1")}</li>
                 <li>{t("help.step5Item2")}</li>
+                <li><strong>{t("help.step5Item3")}</strong></li>
               </ul>
             </div>
           </div>
@@ -100,8 +103,9 @@ export function HelpPage(): JSX.Element {
             <div className="help-step-content">
               <p>{t("help.step6Desc")}</p>
               <ul className="help-list">
-                <li>{t("help.step6Item1")}</li>
+                <li><strong>{t("help.step6Item1")}</strong></li>
                 <li>{t("help.step6Item2")}</li>
+                <li>{t("help.step6Item3")}</li>
               </ul>
             </div>
           </div>

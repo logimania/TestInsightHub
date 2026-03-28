@@ -1,0 +1,42 @@
+{
+  "version": "1.2.0",
+  "generatedAt": "2026-03-28T12:00:00Z",
+  "projectRoot": ".",
+  "coverageThreshold": 80,
+  "qualityGate": {
+    "passed": false,
+    "verdict": "不合格: src/main/index.ts が0%。E2Eテストで検証してください。",
+    "failedModules": ["src/main"],
+    "moduleResults": [
+      { "moduleId": "src/main", "coverage": 0, "threshold": 80, "passed": false, "fileCount": 1, "untestedFileCount": 1 }
+    ]
+  },
+  "gaps": [
+    {
+      "filePath": "src/main/index.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        { "start": 9, "end": 43, "functionName": "createWindow" },
+        { "start": 45, "end": 58, "functionName": "setupCSP" },
+        { "start": 60, "end": 75, "functionName": "app.whenReady" }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "high",
+      "priorityScore": 70,
+      "complexity": 3,
+      "changeFrequency": 0,
+      "testingNote": "このファイルはElectronのメインプロセスエントリポイントです。app.whenReady()やBrowserWindow生成を含むため、vitestのjsdom環境ではテストできません。Playwright for Electronを導入してE2Eテストで検証してください。"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "e2e",
+      "targetFile": "src/main/index.ts",
+      "suggestedTestFile": "tests/e2e/app-launch.test.ts",
+      "functions": ["createWindow", "setupCSP"],
+      "description": "Electronアプリの起動・ウィンドウ表示・CSP設定のE2Eテストを追加"
+    }
+  ]
+}

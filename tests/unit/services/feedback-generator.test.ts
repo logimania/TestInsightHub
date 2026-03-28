@@ -91,7 +91,7 @@ describe("generateFeedback", () => {
       threshold: 80,
     });
 
-    expect(fb.version).toBe("1.1.0");
+    expect(fb.version).toBe("1.2.0");
     expect(fb.coverageThreshold).toBe(80);
     expect(fb.summary.totalModules).toBe(2);
     expect(fb.summary.belowThreshold).toBe(1);

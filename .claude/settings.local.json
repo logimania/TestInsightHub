@@ -28,7 +28,12 @@
       "WebFetch(domain:arxiv.org)",
       "WebFetch(domain:slack.engineering)",
       "WebFetch(domain:openobserve.ai)",
-      "Bash(ls \"D:\\\\AI_Agent\\\\ClaudeWorkingFolder\\\\TestTools\\\\TestInsightHub\\\\.claude\\\\worktrees\\\\agent-a4162742\\\\tests\\\\unit\\\\renderer\\\\pages\"\" 2>&1 | head -5 && echo \"---\" && ls \"D:AI_AgentClaudeWorkingFolderTestToolsTestInsightHub.claudeworktreesagent-a1f159a2testsunitrendererpages\"\")"
+      "Bash(ls \"D:\\\\AI_Agent\\\\ClaudeWorkingFolder\\\\TestTools\\\\TestInsightHub\\\\.claude\\\\worktrees\\\\agent-a4162742\\\\tests\\\\unit\\\\renderer\\\\pages\"\" 2>&1 | head -5 && echo \"---\" && ls \"D:AI_AgentClaudeWorkingFolderTestToolsTestInsightHub.claudeworktreesagent-a1f159a2testsunitrendererpages\"\")",
+      "Bash(mkdir -p eval/backup)",
+      "Bash(cp tests/unit/renderer/components/diagram/diagram-controls.test.tsx eval/backup/)",
+      "Bash(cp tests/unit/renderer/app.test.tsx eval/backup/)",
+      "Bash(cp tests/unit/main/ipc/settings-handlers.test.ts eval/backup/)",
+      "Bash(node -e \"const ja=require\\(''./src/renderer/i18n/ja.json''\\); console.log\\(JSON.stringify\\(ja.help, null, 2\\)\\)\")"
     ]
   }
 }
