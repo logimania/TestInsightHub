@@ -1,0 +1,1219 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-03-25T10:18:54.433Z",
+  "projectRoot": "D:\\AI_Agent\\ClaudeWorkingFolder\\TestTools\\TestInsightHub",
+  "coverageThreshold": 80,
+  "summary": {
+    "totalModules": 1,
+    "belowThreshold": 1,
+    "totalUncoveredFunctions": 163,
+    "overallCoverage": 64.8
+  },
+  "gaps": [
+    {
+      "filePath": "src/main/ipc/coverage-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-2 の分岐"
+        },
+        {
+          "start": 4,
+          "end": 4,
+          "functionName": "L4-5 の分岐"
+        },
+        {
+          "start": 7,
+          "end": 7,
+          "functionName": "L7-7 の分岐"
+        },
+        {
+          "start": 9,
+          "end": 9,
+          "functionName": "registerCoverageHandlers 内の分岐 (L9-14)"
+        },
+        {
+          "start": 16,
+          "end": 16,
+          "functionName": "registerCoverageHandlers 内の分岐 (L16-35)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "registerCoverageHandlers 内の分岐 (L37-41)"
+        },
+        {
+          "start": 43,
+          "end": 43,
+          "functionName": "registerCoverageHandlers 内の分岐 (L43-43)"
+        },
+        {
+          "start": 45,
+          "end": 45,
+          "functionName": "registerCoverageHandlers 内の分岐 (L45-45)"
+        },
+        {
+          "start": 47,
+          "end": 47,
+          "functionName": "registerCoverageHandlers 内の分岐 (L47-50)"
+        },
+        {
+          "start": 52,
+          "end": 52,
+          "functionName": "setLastRootPath 内の分岐 (L52-54)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 43,
+      "complexity": 9,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/export-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-3 の分岐"
+        },
+        {
+          "start": 5,
+          "end": 5,
+          "functionName": "L5-5 の分岐"
+        },
+        {
+          "start": 11,
+          "end": 11,
+          "functionName": "registerExportHandlers 内の分岐 (L11-15)"
+        },
+        {
+          "start": 17,
+          "end": 17,
+          "functionName": "registerExportHandlers 内の分岐 (L17-26)"
+        },
+        {
+          "start": 28,
+          "end": 28,
+          "functionName": "registerExportHandlers 内の分岐 (L28-28)"
+        },
+        {
+          "start": 30,
+          "end": 30,
+          "functionName": "registerExportHandlers 内の分岐 (L30-31)"
+        },
+        {
+          "start": 33,
+          "end": 33,
+          "functionName": "registerExportHandlers 内の分岐 (L33-42)"
+        },
+        {
+          "start": 44,
+          "end": 44,
+          "functionName": "registerExportHandlers 内の分岐 (L44-49)"
+        },
+        {
+          "start": 51,
+          "end": 51,
+          "functionName": "registerExportHandlers 内の分岐 (L51-53)"
+        },
+        {
+          "start": 55,
+          "end": 55,
+          "functionName": "registerExportHandlers 内の分岐 (L55-65)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 43,
+      "complexity": 10,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/project-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-3 の分岐"
+        },
+        {
+          "start": 5,
+          "end": 5,
+          "functionName": "L5-9 の分岐"
+        },
+        {
+          "start": 11,
+          "end": 11,
+          "functionName": "registerProjectHandlers 内の分岐 (L11-21)"
+        },
+        {
+          "start": 23,
+          "end": 23,
+          "functionName": "registerProjectHandlers 内の分岐 (L23-26)"
+        },
+        {
+          "start": 28,
+          "end": 28,
+          "functionName": "registerProjectHandlers 内の分岐 (L28-38)"
+        },
+        {
+          "start": 40,
+          "end": 40,
+          "functionName": "registerProjectHandlers 内の分岐 (L40-47)"
+        },
+        {
+          "start": 49,
+          "end": 49,
+          "functionName": "registerProjectHandlers 内の分岐 (L49-55)"
+        },
+        {
+          "start": 57,
+          "end": 57,
+          "functionName": "registerProjectHandlers 内の分岐 (L57-70)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 42,
+      "complexity": 7,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/feedback-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-3 の分岐"
+        },
+        {
+          "start": 8,
+          "end": 8,
+          "functionName": "L8-8 の分岐"
+        },
+        {
+          "start": 12,
+          "end": 12,
+          "functionName": "L12-12 の分岐"
+        },
+        {
+          "start": 14,
+          "end": 14,
+          "functionName": "L14-14 の分岐"
+        },
+        {
+          "start": 18,
+          "end": 18,
+          "functionName": "L18-19 の分岐"
+        },
+        {
+          "start": 21,
+          "end": 21,
+          "functionName": "registerFeedbackHandlers 内の分岐 (L21-24)"
+        },
+        {
+          "start": 27,
+          "end": 27,
+          "functionName": "registerFeedbackHandlers 内の分岐 (L27-34)"
+        },
+        {
+          "start": 36,
+          "end": 36,
+          "functionName": "registerFeedbackHandlers 内の分岐 (L36-45)"
+        },
+        {
+          "start": 47,
+          "end": 47,
+          "functionName": "registerFeedbackHandlers 内の分岐 (L47-51)"
+        },
+        {
+          "start": 53,
+          "end": 53,
+          "functionName": "registerFeedbackHandlers 内の分岐 (L53-55)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/test-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-2 の分岐"
+        },
+        {
+          "start": 5,
+          "end": 5,
+          "functionName": "L5-7 の分岐"
+        },
+        {
+          "start": 9,
+          "end": 9,
+          "functionName": "L9-9 の分岐"
+        },
+        {
+          "start": 11,
+          "end": 11,
+          "functionName": "registerTestHandlers 内の分岐 (L11-11)"
+        },
+        {
+          "start": 13,
+          "end": 13,
+          "functionName": "registerTestHandlers 内の分岐 (L13-18)"
+        },
+        {
+          "start": 20,
+          "end": 20,
+          "functionName": "registerTestHandlers 内の分岐 (L20-33)"
+        },
+        {
+          "start": 35,
+          "end": 35,
+          "functionName": "registerTestHandlers 内の分岐 (L35-35)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "registerTestHandlers 内の分岐 (L37-37)"
+        },
+        {
+          "start": 40,
+          "end": 40,
+          "functionName": "registerTestHandlers 内の分岐 (L40-44)"
+        },
+        {
+          "start": 46,
+          "end": 46,
+          "functionName": "registerTestHandlers 内の分岐 (L46-48)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/cache-manager.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-3 の分岐"
+        },
+        {
+          "start": 11,
+          "end": 11,
+          "functionName": "getCacheBasePath 内の分岐 (L11-13)"
+        },
+        {
+          "start": 15,
+          "end": 15,
+          "functionName": "getCacheStats 内の分岐 (L15-19)"
+        },
+        {
+          "start": 21,
+          "end": 21,
+          "functionName": "getCacheStats 内の分岐 (L21-34)"
+        },
+        {
+          "start": 36,
+          "end": 36,
+          "functionName": "getCacheStats 内の分岐 (L36-38)"
+        },
+        {
+          "start": 40,
+          "end": 40,
+          "functionName": "getCacheStats 内の分岐 (L40-40)"
+        },
+        {
+          "start": 42,
+          "end": 42,
+          "functionName": "getCacheStats 内の分岐 (L42-43)"
+        },
+        {
+          "start": 45,
+          "end": 45,
+          "functionName": "clearProjectCache 内の分岐 (L45-50)"
+        },
+        {
+          "start": 52,
+          "end": 52,
+          "functionName": "clearProjectCache 内の分岐 (L52-53)"
+        },
+        {
+          "start": 55,
+          "end": 55,
+          "functionName": "clearAllCache 内の分岐 (L55-63)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/settings-manager.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-3 の分岐"
+        },
+        {
+          "start": 9,
+          "end": 9,
+          "functionName": "L9-9 の分岐"
+        },
+        {
+          "start": 17,
+          "end": 17,
+          "functionName": "getUserDataPath 内の分岐 (L17-19)"
+        },
+        {
+          "start": 21,
+          "end": 21,
+          "functionName": "L21-28 の分岐"
+        },
+        {
+          "start": 30,
+          "end": 30,
+          "functionName": "readJsonFile 内の分岐 (L30-37)"
+        },
+        {
+          "start": 39,
+          "end": 39,
+          "functionName": "writeJsonFile 内の分岐 (L39-43)"
+        },
+        {
+          "start": 45,
+          "end": 45,
+          "functionName": "loadGlobalSettings 内の分岐 (L45-49)"
+        },
+        {
+          "start": 51,
+          "end": 51,
+          "functionName": "saveGlobalSettings 内の分岐 (L51-56)"
+        },
+        {
+          "start": 58,
+          "end": 58,
+          "functionName": "loadProjectSettings 内の分岐 (L58-68)"
+        },
+        {
+          "start": 70,
+          "end": 70,
+          "functionName": "saveProjectSettings 内の分岐 (L70-80)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/feedback-generator/feedback-deployer.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-3 の分岐"
+        },
+        {
+          "start": 5,
+          "end": 5,
+          "functionName": "L5-5 の分岐"
+        },
+        {
+          "start": 13,
+          "end": 13,
+          "functionName": "deployFeedback 内の分岐 (L13-17)"
+        },
+        {
+          "start": 19,
+          "end": 19,
+          "functionName": "deployFeedback 内の分岐 (L19-28)"
+        },
+        {
+          "start": 30,
+          "end": 30,
+          "functionName": "deployFeedback 内の分岐 (L30-35)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "deployFeedback 内の分岐 (L37-39)"
+        },
+        {
+          "start": 41,
+          "end": 41,
+          "functionName": "deployFeedback 内の分岐 (L41-43)"
+        },
+        {
+          "start": 45,
+          "end": 45,
+          "functionName": "deployFeedback 内の分岐 (L45-55)"
+        },
+        {
+          "start": 57,
+          "end": 57,
+          "functionName": "deployFeedback 内の分岐 (L57-62)"
+        },
+        {
+          "start": 64,
+          "end": 64,
+          "functionName": "suggestGitignore 内の分岐 (L64-69)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/utils/git-utils.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-4 の分岐"
+        },
+        {
+          "start": 10,
+          "end": 10,
+          "functionName": "L10-10 の分岐"
+        },
+        {
+          "start": 12,
+          "end": 12,
+          "functionName": "isGitRepository 内の分岐 (L12-19)"
+        },
+        {
+          "start": 21,
+          "end": 21,
+          "functionName": "getFileCommitCount 内の分岐 (L21-36)"
+        },
+        {
+          "start": 38,
+          "end": 38,
+          "functionName": "getMaxCommitCount 内の分岐 (L38-49)"
+        },
+        {
+          "start": 51,
+          "end": 51,
+          "functionName": "getChangeFrequencyScore 内の分岐 (L51-60)"
+        },
+        {
+          "start": 62,
+          "end": 62,
+          "functionName": "getChangeFrequencyScore 内の分岐 (L62-72)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/settings-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-2 の分岐"
+        },
+        {
+          "start": 4,
+          "end": 4,
+          "functionName": "L4-4 の分岐"
+        },
+        {
+          "start": 12,
+          "end": 12,
+          "functionName": "registerSettingsHandlers 内の分岐 (L12-15)"
+        },
+        {
+          "start": 17,
+          "end": 17,
+          "functionName": "registerSettingsHandlers 内の分岐 (L17-22)"
+        },
+        {
+          "start": 24,
+          "end": 24,
+          "functionName": "registerSettingsHandlers 内の分岐 (L24-29)"
+        },
+        {
+          "start": 31,
+          "end": 31,
+          "functionName": "registerSettingsHandlers 内の分岐 (L31-36)"
+        },
+        {
+          "start": 38,
+          "end": 38,
+          "functionName": "registerSettingsHandlers 内の分岐 (L38-41)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/utils/hash-utils.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-1 の分岐"
+        },
+        {
+          "start": 3,
+          "end": 3,
+          "functionName": "sha256 内の分岐 (L3-5)"
+        },
+        {
+          "start": 7,
+          "end": 7,
+          "functionName": "generateProjectId 内の分岐 (L7-9)"
+        },
+        {
+          "start": 11,
+          "end": 11,
+          "functionName": "generateCacheKey 内の分岐 (L11-17)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/coverage-analyzer/parsers/coveragepy-parser.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 14.0625,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 34,
+          "end": 34,
+          "functionName": "parse 内の分岐 (L34-35)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "parse 内の分岐 (L37-39)"
+        },
+        {
+          "start": 41,
+          "end": 41,
+          "functionName": "parse 内の分岐 (L41-45)"
+        },
+        {
+          "start": 47,
+          "end": 47,
+          "functionName": "parse 内の分岐 (L47-57)"
+        },
+        {
+          "start": 59,
+          "end": 59,
+          "functionName": "parse 内の分岐 (L59-63)"
+        },
+        {
+          "start": 65,
+          "end": 65,
+          "functionName": "parse 内の分岐 (L65-67)"
+        },
+        {
+          "start": 69,
+          "end": 69,
+          "functionName": "parse 内の分岐 (L69-78)"
+        },
+        {
+          "start": 80,
+          "end": 80,
+          "functionName": "parse 内の分岐 (L80-81)"
+        },
+        {
+          "start": 83,
+          "end": 83,
+          "functionName": "groupConsecutiveLines 内の分岐 (L83-86)"
+        },
+        {
+          "start": 88,
+          "end": 88,
+          "functionName": "groupConsecutiveLines 内の分岐 (L88-95)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 36,
+      "complexity": 11,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/coverage-analyzer/parsers/llvm-cov-parser.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 16.9811320754717,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 45,
+          "end": 45,
+          "functionName": "parse 内の分岐 (L45-46)"
+        },
+        {
+          "start": 48,
+          "end": 48,
+          "functionName": "parse 内の分岐 (L48-54)"
+        },
+        {
+          "start": 56,
+          "end": 56,
+          "functionName": "parse 内の分岐 (L56-60)"
+        },
+        {
+          "start": 62,
+          "end": 62,
+          "functionName": "parse 内の分岐 (L62-69)"
+        },
+        {
+          "start": 71,
+          "end": 71,
+          "functionName": "parse 内の分岐 (L71-79)"
+        },
+        {
+          "start": 81,
+          "end": 81,
+          "functionName": "parse 内の分岐 (L81-91)"
+        },
+        {
+          "start": 93,
+          "end": 93,
+          "functionName": "parse 内の分岐 (L93-94)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 34,
+      "complexity": 7,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/test-runner/framework-detector.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 48.91304347826087,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 45,
+          "end": 45,
+          "functionName": "detectTestFramework 内の分岐 (L45-53)"
+        },
+        {
+          "start": 65,
+          "end": 65,
+          "functionName": "detectTestFramework 内の分岐 (L65-75)"
+        },
+        {
+          "start": 80,
+          "end": 80,
+          "functionName": "detectTestFramework 内の分岐 (L80-87)"
+        },
+        {
+          "start": 92,
+          "end": 92,
+          "functionName": "detectTestFramework 内の分岐 (L92-99)"
+        },
+        {
+          "start": 110,
+          "end": 110,
+          "functionName": "checkPyprojectForPytest 内の分岐 (L110-116)"
+        },
+        {
+          "start": 118,
+          "end": 118,
+          "functionName": "checkPyprojectForPytest 内の分岐 (L118-121)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 19,
+      "complexity": 12,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/ast-analyzer.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 73.17073170731707,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 73,
+          "end": 73,
+          "functionName": "getFunctionPatterns 内の分岐 (L73-73)"
+        },
+        {
+          "start": 75,
+          "end": 75,
+          "functionName": "getFunctionPatterns 内の分岐 (L75-75)"
+        },
+        {
+          "start": 77,
+          "end": 77,
+          "functionName": "getFunctionPatterns 内の分岐 (L77-77)"
+        },
+        {
+          "start": 80,
+          "end": 80,
+          "functionName": "getFunctionPatterns 内の分岐 (L80-80)"
+        },
+        {
+          "start": 82,
+          "end": 82,
+          "functionName": "getFunctionPatterns 内の分岐 (L82-82)"
+        },
+        {
+          "start": 109,
+          "end": 109,
+          "functionName": "extractImports 内の分岐 (L109-116)"
+        },
+        {
+          "start": 118,
+          "end": 118,
+          "functionName": "extractImports 内の分岐 (L118-122)"
+        },
+        {
+          "start": 124,
+          "end": 124,
+          "functionName": "extractImports 内の分岐 (L124-128)"
+        },
+        {
+          "start": 131,
+          "end": 131,
+          "functionName": "extractImports 内の分岐 (L131-135)"
+        },
+        {
+          "start": 152,
+          "end": 152,
+          "functionName": "findBlockEnd 内の分岐 (L152-161)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 12,
+      "complexity": 30,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/coverage-analyzer/normalizer.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 68.33333333333333,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 21,
+          "end": 21,
+          "functionName": "parseReport 内の分岐 (L21-21)"
+        },
+        {
+          "start": 23,
+          "end": 23,
+          "functionName": "parseReport 内の分岐 (L23-23)"
+        },
+        {
+          "start": 25,
+          "end": 25,
+          "functionName": "parseReport 内の分岐 (L25-25)"
+        },
+        {
+          "start": 27,
+          "end": 27,
+          "functionName": "parseReport 内の分岐 (L27-27)"
+        },
+        {
+          "start": 29,
+          "end": 29,
+          "functionName": "parseReport 内の分岐 (L29-29)"
+        },
+        {
+          "start": 39,
+          "end": 39,
+          "functionName": "applyPathMappings 内の分岐 (L39-50)"
+        },
+        {
+          "start": 64,
+          "end": 64,
+          "functionName": "matchWithSourceFiles 内の分岐 (L64-65)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 8,
+      "complexity": 6,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/file-scanner.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 73.25581395348837,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "scanProject 内の分岐 (L37-39)"
+        },
+        {
+          "start": 53,
+          "end": 53,
+          "functionName": "scanProject 内の分岐 (L53-54)"
+        },
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "scanProject 内の分岐 (L61-66)"
+        },
+        {
+          "start": 70,
+          "end": 70,
+          "functionName": "scanProject 内の分岐 (L70-71)"
+        },
+        {
+          "start": 73,
+          "end": 73,
+          "functionName": "scanProject 内の分岐 (L73-75)"
+        },
+        {
+          "start": 80,
+          "end": 80,
+          "functionName": "scanProject 内の分岐 (L80-82)"
+        },
+        {
+          "start": 91,
+          "end": 91,
+          "functionName": "scanProject 内の分岐 (L91-92)"
+        },
+        {
+          "start": 115,
+          "end": 115,
+          "functionName": "loadGitignorePatterns 内の分岐 (L115-116)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 8,
+      "complexity": 14,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/complexity-calculator.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 74.68354430379746,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "getBranchPatterns 内の分岐 (L61-69)"
+        },
+        {
+          "start": 72,
+          "end": 72,
+          "functionName": "getBranchPatterns 内の分岐 (L72-81)"
+        },
+        {
+          "start": 83,
+          "end": 83,
+          "functionName": "getBranchPatterns 内の分岐 (L83-83)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 8,
+      "complexity": 18,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/module-builder.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 70.73170731707317,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 70,
+          "end": 70,
+          "functionName": "buildChildModules 内の分岐 (L70-71)"
+        },
+        {
+          "start": 73,
+          "end": 73,
+          "functionName": "buildChildModules 内の分岐 (L73-77)"
+        },
+        {
+          "start": 81,
+          "end": 81,
+          "functionName": "buildChildModules 内の分岐 (L81-86)"
+        },
+        {
+          "start": 88,
+          "end": 88,
+          "functionName": "buildChildModules 内の分岐 (L88-98)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 7,
+      "complexity": 7,
+      "changeFrequency": 0
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/coverage-handlers.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "registerCoverageHandlers",
+        "setLastRootPath"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: registerCoverageHandlers の正常系テスト | normal: setLastRootPath の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/export-handlers.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "registerExportHandlers"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: registerExportHandlers の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/project-handlers.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "registerProjectHandlers"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: registerProjectHandlers の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/feedback-handlers.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "registerFeedbackHandlers",
+        "setLastProjectRoot"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: registerFeedbackHandlers の正常系テスト | normal: setLastProjectRoot の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/test-handlers.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "registerTestHandlers",
+        "setProjectStructure"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: registerTestHandlers の正常系テスト | normal: setProjectStructure の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/cache-manager.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "getCacheBasePath",
+        "getCacheStats",
+        "clearProjectCache",
+        "clearAllCache",
+        "formatBytes"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: getCacheBasePath の正常系テスト | normal: getCacheStats の正常系テスト | normal: clearProjectCache の正常系テスト | normal: clearAllCache の正常系テスト | normal: formatBytes の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/settings-manager.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "getUserDataPath",
+        "readJsonFile",
+        "writeJsonFile",
+        "loadGlobalSettings",
+        "saveGlobalSettings",
+        "loadProjectSettings",
+        "saveProjectSettings",
+        "loadRecentProjects",
+        "addRecentProject"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: getUserDataPath の正常系テスト | normal: readJsonFile の正常系テスト | normal: writeJsonFile の正常系テスト | normal: loadGlobalSettings の正常系テスト | normal: saveGlobalSettings の正常系テスト | normal: loadProjectSettings の正常系テスト | normal: saveProjectSettings の正常系テスト | normal: loadRecentProjects の正常系テスト | normal: addRecentProject の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/feedback-generator/feedback-deployer.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "deployFeedback",
+        "suggestGitignore"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: deployFeedback の正常系テスト | normal: suggestGitignore の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/utils/git-utils.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "isGitRepository",
+        "getFileCommitCount",
+        "getMaxCommitCount",
+        "getChangeFrequencyScore"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: isGitRepository の正常系テスト | normal: getFileCommitCount の正常系テスト | normal: getMaxCommitCount の正常系テスト | normal: getChangeFrequencyScore の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/settings-handlers.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "registerSettingsHandlers"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: registerSettingsHandlers の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/utils/hash-utils.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "sha256",
+        "generateProjectId",
+        "generateCacheKey"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: sha256 の正常系テスト | normal: generateProjectId の正常系テスト | normal: generateCacheKey の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/coverage-analyzer/parsers/coveragepy-parser.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "parse",
+        "groupConsecutiveLines"
+      ],
+      "description": "Line: 14%→80% | Function: 33%→80% | Branch: 50%→80% | 品質: NONE | normal: parse の正常系テスト | normal: groupConsecutiveLines の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/coverage-analyzer/parsers/llvm-cov-parser.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "parse"
+      ],
+      "description": "Line: 17%→80% | Function: 50%→80% | Branch: 33%→80% | 品質: NONE | normal: parse の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/test-runner/framework-detector.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "checkPyprojectForPytest"
+      ],
+      "description": "Line: 49%→80% | Function: 50%→80% | Branch: 64%→80% | 品質: LOW | normal: checkPyprojectForPytest の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: checkPyprojectForPytest"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/ast-analyzer.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "getIndentLevel"
+      ],
+      "description": "Line: 73%→80% | Function: 86%→80% | Branch: 62%→80% | 品質: MEDIUM | normal: getIndentLevel の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/coverage-analyzer/normalizer.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "parseReport",
+        "applyPathMappings",
+        "matchWithSourceFiles"
+      ],
+      "description": "Line: 68%→80% | Function: 100%→80% | Branch: 33%→80% | 品質: NONE | normal: parseReport の正常系テスト | normal: applyPathMappings の正常系テスト | normal: matchWithSourceFiles の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/file-scanner.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "scanProject",
+        "walk",
+        "loadGitignorePatterns"
+      ],
+      "description": "Line: 73%→80% | Function: 100%→80% | Branch: 50%→80% | 品質: MEDIUM | normal: scanProject の正常系テスト | normal: walk の正常系テスト | normal: loadGitignorePatterns の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/complexity-calculator.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "calculateComplexity",
+        "getBranchPatterns",
+        "estimateComplexityFromLoc"
+      ],
+      "description": "Line: 75%→80% | Function: 100%→80% | Branch: 69%→80% | 品質: MEDIUM | normal: calculateComplexity の正常系テスト | normal: getBranchPatterns の正常系テスト | normal: estimateComplexityFromLoc の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/module-builder.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "buildModules",
+        "groupByDirectory",
+        "buildChildModules"
+      ],
+      "description": "Line: 71%→80% | Function: 100%→80% | Branch: 71%→80% | 品質: HIGH | normal: buildModules の正常系テスト | normal: groupByDirectory の正常系テスト | normal: buildChildModules の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト"
+    }
+  ]
+}

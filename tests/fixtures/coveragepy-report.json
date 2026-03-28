@@ -1,0 +1,25 @@
+{
+  "files": {
+    "src/utils/helpers.py": {
+      "executed_lines": [1, 2, 3, 5, 6, 10, 11],
+      "missing_lines": [7, 8, 12, 13, 14],
+      "excluded_lines": [],
+      "summary": {
+        "covered_lines": 7,
+        "num_statements": 12,
+        "percent_covered": 58.33
+      },
+      "executed_branches": [[5, 6], [10, 11]],
+      "missing_branches": [[5, 7], [10, 12]]
+    },
+    "src\\models\\user.py": {
+      "executed_lines": [1, 2, 3, 4, 5],
+      "missing_lines": [],
+      "summary": {
+        "covered_lines": 5,
+        "num_statements": 5,
+        "percent_covered": 100.0
+      }
+    }
+  }
+}

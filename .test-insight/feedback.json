@@ -1,0 +1,649 @@
+{
+  "version": "1.1.0",
+  "generatedAt": "2026-03-26T13:55:51.955Z",
+  "projectRoot": "D:\\AI_Agent\\ClaudeWorkingFolder\\TestTools\\TestInsightHub",
+  "coverageThreshold": 80,
+  "summary": {
+    "totalModules": 1,
+    "belowThreshold": 1,
+    "totalUncoveredFunctions": 106,
+    "overallCoverage": 74.2
+  },
+  "gaps": [
+    {
+      "filePath": "src/renderer/App.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-18 の分岐"
+        },
+        {
+          "start": 20,
+          "end": 20,
+          "functionName": "L20-20 の分岐"
+        },
+        {
+          "start": 22,
+          "end": 22,
+          "functionName": "App 内の分岐 (L22-24)"
+        },
+        {
+          "start": 26,
+          "end": 26,
+          "functionName": "App 内の分岐 (L26-31)"
+        },
+        {
+          "start": 33,
+          "end": 33,
+          "functionName": "App 内の分岐 (L33-36)"
+        },
+        {
+          "start": 38,
+          "end": 38,
+          "functionName": "App 内の分岐 (L38-42)"
+        },
+        {
+          "start": 44,
+          "end": 44,
+          "functionName": "App 内の分岐 (L44-71)"
+        },
+        {
+          "start": 73,
+          "end": 73,
+          "functionName": "App 内の分岐 (L73-73)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/components/keyboard-shortcut-provider.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "L1-1 の分岐"
+        },
+        {
+          "start": 3,
+          "end": 3,
+          "functionName": "KeyboardShortcutProvider 内の分岐 (L3-6)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/components/diagram/dependency-edge.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 3.7735849056603774,
+      "targetCoverage": 80,
+      "uncoveredLines": [],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 38,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/components/toast.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 34.375,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 20,
+          "end": 20,
+          "functionName": "Toast 内の分岐 (L20-22)"
+        },
+        {
+          "start": 24,
+          "end": 24,
+          "functionName": "Toast 内の分岐 (L24-27)"
+        },
+        {
+          "start": 29,
+          "end": 29,
+          "functionName": "Toast 内の分岐 (L29-32)"
+        },
+        {
+          "start": 34,
+          "end": 34,
+          "functionName": "Toast 内の分岐 (L34-34)"
+        },
+        {
+          "start": 36,
+          "end": 36,
+          "functionName": "Toast 内の分岐 (L36-38)"
+        },
+        {
+          "start": 40,
+          "end": 40,
+          "functionName": "Toast 内の分岐 (L40-44)"
+        },
+        {
+          "start": 46,
+          "end": 46,
+          "functionName": "Toast 内の分岐 (L46-46)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 25,
+      "complexity": 7,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/coverage-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 53.179190751445084,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 24,
+          "end": 24,
+          "functionName": "getMetricForMode 内の分岐 (L24-24)"
+        },
+        {
+          "start": 26,
+          "end": 26,
+          "functionName": "getMetricForMode 内の分岐 (L26-26)"
+        },
+        {
+          "start": 38,
+          "end": 38,
+          "functionName": "filterByTestType 内の分岐 (L38-42)"
+        },
+        {
+          "start": 86,
+          "end": 86,
+          "functionName": "CoveragePage 内の分岐 (L86-89)"
+        },
+        {
+          "start": 91,
+          "end": 91,
+          "functionName": "CoveragePage 内の分岐 (L91-92)"
+        },
+        {
+          "start": 95,
+          "end": 95,
+          "functionName": "CoveragePage 内の分岐 (L95-99)"
+        },
+        {
+          "start": 101,
+          "end": 101,
+          "functionName": "CoveragePage 内の分岐 (L101-106)"
+        },
+        {
+          "start": 108,
+          "end": 108,
+          "functionName": "CoveragePage 内の分岐 (L108-117)"
+        },
+        {
+          "start": 120,
+          "end": 120,
+          "functionName": "CoveragePage 内の分岐 (L120-139)"
+        },
+        {
+          "start": 142,
+          "end": 142,
+          "functionName": "CoveragePage 内の分岐 (L142-158)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 23,
+      "complexity": 31,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/feedback-history-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 41.62162162162162,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 15,
+          "end": 15,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L15-16)"
+        },
+        {
+          "start": 28,
+          "end": 28,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L28-61)"
+        },
+        {
+          "start": 63,
+          "end": 63,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L63-70)"
+        },
+        {
+          "start": 72,
+          "end": 72,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L72-80)"
+        },
+        {
+          "start": 82,
+          "end": 82,
+          "functionName": "FeedbackHistoryPage 内の分岐 (L82-82)"
+        },
+        {
+          "start": 150,
+          "end": 150,
+          "functionName": "HistoryEntry 内の分岐 (L150-156)"
+        },
+        {
+          "start": 158,
+          "end": 158,
+          "functionName": "HistoryEntry 内の分岐 (L158-171)"
+        },
+        {
+          "start": 173,
+          "end": 173,
+          "functionName": "HistoryEntry 内の分岐 (L173-183)"
+        },
+        {
+          "start": 186,
+          "end": 186,
+          "functionName": "HistoryEntry 内の分岐 (L186-192)"
+        },
+        {
+          "start": 194,
+          "end": 194,
+          "functionName": "HistoryEntry 内の分岐 (L194-199)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 21,
+      "complexity": 5,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/feedback-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 58.432304038004744,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 39,
+          "end": 39,
+          "functionName": "FeedbackPage 内の分岐 (L39-47)"
+        },
+        {
+          "start": 51,
+          "end": 51,
+          "functionName": "FeedbackPage 内の分岐 (L51-59)"
+        },
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "FeedbackPage 内の分岐 (L61-75)"
+        },
+        {
+          "start": 78,
+          "end": 78,
+          "functionName": "FeedbackPage 内の分岐 (L78-81)"
+        },
+        {
+          "start": 84,
+          "end": 84,
+          "functionName": "FeedbackPage 内の分岐 (L84-85)"
+        },
+        {
+          "start": 87,
+          "end": 87,
+          "functionName": "FeedbackPage 内の分岐 (L87-98)"
+        },
+        {
+          "start": 101,
+          "end": 101,
+          "functionName": "FeedbackPage 内の分岐 (L101-109)"
+        },
+        {
+          "start": 113,
+          "end": 113,
+          "functionName": "FeedbackPage 内の分岐 (L113-113)"
+        },
+        {
+          "start": 115,
+          "end": 115,
+          "functionName": "FeedbackPage 内の分岐 (L115-115)"
+        },
+        {
+          "start": 253,
+          "end": 253,
+          "functionName": "FeedbackPage 内の分岐 (L253-268)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 21,
+      "complexity": 34,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/components/progress-bar-global.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 48.484848484848484,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 31,
+          "end": 31,
+          "functionName": "ProgressBarGlobal 内の分岐 (L31-33)"
+        },
+        {
+          "start": 35,
+          "end": 35,
+          "functionName": "ProgressBarGlobal 内の分岐 (L35-35)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "ProgressBarGlobal 内の分岐 (L37-44)"
+        },
+        {
+          "start": 46,
+          "end": 46,
+          "functionName": "ProgressBarGlobal 内の分岐 (L46-46)"
+        },
+        {
+          "start": 48,
+          "end": 48,
+          "functionName": "ProgressBarGlobal 内の分岐 (L48-50)"
+        },
+        {
+          "start": 52,
+          "end": 52,
+          "functionName": "ProgressBarGlobal 内の分岐 (L52-52)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 17,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/diagram-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 61.5819209039548,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 49,
+          "end": 49,
+          "functionName": "DiagramContent 内の分岐 (L49-49)"
+        },
+        {
+          "start": 54,
+          "end": 54,
+          "functionName": "DiagramContent 内の分岐 (L54-78)"
+        },
+        {
+          "start": 84,
+          "end": 84,
+          "functionName": "DiagramContent 内の分岐 (L84-98)"
+        },
+        {
+          "start": 130,
+          "end": 130,
+          "functionName": "DiagramContent 内の分岐 (L130-135)"
+        },
+        {
+          "start": 178,
+          "end": 178,
+          "functionName": "DiagramContent 内の分岐 (L178-182)"
+        },
+        {
+          "start": 184,
+          "end": 184,
+          "functionName": "DiagramContent 内の分岐 (L184-185)"
+        },
+        {
+          "start": 192,
+          "end": 192,
+          "functionName": "computeOverall 内の分岐 (L192-200)"
+        },
+        {
+          "start": 202,
+          "end": 202,
+          "functionName": "getCoverageColor 内の分岐 (L202-206)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 15,
+      "complexity": 18,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/pages/home-page.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 62.06896551724138,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 23,
+          "end": 23,
+          "functionName": "HomePage 内の分岐 (L23-24)"
+        },
+        {
+          "start": 26,
+          "end": 26,
+          "functionName": "HomePage 内の分岐 (L26-34)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "HomePage 内の分岐 (L37-45)"
+        },
+        {
+          "start": 61,
+          "end": 61,
+          "functionName": "HomePage 内の分岐 (L61-73)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 12,
+      "complexity": 10,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/hooks/use-diagram.ts",
+      "moduleName": "src/renderer",
+      "currentCoverage": 62.328767123287676,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 40,
+          "end": 40,
+          "functionName": "useDiagram 内の分岐 (L40-48)"
+        },
+        {
+          "start": 54,
+          "end": 54,
+          "functionName": "useDiagram 内の分岐 (L54-55)"
+        },
+        {
+          "start": 84,
+          "end": 84,
+          "functionName": "useDiagram 内の分岐 (L84-94)"
+        },
+        {
+          "start": 97,
+          "end": 97,
+          "functionName": "useDiagram 内の分岐 (L97-106)"
+        },
+        {
+          "start": 111,
+          "end": 111,
+          "functionName": "useDiagram 内の分岐 (L111-116)"
+        },
+        {
+          "start": 121,
+          "end": 121,
+          "functionName": "useDiagram 内の分岐 (L121-122)"
+        },
+        {
+          "start": 130,
+          "end": 130,
+          "functionName": "useDiagram 内の分岐 (L130-131)"
+        },
+        {
+          "start": 163,
+          "end": 163,
+          "functionName": "applyDagreLayout 内の分岐 (L163-164)"
+        },
+        {
+          "start": 179,
+          "end": 179,
+          "functionName": "applyGridLayout 内の分岐 (L179-189)"
+        }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "low",
+      "priorityScore": 12,
+      "complexity": 10,
+      "changeFrequency": 0
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/App.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "App",
+        "handleOnboardingComplete"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: App の正常系テスト | normal: handleOnboardingComplete の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/components/keyboard-shortcut-provider.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "KeyboardShortcutProvider"
+      ],
+      "description": "Line: 0%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: LOW | normal: KeyboardShortcutProvider の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: (empty-report)"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/components/diagram/dependency-edge.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "DependencyEdge"
+      ],
+      "description": "Line: 4%→80% | Function: 0%→80% | Branch: 0%→80% | 品質: NONE | normal: DependencyEdge の正常系テスト | error: エラーケースのテスト | boundary: 境界値テスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/components/toast.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "Toast"
+      ],
+      "description": "Line: 34%→80% | Function: 50%→80% | Branch: 100%→80% | 品質: MEDIUM | normal: Toast の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 未テスト関数: Toast"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/coverage-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "handleRunTests",
+        "handleLoadExisting",
+        "onChange",
+        "onChange",
+        "onClick",
+        "onClick",
+        "onChange",
+        "buildZeroCoverage"
+      ],
+      "description": "Line: 53%→80% | Function: 33%→80% | Branch: 66%→80% | 品質: LOW | normal: handleRunTests の正常系テスト | normal: handleLoadExisting の正常系テスト | normal: onChange の正常系テスト | normal: onChange の正常系テスト | normal: onClick の正常系テスト | normal: onClick の正常系テスト | normal: onChange の正常系テスト | normal: buildZeroCoverage の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: handleRunTests, handleLoadExisting, onChange, onChange, onClick, onClick, onChange, buildZeroCoverage"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/feedback-history-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "toggleExpand",
+        "onClick",
+        "onToggle"
+      ],
+      "description": "Line: 42%→80% | Function: 50%→80% | Branch: 57%→80% | 品質: LOW | normal: toggleExpand の正常系テスト | normal: onClick の正常系テスト | normal: onToggle の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 分岐カバレッジが低いです。if/else の両方のパスをテストしてください。 | 指摘: 未テスト関数: toggleExpand, onClick, onToggle"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/feedback-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "handleGenerate",
+        "handleClear",
+        "handleDeploy",
+        "handleCopyToClipboard",
+        "onClick",
+        "onClick",
+        "onChange",
+        "buildFeedbackText",
+        "buildEnrichedJson"
+      ],
+      "description": "Line: 58%→80% | Function: 18%→80% | Branch: 74%→80% | 品質: MEDIUM | normal: handleGenerate の正常系テスト | normal: handleClear の正常系テスト | normal: handleDeploy の正常系テスト | normal: handleCopyToClipboard の正常系テスト | normal: onClick の正常系テスト | normal: onClick の正常系テスト | normal: onChange の正常系テスト | normal: buildFeedbackText の正常系テスト | normal: buildEnrichedJson の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: handleGenerate, handleClear, handleDeploy, handleCopyToClipboard, onClick, onClick, onChange, buildFeedbackText, buildEnrichedJson"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/components/progress-bar-global.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "ProgressBarGlobal"
+      ],
+      "description": "Line: 48%→80% | Function: 75%→80% | Branch: 100%→80% | 品質: MEDIUM | normal: ProgressBarGlobal の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 行カバレッジが不十分です。テストケースを追加してください。 | 指摘: 未テスト関数: ProgressBarGlobal"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/diagram-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "onClose",
+        "computeOverall",
+        "getCoverageColor"
+      ],
+      "description": "Line: 62%→80% | Function: 40%→80% | Branch: 71%→80% | 品質: MEDIUM | normal: onClose の正常系テスト | normal: computeOverall の正常系テスト | normal: getCoverageColor の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: onClose, computeOverall, getCoverageColor"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/pages/home-page.tsx",
+      "suggestedTestFile": "",
+      "functions": [
+        "handleSelectProject",
+        "handleOpenRecent",
+        "onClick"
+      ],
+      "description": "Line: 62%→80% | Function: 25%→80% | Branch: 93%→80% | 品質: MEDIUM | normal: handleSelectProject の正常系テスト | normal: handleOpenRecent の正常系テスト | normal: onClick の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: 未テスト関数: handleSelectProject, handleOpenRecent, onClick"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/hooks/use-diagram.ts",
+      "suggestedTestFile": "",
+      "functions": [
+        "applyGridLayout"
+      ],
+      "description": "Line: 62%→80% | Function: 67%→80% | Branch: 58%→80% | 品質: NONE | normal: applyGridLayout の正常系テスト | error: エラーケースのテスト | boundary: 分岐カバレッジテスト | 指摘: テストが存在しません。テストを新規作成してください。"
+    }
+  ]
+}

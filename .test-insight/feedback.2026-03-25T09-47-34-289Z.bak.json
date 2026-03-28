@@ -1,0 +1,1257 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-03-25T00:30:57.494Z",
+  "projectRoot": "D:\\AI_Agent\\ClaudeWorkingFolder\\TestTools\\TestInsightHub",
+  "coverageThreshold": 80,
+  "summary": {
+    "totalModules": 1,
+    "belowThreshold": 1,
+    "totalUncoveredFunctions": 163,
+    "overallCoverage": 64.8
+  },
+  "gaps": [
+    {
+      "filePath": "src/main/ipc/coverage-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 2,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 4,
+          "end": 5,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 7,
+          "end": 7,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 9,
+          "end": 14,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 16,
+          "end": 35,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 37,
+          "end": 41,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 43,
+          "end": 43,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 45,
+          "end": 45,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 47,
+          "end": 50,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 52,
+          "end": 54,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 43,
+      "complexity": 9,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/export-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 3,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 5,
+          "end": 5,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 11,
+          "end": 15,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 17,
+          "end": 26,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 28,
+          "end": 28,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 30,
+          "end": 31,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 33,
+          "end": 42,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 44,
+          "end": 49,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 51,
+          "end": 53,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 55,
+          "end": 65,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 43,
+      "complexity": 10,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/project-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 3,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 5,
+          "end": 9,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 11,
+          "end": 21,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 23,
+          "end": 26,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 28,
+          "end": 38,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 40,
+          "end": 47,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 49,
+          "end": 55,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 57,
+          "end": 70,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 42,
+      "complexity": 7,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/feedback-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 3,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 8,
+          "end": 8,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 12,
+          "end": 12,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 14,
+          "end": 14,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 21,
+          "end": 24,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 27,
+          "end": 34,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 47,
+          "end": 51,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 53,
+          "end": 55,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 57,
+          "end": 60,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 62,
+          "end": 64,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/test-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 2,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 5,
+          "end": 7,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 9,
+          "end": 9,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 11,
+          "end": 11,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 13,
+          "end": 18,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 20,
+          "end": 33,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 35,
+          "end": 35,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 37,
+          "end": 37,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 40,
+          "end": 44,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 46,
+          "end": 48,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 50,
+          "end": 56,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 58,
+          "end": 60,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/cache-manager.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 3,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 11,
+          "end": 13,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 15,
+          "end": 19,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 21,
+          "end": 34,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 36,
+          "end": 38,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 40,
+          "end": 40,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 42,
+          "end": 43,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 45,
+          "end": 50,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 52,
+          "end": 53,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 55,
+          "end": 63,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 65,
+          "end": 66,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 68,
+          "end": 74,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 4,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/settings-manager.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 3,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 9,
+          "end": 9,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 21,
+          "end": 28,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 30,
+          "end": 37,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 39,
+          "end": 43,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 45,
+          "end": 49,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 51,
+          "end": 56,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 58,
+          "end": 68,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 70,
+          "end": 80,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 82,
+          "end": 86,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 88,
+          "end": 94,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/feedback-generator/feedback-deployer.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 3,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 5,
+          "end": 5,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 13,
+          "end": 17,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 19,
+          "end": 28,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 30,
+          "end": 35,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 37,
+          "end": 39,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 41,
+          "end": 43,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 45,
+          "end": 55,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 57,
+          "end": 62,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 64,
+          "end": 69,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 71,
+          "end": 77,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/utils/git-utils.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 4,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 10,
+          "end": 10,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 12,
+          "end": 19,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 21,
+          "end": 36,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 51,
+          "end": 60,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 62,
+          "end": 72,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/settings-handlers.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 2,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 4,
+          "end": 4,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 12,
+          "end": 15,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 17,
+          "end": 22,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 24,
+          "end": 29,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 31,
+          "end": 36,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 38,
+          "end": 41,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/utils/hash-utils.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 1,
+          "end": 1,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 3,
+          "end": 5,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 7,
+          "end": 9,
+          "functionName": "(empty-report)"
+        },
+        {
+          "start": 11,
+          "end": 17,
+          "functionName": "(empty-report)"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/coverage-analyzer/parsers/coveragepy-parser.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 14.1,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 34,
+          "end": 35,
+          "functionName": "parse"
+        },
+        {
+          "start": 37,
+          "end": 39,
+          "functionName": "parse"
+        },
+        {
+          "start": 41,
+          "end": 45,
+          "functionName": "parse"
+        },
+        {
+          "start": 47,
+          "end": 57,
+          "functionName": "parse"
+        },
+        {
+          "start": 59,
+          "end": 63,
+          "functionName": "parse"
+        },
+        {
+          "start": 65,
+          "end": 67,
+          "functionName": "parse"
+        },
+        {
+          "start": 69,
+          "end": 78,
+          "functionName": "parse"
+        },
+        {
+          "start": 80,
+          "end": 81,
+          "functionName": "parse"
+        },
+        {
+          "start": 83,
+          "end": 86,
+          "functionName": "groupConsecutiveLines"
+        },
+        {
+          "start": 88,
+          "end": 95,
+          "functionName": "groupConsecutiveLines"
+        },
+        {
+          "start": 97,
+          "end": 98,
+          "functionName": "groupConsecutiveLines"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 36,
+      "complexity": 11,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/coverage-analyzer/parsers/llvm-cov-parser.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 17,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 45,
+          "end": 46,
+          "functionName": "parse"
+        },
+        {
+          "start": 48,
+          "end": 54,
+          "functionName": "parse"
+        },
+        {
+          "start": 56,
+          "end": 60,
+          "functionName": "parse"
+        },
+        {
+          "start": 62,
+          "end": 69,
+          "functionName": "parse"
+        },
+        {
+          "start": 71,
+          "end": 79,
+          "functionName": "parse"
+        },
+        {
+          "start": 81,
+          "end": 91,
+          "functionName": "parse"
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "functionName": "parse"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 34,
+      "complexity": 7,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/test-runner/framework-detector.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 48.9,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 45,
+          "end": 53,
+          "functionName": "detectTestFramework"
+        },
+        {
+          "start": 65,
+          "end": 75,
+          "functionName": "detectTestFramework"
+        },
+        {
+          "start": 80,
+          "end": 87,
+          "functionName": "detectTestFramework"
+        },
+        {
+          "start": 92,
+          "end": 99,
+          "functionName": "detectTestFramework"
+        },
+        {
+          "start": 110,
+          "end": 116,
+          "functionName": "checkPyprojectForPytest"
+        },
+        {
+          "start": 118,
+          "end": 121,
+          "functionName": "checkPyprojectForPytest"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 19,
+      "complexity": 12,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/ast-analyzer.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 73.2,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 73,
+          "end": 73,
+          "functionName": "getFunctionPatterns"
+        },
+        {
+          "start": 75,
+          "end": 75,
+          "functionName": "getFunctionPatterns"
+        },
+        {
+          "start": 77,
+          "end": 77,
+          "functionName": "getFunctionPatterns"
+        },
+        {
+          "start": 80,
+          "end": 80,
+          "functionName": "getFunctionPatterns"
+        },
+        {
+          "start": 82,
+          "end": 82,
+          "functionName": "getFunctionPatterns"
+        },
+        {
+          "start": 109,
+          "end": 116,
+          "functionName": "extractImports"
+        },
+        {
+          "start": 118,
+          "end": 122,
+          "functionName": "extractImports"
+        },
+        {
+          "start": 124,
+          "end": 128,
+          "functionName": "extractImports"
+        },
+        {
+          "start": 131,
+          "end": 135,
+          "functionName": "extractImports"
+        },
+        {
+          "start": 152,
+          "end": 161,
+          "functionName": "findBlockEnd"
+        },
+        {
+          "start": 178,
+          "end": 179,
+          "functionName": "findBlockEnd"
+        },
+        {
+          "start": 181,
+          "end": 184,
+          "functionName": "getIndentLevel"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 12,
+      "complexity": 30,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/coverage-analyzer/normalizer.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 68.3,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 21,
+          "end": 21,
+          "functionName": "parseReport"
+        },
+        {
+          "start": 23,
+          "end": 23,
+          "functionName": "parseReport"
+        },
+        {
+          "start": 25,
+          "end": 25,
+          "functionName": "parseReport"
+        },
+        {
+          "start": 27,
+          "end": 27,
+          "functionName": "parseReport"
+        },
+        {
+          "start": 29,
+          "end": 29,
+          "functionName": "parseReport"
+        },
+        {
+          "start": 39,
+          "end": 50,
+          "functionName": "applyPathMappings"
+        },
+        {
+          "start": 64,
+          "end": 65,
+          "functionName": "matchWithSourceFiles"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 8,
+      "complexity": 6,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/file-scanner.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 73.3,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 37,
+          "end": 39,
+          "functionName": "scanProject"
+        },
+        {
+          "start": 53,
+          "end": 54,
+          "functionName": "scanProject"
+        },
+        {
+          "start": 61,
+          "end": 66,
+          "functionName": "scanProject"
+        },
+        {
+          "start": 70,
+          "end": 71,
+          "functionName": "scanProject"
+        },
+        {
+          "start": 73,
+          "end": 75,
+          "functionName": "scanProject"
+        },
+        {
+          "start": 80,
+          "end": 82,
+          "functionName": "scanProject"
+        },
+        {
+          "start": 91,
+          "end": 92,
+          "functionName": "scanProject"
+        },
+        {
+          "start": 115,
+          "end": 116,
+          "functionName": "loadGitignorePatterns"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 8,
+      "complexity": 14,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/complexity-calculator.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 74.7,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 61,
+          "end": 69,
+          "functionName": "getBranchPatterns"
+        },
+        {
+          "start": 72,
+          "end": 81,
+          "functionName": "getBranchPatterns"
+        },
+        {
+          "start": 83,
+          "end": 83,
+          "functionName": "getBranchPatterns"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 8,
+      "complexity": 18,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/services/project-parser/module-builder.ts",
+      "moduleName": "src/main",
+      "currentCoverage": 70.7,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        {
+          "start": 70,
+          "end": 71,
+          "functionName": "buildChildModules"
+        },
+        {
+          "start": 73,
+          "end": 77,
+          "functionName": "buildChildModules"
+        },
+        {
+          "start": 81,
+          "end": 86,
+          "functionName": "buildChildModules"
+        },
+        {
+          "start": 88,
+          "end": 98,
+          "functionName": "buildChildModules"
+        }
+      ],
+      "recommendedTestType": "unit",
+      "priority": "low",
+      "priorityScore": 7,
+      "complexity": 7,
+      "changeFrequency": 0
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/coverage-handlers.ts",
+      "suggestedTestFile": "src/main/ipc/__tests__/coverage-handlers.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/export-handlers.ts",
+      "suggestedTestFile": "src/main/ipc/__tests__/export-handlers.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/project-handlers.ts",
+      "suggestedTestFile": "src/main/ipc/__tests__/project-handlers.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/feedback-handlers.ts",
+      "suggestedTestFile": "src/main/ipc/__tests__/feedback-handlers.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/test-handlers.ts",
+      "suggestedTestFile": "src/main/ipc/__tests__/test-handlers.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/cache-manager.ts",
+      "suggestedTestFile": "src/main/services/__tests__/cache-manager.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/settings-manager.ts",
+      "suggestedTestFile": "src/main/services/__tests__/settings-manager.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/feedback-generator/feedback-deployer.ts",
+      "suggestedTestFile": "src/main/services/feedback-generator/__tests__/feedback-deployer.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/utils/git-utils.ts",
+      "suggestedTestFile": "src/main/utils/__tests__/git-utils.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/ipc/settings-handlers.ts",
+      "suggestedTestFile": "src/main/ipc/__tests__/settings-handlers.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/utils/hash-utils.ts",
+      "suggestedTestFile": "src/main/utils/__tests__/hash-utils.test.ts",
+      "functions": [
+        "(empty-report)"
+      ],
+      "description": "(empty-report) のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/coverage-analyzer/parsers/coveragepy-parser.ts",
+      "suggestedTestFile": "src/main/services/coverage-analyzer/parsers/__tests__/coveragepy-parser.test.ts",
+      "functions": [
+        "parse",
+        "groupConsecutiveLines"
+      ],
+      "description": "parse, groupConsecutiveLines のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/coverage-analyzer/parsers/llvm-cov-parser.ts",
+      "suggestedTestFile": "src/main/services/coverage-analyzer/parsers/__tests__/llvm-cov-parser.test.ts",
+      "functions": [
+        "parse"
+      ],
+      "description": "parse のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/test-runner/framework-detector.ts",
+      "suggestedTestFile": "src/main/services/test-runner/__tests__/framework-detector.test.ts",
+      "functions": [
+        "detectTestFramework",
+        "checkPyprojectForPytest"
+      ],
+      "description": "detectTestFramework, checkPyprojectForPytest のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/ast-analyzer.ts",
+      "suggestedTestFile": "src/main/services/project-parser/__tests__/ast-analyzer.test.ts",
+      "functions": [
+        "getFunctionPatterns",
+        "extractImports",
+        "findBlockEnd",
+        "getIndentLevel"
+      ],
+      "description": "getFunctionPatterns, extractImports, findBlockEnd, getIndentLevel のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/coverage-analyzer/normalizer.ts",
+      "suggestedTestFile": "src/main/services/coverage-analyzer/__tests__/normalizer.test.ts",
+      "functions": [
+        "parseReport",
+        "applyPathMappings",
+        "matchWithSourceFiles"
+      ],
+      "description": "parseReport, applyPathMappings, matchWithSourceFiles のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/file-scanner.ts",
+      "suggestedTestFile": "src/main/services/project-parser/__tests__/file-scanner.test.ts",
+      "functions": [
+        "scanProject",
+        "loadGitignorePatterns"
+      ],
+      "description": "scanProject, loadGitignorePatterns のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/complexity-calculator.ts",
+      "suggestedTestFile": "src/main/services/project-parser/__tests__/complexity-calculator.test.ts",
+      "functions": [
+        "getBranchPatterns"
+      ],
+      "description": "getBranchPatterns のテストを追加"
+    },
+    {
+      "type": "unit",
+      "targetFile": "src/main/services/project-parser/module-builder.ts",
+      "suggestedTestFile": "src/main/services/project-parser/__tests__/module-builder.test.ts",
+      "functions": [
+        "buildChildModules"
+      ],
+      "description": "buildChildModules のテストを追加"
+    }
+  ]
+}

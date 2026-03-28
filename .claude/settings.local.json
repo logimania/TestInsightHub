@@ -7,7 +7,28 @@
       "Bash(/tmp/check_files.txt:*)",
       "Read(//tmp/**)",
       "Bash(gh run:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(cd:*)",
+      "Bash(npm install:*)",
+      "Bash(npm view:*)",
+      "Bash(npx vitest:*)",
+      "Bash(npx electron-vite:*)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(taskkill //F //IM electron.exe)",
+      "Bash(curl -s http://localhost:5173/main.tsx)",
+      "Bash(tasklist)",
+      "Bash(node -e \"const d=require\\(''''./.test-insight/feedback.json''''\\); d.gaps.forEach\\(g => console.log\\(g.recommendedTestType, g.priorityScore, g.filePath\\)\\)\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''.test-insight/feedback.json'',''utf8''\\)\\); console.log\\(''Summary:'', JSON.stringify\\(d.summary\\)\\); console.log\\(''---''\\); d.gaps.forEach\\(g => console.log\\(g.filePath, ''| cov:'', g.currentCoverage, ''| priority:'', g.priority, ''| score:'', g.priorityScore, ''| type:'', g.recommendedTestType, ''| complexity:'', g.complexity\\)\\);\")",
+      "Bash(npx prettier:*)",
+      "Bash(npx eslint:*)",
+      "Bash(node -e \"const ja = require\\(''./src/renderer/i18n/ja.json''\\); console.log\\(ja.feedbackHistory\\);\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''.test-insight/feedback.json'',''utf8''\\)\\); console.log\\(''Overall:'', d.summary.overallCoverage, ''% | Gaps:'', d.summary.totalUncoveredFunctions\\); console.log\\(''---''\\); d.gaps.forEach\\(g => console.log\\(g.filePath, ''|'', g.currentCoverage, ''% |'', g.priority, g.priorityScore, ''|'', g.recommendedTestType\\)\\);\")",
+      "Bash(node -e \":*)",
+      "WebSearch",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:slack.engineering)",
+      "WebFetch(domain:openobserve.ai)",
+      "Bash(ls \"D:\\\\AI_Agent\\\\ClaudeWorkingFolder\\\\TestTools\\\\TestInsightHub\\\\.claude\\\\worktrees\\\\agent-a4162742\\\\tests\\\\unit\\\\renderer\\\\pages\"\" 2>&1 | head -5 && echo \"---\" && ls \"D:AI_AgentClaudeWorkingFolderTestToolsTestInsightHub.claudeworktreesagent-a1f159a2testsunitrendererpages\"\")"
     ]
   }
 }

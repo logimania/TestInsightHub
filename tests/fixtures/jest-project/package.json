@@ -1,0 +1,6 @@
+{
+  "name": "jest-project",
+  "devDependencies": {
+    "jest": "29.7.0"
+  }
+}

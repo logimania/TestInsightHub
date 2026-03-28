@@ -1,0 +1,88 @@
+import type { TestType } from "./coverage";
+
+export interface FeedbackFile {
+  readonly version: string;
+  readonly generatedAt: string;
+  readonly projectRoot: string;
+  readonly coverageThreshold: number;
+  readonly summary: FeedbackSummary;
+  readonly gaps: readonly CoverageGap[];
+  readonly recommendations: readonly TestRecommendation[];
+}
+
+export interface FeedbackSummary {
+  readonly totalModules: number;
+  readonly belowThreshold: number;
+  readonly totalUncoveredFunctions: number;
+  readonly overallCoverage: number;
+}
+
+export interface CoverageGap {
+  readonly filePath: string;
+  readonly moduleName: string;
+  readonly currentCoverage: number;
+  readonly targetCoverage: number;
+  readonly uncoveredLines: readonly {
+    readonly start: number;
+    readonly end: number;
+    readonly functionName: string;
+  }[];
+  readonly recommendedTestType: TestType;
+  readonly priority: "high" | "medium" | "low";
+  readonly priorityScore: number;
+  readonly complexity: number;
+  readonly changeFrequency: number;
+  readonly prerequisites?: TestPrerequisites;
+}
+
+export interface TestRecommendation {
+  readonly type: TestType;
+  readonly targetFile: string;
+  readonly suggestedTestFile: string;
+  readonly functions: readonly string[];
+  readonly description: string;
+}
+
+export interface FeedbackComparison {
+  readonly previousFeedbackAt: string;
+  readonly currentFeedbackAt: string;
+  readonly improved: readonly GapChange[];
+  readonly unchanged: readonly GapChange[];
+  readonly newGaps: readonly CoverageGap[];
+  readonly improvementRate: number;
+}
+
+export interface GapChange {
+  readonly filePath: string;
+  readonly previousCoverage: number;
+  readonly currentCoverage: number;
+  readonly targetCoverage: number;
+}
+
+export interface PriorityWeights {
+  readonly coverageGapWeight: number;
+  readonly complexityWeight: number;
+  readonly changeFreqWeight: number;
+}
+
+// --- Prerequisites ---
+
+export interface TestPrerequisite {
+  readonly type: "package" | "config";
+  readonly name: string;
+  readonly description: string;
+  readonly installCommand?: string;
+  readonly configExample?: string;
+}
+
+export interface TestPrerequisites {
+  readonly satisfied: boolean;
+  readonly missing: readonly TestPrerequisite[];
+}
+
+export interface ProjectTestEnvironment {
+  readonly installedPackages: readonly string[];
+  readonly configFiles: readonly string[];
+  readonly testFramework: string | null;
+  readonly testEnvironment: string | null;
+}

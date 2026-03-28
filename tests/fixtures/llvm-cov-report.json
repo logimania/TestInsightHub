@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "files": [
+        {
+          "filename": "src/main.rs",
+          "summary": {
+            "lines": { "count": 20, "covered": 15, "percent": 75.0 },
+            "functions": { "count": 5, "covered": 4, "percent": 80.0 },
+            "branches": { "count": 8, "covered": 6, "percent": 75.0 }
+          },
+          "segments": [
+            [10, 1, 0, true, true],
+            [15, 1, 0, true, true],
+            [20, 1, 5, true, true]
+          ]
+        },
+        {
+          "filename": "src\\lib.rs",
+          "summary": {
+            "lines": { "count": 10, "covered": 10, "percent": 100.0 },
+            "functions": { "count": 3, "covered": 3, "percent": 100.0 }
+          }
+        }
+      ]
+    }
+  ]
+}

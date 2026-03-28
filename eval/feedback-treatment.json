@@ -1,0 +1,164 @@
+{
+  "version": "1.1.0",
+  "generatedAt": "2026-03-26T12:00:00Z",
+  "projectRoot": ".",
+  "coverageThreshold": 80,
+  "summary": { "totalModules": 3, "belowThreshold": 3, "totalUncoveredFunctions": 10, "overallCoverage": 0 },
+  "testEnvironment": {
+    "framework": "vitest",
+    "runner": "npx vitest run",
+    "coverageRunner": "npx vitest run --coverage",
+    "globals": true,
+    "jsdom": true,
+    "reactPlugin": "@vitejs/plugin-react (already configured in vitest.config.ts)"
+  },
+  "existingTestExamples": [
+    {
+      "sourceFile": "src/renderer/components/layout/menu-bar.tsx",
+      "testFile": "tests/unit/renderer/components/layout/menu-bar.test.tsx",
+      "patterns": ["renderWithProviders", "vi.stubGlobal for window.api", "fireEvent.click", "zustand store setState for setup"]
+    },
+    {
+      "sourceFile": "src/main/ipc/project-handlers.ts",
+      "testFile": "tests/unit/main/ipc/project-handlers.test.ts",
+      "patterns": ["vi.hoisted for mock declarations", "vi.mock('electron')", "extract handler from mockHandle.mock.calls", "vi.mock for services"]
+    }
+  ],
+  "gaps": [
+    {
+      "filePath": "src/renderer/components/diagram/diagram-controls.tsx",
+      "moduleName": "src/renderer/components/diagram",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        { "start": 13, "end": 77, "functionName": "DiagramControls" }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0,
+      "mockRecipes": {
+        "imports": [
+          "import { render, screen, fireEvent } from '@testing-library/react'",
+          "import { DiagramControls } from '../../../../../src/renderer/components/diagram/diagram-controls'"
+        ],
+        "mocks": [],
+        "setupCode": "const defaultProps = { layout: 'hierarchical' as const, nodeSize: 'medium' as const, onLayoutChange: vi.fn(), onNodeSizeChange: vi.fn(), onFitView: vi.fn(), onExport: vi.fn() };",
+        "notes": "Pure presentational component. No router, i18n, or store dependencies. Use plain render(), not renderWithProviders."
+      },
+      "existingTestExample": "tests/unit/renderer/components/diagram/module-node.test.tsx"
+    },
+    {
+      "filePath": "src/renderer/App.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        { "start": 22, "end": 73, "functionName": "App" },
+        { "start": 33, "end": 36, "functionName": "handleOnboardingComplete" }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0,
+      "mockRecipes": {
+        "imports": [
+          "import { render, screen } from '@testing-library/react'",
+          "import { I18nextProvider } from 'react-i18next'",
+          "import i18n from '../../../src/renderer/i18n/index'",
+          "import { App } from '../../../src/renderer/App'"
+        ],
+        "mocks": [
+          {
+            "target": "@xyflow/react",
+            "pattern": "vi.mock",
+            "code": "vi.mock('@xyflow/react', () => ({ ReactFlow: ({children}: any) => <div data-testid='react-flow'>{children}</div>, Background: () => <div/>, Controls: () => <div/>, MiniMap: () => <div/>, ReactFlowProvider: ({children}: any) => <div>{children}</div>, useReactFlow: () => ({fitView: vi.fn()}), Position: {Top:'top',Bottom:'bottom',Left:'left',Right:'right'}, Handle: () => <div/>, BaseEdge: () => <svg/>, getBezierPath: () => ['',0,0], EdgeLabelRenderer: ({children}: any) => <div>{children}</div> }))",
+            "reason": "ReactFlowはcanvas操作を含むためjsdomでは動作しない"
+          },
+          {
+            "target": "dagre",
+            "pattern": "vi.mock",
+            "code": "vi.mock('dagre', () => ({ default: { graphlib: { Graph: vi.fn().mockImplementation(() => ({setDefaultEdgeLabel:vi.fn(),setGraph:vi.fn(),setNode:vi.fn(),setEdge:vi.fn(),node:()=>({x:0,y:0})})) }, layout: vi.fn() } }))",
+            "reason": "dagreはuse-diagram.ts経由でDiagramPageが使う"
+          },
+          {
+            "target": "window.api",
+            "pattern": "vi.stubGlobal",
+            "code": "vi.stubGlobal('window', { ...window, api: { project: {selectDirectory:vi.fn(),parse:vi.fn()}, settings: {loadGlobal:vi.fn().mockResolvedValue(null),loadRecentProjects:vi.fn().mockResolvedValue([])}, coverage:{load:vi.fn()}, test:{run:vi.fn()}, feedback:{deploy:vi.fn()}, onParseProgress:vi.fn(), onTestOutput:vi.fn(), onFileChange:vi.fn(), removeAllListeners:vi.fn() } })"
+          },
+          {
+            "target": "localStorage",
+            "pattern": "vi.stubGlobal",
+            "code": "vi.stubGlobal('localStorage', { getItem: vi.fn().mockReturnValue('true'), setItem: vi.fn() })",
+            "reason": "App reads 'tih-onboarding-completed' from localStorage. Return 'true' to skip onboarding."
+          }
+        ],
+        "notes": "CRITICAL: App.tsx contains its own HashRouter. Do NOT wrap in MemoryRouter or renderWithProviders. Render with I18nextProvider only: render(<I18nextProvider i18n={i18n}><App /></I18nextProvider>)",
+        "wrapperSource": null
+      },
+      "existingTestExample": "tests/unit/renderer/components/layout/menu-bar.test.tsx"
+    },
+    {
+      "filePath": "src/main/ipc/settings-handlers.ts",
+      "moduleName": "src/main/ipc",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        { "start": 1, "end": 41, "functionName": "registerSettingsHandlers" }
+      ],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0,
+      "mockRecipes": {
+        "imports": [
+          "import { describe, it, expect, vi, beforeEach } from 'vitest'",
+          "import { registerSettingsHandlers } from '../../../../src/main/ipc/settings-handlers'"
+        ],
+        "mocks": [
+          {
+            "target": "electron",
+            "pattern": "vi.hoisted + vi.mock",
+            "code": "const { mockHandle } = vi.hoisted(() => ({ mockHandle: vi.fn() })); vi.mock('electron', () => ({ ipcMain: { handle: mockHandle } }));",
+            "reason": "IMPORTANT: vi.mock factory is hoisted. Use vi.hoisted() to declare mocks that are referenced inside vi.mock factory."
+          },
+          {
+            "target": "settings-manager",
+            "pattern": "vi.hoisted + vi.mock",
+            "code": "const { mockLoadGlobal, mockSaveGlobal, mockLoadProject, mockSaveProject, mockLoadRecent } = vi.hoisted(() => ({ mockLoadGlobal: vi.fn().mockResolvedValue({}), mockSaveGlobal: vi.fn().mockResolvedValue(undefined), mockLoadProject: vi.fn().mockResolvedValue(null), mockSaveProject: vi.fn().mockResolvedValue(undefined), mockLoadRecent: vi.fn().mockResolvedValue([]) })); vi.mock('../../../../src/main/services/settings-manager', () => ({ loadGlobalSettings: mockLoadGlobal, saveGlobalSettings: mockSaveGlobal, loadProjectSettings: mockLoadProject, saveProjectSettings: mockSaveProject, loadRecentProjects: mockLoadRecent }));",
+            "reason": "Isolate IPC handler logic from filesystem. All 5 settings-manager functions need mocking."
+          }
+        ],
+        "testPattern": "Call registerSettingsHandlers(), then find each handler from mockHandle.mock.calls by channel name. Invoke the handler and verify it delegates to the correct settings-manager function.",
+        "notes": "Node.js environment. No jsdom needed. Follow the exact same pattern as tests/unit/main/ipc/project-handlers.test.ts."
+      },
+      "existingTestExample": "tests/unit/main/ipc/project-handlers.test.ts"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/components/diagram/diagram-controls.tsx",
+      "suggestedTestFile": "tests/unit/renderer/components/diagram/diagram-controls.test.tsx",
+      "functions": ["DiagramControls"],
+      "description": "DiagramControls のテストを追加"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/App.tsx",
+      "suggestedTestFile": "tests/unit/renderer/app.test.tsx",
+      "functions": ["App", "handleOnboardingComplete"],
+      "description": "App, handleOnboardingComplete のテストを追加"
+    },
+    {
+      "type": "integration",
+      "targetFile": "src/main/ipc/settings-handlers.ts",
+      "suggestedTestFile": "tests/unit/main/ipc/settings-handlers.test.ts",
+      "functions": ["registerSettingsHandlers"],
+      "description": "registerSettingsHandlers のテストを追加"
+    }
+  ]
+}

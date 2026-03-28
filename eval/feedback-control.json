@@ -1,0 +1,75 @@
+{
+  "version": "1.1.0",
+  "generatedAt": "2026-03-26T12:00:00Z",
+  "projectRoot": ".",
+  "coverageThreshold": 80,
+  "summary": { "totalModules": 3, "belowThreshold": 3, "totalUncoveredFunctions": 10, "overallCoverage": 0 },
+  "gaps": [
+    {
+      "filePath": "src/renderer/components/diagram/diagram-controls.tsx",
+      "moduleName": "src/renderer/components/diagram",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        { "start": 13, "end": 77, "functionName": "DiagramControls" }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/renderer/App.tsx",
+      "moduleName": "src/renderer",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        { "start": 22, "end": 73, "functionName": "App" },
+        { "start": 33, "end": 36, "functionName": "handleOnboardingComplete" }
+      ],
+      "recommendedTestType": "e2e",
+      "priority": "medium",
+      "priorityScore": 41,
+      "complexity": 3,
+      "changeFrequency": 0
+    },
+    {
+      "filePath": "src/main/ipc/settings-handlers.ts",
+      "moduleName": "src/main/ipc",
+      "currentCoverage": 0,
+      "targetCoverage": 80,
+      "uncoveredLines": [
+        { "start": 1, "end": 41, "functionName": "registerSettingsHandlers" }
+      ],
+      "recommendedTestType": "integration",
+      "priority": "medium",
+      "priorityScore": 40,
+      "complexity": 1,
+      "changeFrequency": 0
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/components/diagram/diagram-controls.tsx",
+      "suggestedTestFile": "tests/unit/renderer/components/diagram/diagram-controls.test.tsx",
+      "functions": ["DiagramControls"],
+      "description": "DiagramControls のテストを追加"
+    },
+    {
+      "type": "e2e",
+      "targetFile": "src/renderer/App.tsx",
+      "suggestedTestFile": "tests/unit/renderer/app.test.tsx",
+      "functions": ["App", "handleOnboardingComplete"],
+      "description": "App, handleOnboardingComplete のテストを追加"
+    },
+    {
+      "type": "integration",
+      "targetFile": "src/main/ipc/settings-handlers.ts",
+      "suggestedTestFile": "tests/unit/main/ipc/settings-handlers.test.ts",
+      "functions": ["registerSettingsHandlers"],
+      "description": "registerSettingsHandlers のテストを追加"
+    }
+  ]
+}
